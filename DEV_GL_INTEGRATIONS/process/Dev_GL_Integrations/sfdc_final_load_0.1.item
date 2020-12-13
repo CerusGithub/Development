@@ -26,15 +26,15 @@
     <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
-    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="false"/>
     <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="true"/>
     <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
     <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
-    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
-    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
-    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
-    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="true"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="true"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;C:/Users/INFOVITY-LT-236/Desktop/Credientials/configuration_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
     <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -51,18 +51,18 @@
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
-    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
-    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
-    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
-    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
-    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false"/>
     <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;E:/talend_new_ws/.metadata&quot;"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;E:/talend_new_dir/Talend-Studio-20190620_1446-V7.2.1/workspace/.metadata&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
@@ -335,7 +335,7 @@
       <column comment="" key="false" length="-1" name="Territory__c" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables name="Var" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row1.EUR_REP_REV_TOTAL.multiply(new BigDecimal(-1) ) " name="var1" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="row1.REP_REV_TOTAL.multiply(new BigDecimal(-1) ) " name="var2" nullable="true" type="id_BigDecimal"/>
@@ -562,7 +562,7 @@
       <column comment="" key="false" length="-1" name="SYS_LASTUPDBY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="UpdSFRowId" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="Integer.parseInt(row2.INTrowId__c) " name="ID" type="id_Integer"/>
@@ -1374,13 +1374,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cad95275-3524-4041-83e7-3804ea87356f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wVYaSfdRl1vNvtBsZI02yNReEuyuvPogwXVpbvA3pstmgzbSiIr+AwpdKLES2B/y8ugrZEfVmOc2&#13;
-wtqQT30q0w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_52fb7601-e835-4092-8308-fe1ce8ec9491"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7IeKcgha6rq6Szm8eVUyhplBnah+hjgK0ehbQqQO/LuLynT66kGA1bbl3gpx3VjWNN/c6C0mP3/h&#13;
-S1JyfyqinA==</DigestValue></Reference></SignedInfo><SignatureValue>gq/VqtYraB7NDPxTnnPSItfM3f3stwArU2WnYledlLQx3GDSCNliKunEgBWObKdhrtYc6mapGRTx&#13;
-7htzBlsJuD6NQuS7ccGihC/zWhS3tR2ecun3Tg7lLbfHoZdrydH2w/XYMp+i9RhtgAdcb/09Jn21&#13;
-vKIDNJolSPHpvsqa9ozJMSkSD0BEfn9fn1sfmho7MRDFOj+/pYXXR0yMO37N9DT5J2kS/Hjr9YKa&#13;
-7Wz2fntsAdynwioTQ1ShUUpL8HK3iascjDMugMhhARdITxhRZa/iAKlpv5h/BmK+P1Hlm3hqqN33&#13;
-acc32umR4fcjITuXdItshc6Xrb19fjtuTO+ZAA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ee034d8c-4c7b-4cda-b3ec-77bd5ce4dad0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1ths/BDV8k5txnfIe49nXasMvGmaZMfYPsBX9FgCyHyL+PMD/EZlCrxbvsARpc8duIg8rGbZkgCF&#13;
+klpNGp3Wuw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_af327266-f232-4415-a736-a629d01cd492"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>b0u/gRfRWC1dnrscUoL0lhDuXnm5U65YzG+cWMnZZtCviHhHtvs2vMmKUqMuL645i80ooRP/JpP0&#13;
+C9kCsKnKjQ==</DigestValue></Reference></SignedInfo><SignatureValue>FvK7Gu3fzeP6zyj8spZnkSjhQ0w13mj8LrnHhWgAMaA47/GJrpuTjWAnBLAZQoJJCjXsqfh4B5vP&#13;
+daRDkjkzy/wt1qOo7X0fgX4abkhWmAOC3+Iv23/TjoTYccDwGL67DUya33vRgafiYM3kwCs5i7ya&#13;
+uZmmyoLCPZy8OjpRu56NpVGFNzktPKhZgxC3ouTIYR1YUmEj2VjUvFoAqGI2zTAFrwe5dlLzfjal&#13;
+zt22GkjTaqBXji28nHyEN2hi0v9i0Ilek5m6cXIcpxgrb59Lkq8BJ8NeLezMp0ucWZ+jc9Ndl9rq&#13;
+3TAr7YQ2WgGMCHJjZfbq4O/UTSV45G4w1s5XMA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1402,4 +1402,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_52fb7601-e835-4092-8308-fe1ce8ec9491" Target="#_cad95275-3524-4041-83e7-3804ea87356f"><Timestamp>2020-12-09 16:37:07</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_af327266-f232-4415-a736-a629d01cd492" Target="#_ee034d8c-4c7b-4cda-b3ec-77bd5ce4dad0"><Timestamp>2020-12-13 15:44:19</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
