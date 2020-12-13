@@ -331,11 +331,11 @@
       <column key="false" length="18" name="EuroAggReportingRev__c" nullable="true" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="-1" name="Id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Territory__c" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="true" length="255" name="Id" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Territory__c" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row1.EUR_REP_REV_TOTAL.multiply(new BigDecimal(-1) ) " name="var1" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="row1.REP_REV_TOTAL.multiply(new BigDecimal(-1) ) " name="var2" nullable="true" type="id_BigDecimal"/>
@@ -502,8 +502,8 @@
       <column key="false" length="18" name="EuroAggReportingRev__c" nullable="true" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="-1" name="Id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Territory__c" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="true" length="255" name="Id" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Territory__c" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="Aggregated_Recognized_Revenue__c" name="REJECT">
       <column comment="" key="false" length="18" name="Account__c" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -532,8 +532,8 @@
       <column key="false" length="18" name="EuroAggReportingRev__c" nullable="true" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="-1" name="Id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Territory__c" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="true" length="255" name="Id" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Territory__c" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -556,13 +556,13 @@
       <column key="true" length="1" name="ID" nullable="false" pattern="" precision="1" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="30" name="SFDC_ROW_ID" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+      <column key="false" length="255" name="SFDC_ROW_ID" nullable="true" pattern="" precision="2" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="SYS_LASTUPDBY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SYS_LASTUPDBY" nullable="true" originalLength="255" pattern="" precision="3" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="UpdSFRowId" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="Integer.parseInt(row2.INTrowId__c) " name="ID" type="id_Integer"/>
@@ -647,19 +647,19 @@
       <column key="true" length="1" name="ID" nullable="false" pattern="" precision="1" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="30" name="SFDC_ROW_ID" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+      <column key="false" length="255" name="SFDC_ROW_ID" nullable="true" pattern="" precision="2" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="SYS_LASTUPDBY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SYS_LASTUPDBY" nullable="true" originalLength="255" pattern="" precision="3" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="EBS_GL_AGG_NUM" name="REJECT">
       <column key="true" length="1" name="ID" nullable="false" pattern="" precision="1" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="30" name="SFDC_ROW_ID" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+      <column key="false" length="255" name="SFDC_ROW_ID" nullable="true" pattern="" precision="2" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="SYS_LASTUPDBY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SYS_LASTUPDBY" nullable="true" originalLength="255" pattern="" precision="3" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -1374,13 +1374,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a07c442b-92ca-4ea2-bf4e-3aa22ffc5be6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SZVSw6y0CTysQl+JbiUYua0lATkwerpWfrLxVw8AlcCRsuSzSrG/2ROHhrIHh0Hc4h5R31PawEFT&#13;
-62efeWHGOA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3943b796-c94d-4a27-a4c6-f80a2b245944"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>72r/OqNajHUb1c5BojcL0QCrVD5aiVprNSLv7Eqck6Woqiy44HHcISIs3bVZk96ferSBvVZdjPqt&#13;
-BOgpZUPljA==</DigestValue></Reference></SignedInfo><SignatureValue>dZDvkE80NAKiI7N4xxQIVbpfXumO11/IKg3//U1d+sFIn+I7SZwqg4qxLloEmQtZ4In1z1KMWaDv&#13;
-t+tjbau04X2o4bkuoiwG1ZoaP/87Qgp3t5Dl4quj6ZAfMTKEf3xBbcptELBK57/t+EwGuPUhnwsA&#13;
-Un7JoIqiI1OPPRF3ronVL4MNCYETRwU/1ECN1Kd4SA7PmuerPseFulLEzzvEpgqtjQp+P5nWdGS2&#13;
-Wo9it8kM861fuUGfX4z6YPiRJE5M+V4Oz/QmbIgaefAD9Dq46UxYI8hnZGb4nNC7Ec0oOJ57tCNN&#13;
-3ABGF1dIx9DZ7vCl/FXaZFJGwlIkfKA5im4vIw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3542e198-89d6-464a-99b9-76652fe6d4cf"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>F5iEneJ3NZ+YkumChYTPfaEDKtyVhdxuO5foHMl7kpsui1xmXit3N68qgzvhLhSt2iU/5vK2fWVD&#13;
+nTvwTBp0kw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f233dac6-61ef-493c-8885-b5484dcd43f3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tLUeY6O1TZuEn4CxEgDQqQXHH3Fs6fuD343Lb42VrJ1KxiSjHmR3sm63qtZ9roY/2EJX4AukdJ7R&#13;
+cZtUOLKI/g==</DigestValue></Reference></SignedInfo><SignatureValue>Bm7lUuVi19NDNeH+q6scwXKIwJAp/BxCC5G28L0P8J6ePvBkT6rCWCzAVMLVl94rqxLG322JeJ6m&#13;
+LTy6Xy/l3M6Cc57LHGoSzYWsGw7r2uCdaHXAg1GYVndW0EIEYcb7ACQ2Sz9HtgYDgGKyXcgFVjy1&#13;
+Zg0Qz8fXX4zGb5runrm2ZNnVBGjYH2mhL6oB1cXxM0xWuhoYBzevoYoyEJDnNR1AdIXORJjPocI+&#13;
+rHpmtJIy49D+NeLwkniBA1L7NFsRXxIJS/IQXtUpqeZVFHYb7BUd3SoVGgM6u/+ApYBcgILHX1QN&#13;
+E20Cx9UXHcB7x01ei0x25E8SPYMl8xw6UPEPZw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1402,4 +1402,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3943b796-c94d-4a27-a4c6-f80a2b245944" Target="#_a07c442b-92ca-4ea2-bf4e-3aa22ffc5be6"><Timestamp>2020-12-13 15:44:24</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f233dac6-61ef-493c-8885-b5484dcd43f3" Target="#_3542e198-89d6-464a-99b9-76652fe6d4cf"><Timestamp>2020-12-13 15:45:49</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
