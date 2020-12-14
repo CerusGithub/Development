@@ -414,7 +414,6 @@
       <column key="false" length="255" name="job_name" nullable="true" originalLength="255" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="20" name="start_time" nullable="true" originalLength="20" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column key="false" length="20" name="end_time" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column key="false" length="20" name="total_time" nullable="true" originalLength="-1" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column key="false" length="255" name="job_status" nullable="true" originalLength="-1" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="error_message" nullable="true" originalLength="255" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="no_of_records_inserted" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
@@ -424,16 +423,15 @@
       <column comment="" key="false" length="-1" name="inserted_date" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="copyOfout1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row3.project " name="project_name" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row3.job " name="job_name" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row3.moment " name="start_time" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="context.start_time " name="start_time" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="row3.moment " name="end_time" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="" name="total_time" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="row3.message " name="job_status" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="error_message" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.message " name="error_message" nullable="true" type="id_String"/>
         <mapperTableEntries expression="((Integer)globalMap.get(&quot;tDBOutput_1_NB_LINE_INSERTED&quot;)) " name="no_of_records_inserted" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="((Integer)globalMap.get(&quot;tDBOutput_1_NB_LINE_UPDATED&quot;)) " name="no_of_records_updated" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="((Integer)globalMap.get(&quot;tDBOutput_1_NB_LINE_INSERTED&quot;)) +((Integer)globalMap.get(&quot;tDBOutput_1_NB_LINE_UPDATED&quot;)) " name="total_number_of_records_processed" nullable="true" type="id_Integer"/>
@@ -509,11 +507,6 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="total_time"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="job_status"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
@@ -562,7 +555,6 @@
       <column key="false" length="255" name="job_name" nullable="true" originalLength="255" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column key="false" length="20" name="start_time" nullable="true" originalLength="20" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column key="false" length="20" name="end_time" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
-      <column key="false" length="20" name="total_time" nullable="true" originalLength="-1" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column key="false" length="255" name="job_status" nullable="true" originalLength="-1" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="error_message" nullable="true" originalLength="255" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="no_of_records_inserted" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
@@ -576,7 +568,6 @@
       <column key="false" length="255" name="job_name" nullable="true" originalLength="255" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column key="false" length="20" name="start_time" nullable="true" originalLength="20" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column key="false" length="20" name="end_time" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
-      <column key="false" length="20" name="total_time" nullable="true" originalLength="-1" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column key="false" length="255" name="job_status" nullable="true" originalLength="-1" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="error_message" nullable="true" originalLength="255" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="no_of_records_inserted" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
@@ -685,13 +676,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0057e6cf-82a0-41de-b8c0-43d6848b34e8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2etx8IVdyyrIzp+Byri+2X7u4fwVMzLSWn0aapfuu8ezSwbYZgbuE0KFLbsSYRnZxtfx+2GOE/+3&#13;
-YhU9ya8vtg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_70f395d5-db6b-444d-90ce-f8137d61d754"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TDttIze/vEjkXP3LG9+NkUyTruJRe/2CderXPKBRvanrTjGmGN0fpoBQkOOu9cAgvsi7loRetwb3&#13;
-I/eBRHbsRg==</DigestValue></Reference></SignedInfo><SignatureValue>fnP4wTCsEfC2mWDjNUh63UzJunYfT8TkU9O4jMSGre8xhqVB670AsfbqrARJJ072iICkcg24OGNp&#13;
-+hT5/SI8lq+IU/92/IdmeTTTCC6K7u15ANrwHPXxXw3SMonk0lCwvtw+4axkJy6Jy72/zZSRf+Op&#13;
-orNUpOkAWfFogjJk06PWWB0ZaLDpWBQF8b6xipXI5QZF7Tjwc/j0xJUBLMxypwrZpcbLG2yh1jOY&#13;
-VHGNa6DovpbIWjlEzot7vLNQto3ekCsZpeRGpYTSmtTQStco3TziyDhAUpr+xMIpfeHmhL9zxQsG&#13;
-5XxT1g2DV4kCG0DwWUDAUki6Nx9pAiGgJjt1Jg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_763c6b6e-9c51-4758-bc43-020a83eb25e4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>n51xgm5XDlitsvuUwPbMlhLM6R7340LzPwknK5ZcBC7qhEuew+TURdfhErgl+uOz2abVQgjUtEYb&#13;
+j5W1u/EYZQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_593bfa67-3c41-40b7-9db1-c1cd124b72ce"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>I5++mmt3UY7L6D8vtripQoBHXdT2JuQ9+PjfI+YjUBn0VEFx5rSHMEMN3tdRQ3gB945neW38xoEJ&#13;
+FRDh7wsiVQ==</DigestValue></Reference></SignedInfo><SignatureValue>EYehDgSfnuGJoUSm6aiSDRg8QEbVhTtkGkLHPbgOjNSwsY5rWtJosIgNTisL/ikAt3pNYuC7KoDU&#13;
+/rHUgr5nDdjsvV1Q1Zm+rXqtm2v9hmpBp99GQw9kWktSTPbX3AJG1slLuh4l8kyOtrMLj45mLrdE&#13;
+KnR3YF/en+jVe9DwaPco+2LNuzoTNH6oTvSCGZNTpazRQIzkvgTxZfPOqTFP+sxZKK7Ko4b/n37D&#13;
+Mc4Ir1cFIymtPIQxQou4SWxLjMsfv24c0MCS7QvfQ9AksPKMS+z4SeZUEgEhHj/6jMq2tYKHnGuA&#13;
+6AlKeOiG8RK15yQ5ExQuL/BcWhj8LHDYnMonKw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -713,4 +704,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_70f395d5-db6b-444d-90ce-f8137d61d754" Target="#_0057e6cf-82a0-41de-b8c0-43d6848b34e8"><Timestamp>2020-12-14 14:54:07</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_593bfa67-3c41-40b7-9db1-c1cd124b72ce" Target="#_763c6b6e-9c51-4758-bc43-020a83eb25e4"><Timestamp>2020-12-14 14:54:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
