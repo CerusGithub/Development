@@ -7,6 +7,15 @@
     <contextParameter comment="" name="USERNAME" prompt="USERNAME?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="PASSWORD" prompt="PASSWORD?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="start_time" prompt="start_time?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter comment="" name="ORACLE_HOST" prompt="ORACLE_HOST?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ORACLE_PORT" prompt="ORACLE_PORT?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ORACLE_DATABASE" prompt="ORACLE_DATABASE?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ORACLE_SCHEMA" prompt="ORACLE_SCHEMA?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ORACLE_USERNAME" prompt="ORACLE_USERNAME?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ORACLE_PASSWORD" prompt="ORACLE_PASSWORD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="SFDC_USERID" prompt="SFDC_USERID?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="SFDC_PASSWORD" prompt="SFDC_PASSWORD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="SFDC_SECURITY_TOKEN" prompt="SFDC_SECURITY_TOKEN?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Debug"/>
@@ -63,7 +72,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;E:/talend_new_ws/.metadata&quot;"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/TSC_V7.2.1/Talend-Studio-20190620_1446-V7.2.1/workspace/.metadata&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
@@ -535,16 +544,16 @@
         <additionalField key="di.date.noLogicalType" value="true"/>
       </column>
       <column comment="" defaultValue="0" key="false" length="18" name="Qty_Cancelled__c" nullable="true" pattern="" precision="0" sourceType="DECIMAL" type="id_Double" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="Qty_Cancelled__c"/>
         <additionalField key="Comment" value=""/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="Qty_Cancelled__c"/>
       </column>
       <column comment="" defaultValue="0" key="false" length="18" name="Qty_Fulfilled__c" nullable="true" pattern="" precision="0" sourceType="DECIMAL" type="id_Double" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="Qty_Fulfilled__c"/>
         <additionalField key="Comment" value=""/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="Qty_Fulfilled__c"/>
       </column>
       <column comment="" defaultValue="0" key="false" length="18" name="Secondary_Ship_Qty__c" nullable="true" pattern="" precision="0" sourceType="DECIMAL" type="id_Double" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="Secondary_Ship_Qty__c"/>
         <additionalField key="Comment" value=""/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="Secondary_Ship_Qty__c"/>
       </column>
     </metadata>
     <metadata connector="MAIN" name="MAIN">
@@ -608,16 +617,16 @@
         <additionalField key="di.date.noLogicalType" value="true"/>
       </column>
       <column comment="" defaultValue="0" key="false" length="18" name="Qty_Cancelled__c" nullable="true" pattern="" precision="0" sourceType="DECIMAL" type="id_Double" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="Qty_Cancelled__c"/>
         <additionalField key="Comment" value=""/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="Qty_Cancelled__c"/>
       </column>
       <column comment="" defaultValue="0" key="false" length="18" name="Qty_Fulfilled__c" nullable="true" pattern="" precision="0" sourceType="DECIMAL" type="id_Double" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="Qty_Fulfilled__c"/>
         <additionalField key="Comment" value=""/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="Qty_Fulfilled__c"/>
       </column>
       <column comment="" defaultValue="0" key="false" length="18" name="Secondary_Ship_Qty__c" nullable="true" pattern="" precision="0" sourceType="DECIMAL" type="id_Double" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="Secondary_Ship_Qty__c"/>
         <additionalField key="Comment" value=""/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="Secondary_Ship_Qty__c"/>
       </column>
       <column comment="" key="false" length="255" name="salesforce_id" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="salesforce_id"/>
@@ -1289,8 +1298,8 @@
         <additionalField key="di.date.noLogicalType" value="true"/>
       </column>
       <column comment="" key="true" length="2147483647" name="Id" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="Id"/>
         <additionalField key="Comment" value=""/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="Id"/>
       </column>
     </metadata>
     <metadata connector="MAIN" name="MAIN">
@@ -1412,8 +1421,8 @@
         <additionalField key="di.date.noLogicalType" value="true"/>
       </column>
       <column comment="" key="true" length="2147483647" name="Id" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="Id"/>
         <additionalField key="Comment" value=""/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="Id"/>
       </column>
       <column comment="" key="false" length="255" name="errorCode" nullable="false" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="errorCode"/>
@@ -2349,13 +2358,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_319b7dde-6742-48de-9a18-54cac38b516a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>v/dHeO8eAuBCudMU0pQVlsdiCFHRNw0X31U9ewbVBUNCgad4S8Tmblz4tjHJ5g304sLuruLWO81N&#13;
-2jgdN7SGGg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_19596d48-7358-4487-bd36-ae1a86ab32de"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fdbDOHw12thJSzAJSOdzicArxHXin3YLvyxmxRfivqCmJR32RrlZC28Rn5dSSl/VEHwuv1tnfYkS&#13;
-KQT8U4J+PA==</DigestValue></Reference></SignedInfo><SignatureValue>lsqw2DkH4IZ/dFOKSd6pAUU/vta2x0GGRaBAiAMiiP5YopniuQYwwkEDwurz40jIUjUfmmYO2FkC&#13;
-JzcweL8zQvj1xuKbQ1yPZp2XL/+RjqyppWQ7te3NJgJI/SsAW+NnABY+Az1/ol27a28epJcSCHFk&#13;
-WfJVDDmRQAJch2ibsnIPi0DOyTzgUOStYvOM/7ywVLQN0VIQ0Pay7BlHqeuLRoGjJWstlcrjIhv+&#13;
-MNON5LO9upPdyghEckcZKqwK6qoH8f7PaBpeXPTafPIgAiyP/VjyR7zmdEhgPjIOm3Y+gGslcP/y&#13;
-8G/Be56CCy2zBq4GFZQd5FRbB475T6/jKI3b3Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b8572656-d959-47af-bca5-b5c8b5601483"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hGZGZNTR8ojO+oaoUu5QujXC5Afmo96U6551+6ZCkwfRsF1D+vyir7xs0RIRiH3p/EJ/9qJ3q9vx&#13;
+2UbfAtI/HQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4135d004-33ef-406e-86da-0ea8498e9139"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WMwSKMU+4eEM9J4EV5Ul48cHrkSQVYAZhAizKIJtcNQibNsqwell3ZUVl/JYFpwlQtGeUDcnBQOE&#13;
+JRlfhSf+OQ==</DigestValue></Reference></SignedInfo><SignatureValue>efvXeqsrgkq895yb4Fc2si6UjpXnHesyAk393OLRCu+jk3BGnWGeYIvyIvrBFrMLq1mZnQc1l3CR&#13;
+3hq/ZVqD7ydutTUyqEkQhkBTAFM9cjIVSw69VGzcCNDXkOhhwRMfLXiW+Sr3Pa/vkdd8oW4RsvEP&#13;
+yG5/t7QI9OZPtF3Ldyx3dGyz5F+ueOCDUAdpvRjKI69M44HdAC+cRWlpt2ID0iW0ZHhHdXWP90QP&#13;
+qici7jmtsELpqFmFSywHD+dAzdPEma2L8XBr7d9jBY+5zOd2nM6EShPeSTfKsV1MGd0FUd/z/opH&#13;
+U5P+x84gkO9l0H2s+fzHujTMRW6CPW5AdU+qCg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2377,4 +2386,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_19596d48-7358-4487-bd36-ae1a86ab32de" Target="#_319b7dde-6742-48de-9a18-54cac38b516a"><Timestamp>2021-01-07 04:39:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4135d004-33ef-406e-86da-0ea8498e9139" Target="#_b8572656-d959-47af-bca5-b5c8b5601483"><Timestamp>2021-01-07 07:40:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
