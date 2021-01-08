@@ -142,7 +142,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT distinct &#13;&#10;&#9;&#9;dbo.EBS_SALESORDERS.EBS_LASTUPDBY_ID&#13;&#10;&#9;FROM&#9;dbo.EBS_SALESORDERS&#13;&#10;WHERE dbo.EBS_SALESORDERS.EBS_LASTUPDBY_ID  IS NOT NULL&#13;&#10; AND dbo.EBS_SALESORDERS.EBS_LASTUPDBY != 'CONCURRENT'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT distinct &#13;&#10;&#9;&#9;dbo.EBS_SALESORDERS.EBS_LASTUPDBY_ID&#13;&#10;&#9;FROM&#9;dbo.EBS_SALESORDERS&#13;&#10;WHERE dbo.EBS_SALESORDERS.EBS_LASTUPDBY_ID  IS NOT NULL&#13;&#10; AND (dbo.EBS_SALESORDERS.EBS_LASTUPDBY != 'CONCURRENT' or dbo.EBS_SALESORDERS.EBS_LASTUPDBY is null) &quot;&#13;&#10;&#13;&#10;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -2381,13 +2381,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_266fb134-80c5-4948-bbaa-1e7b4870a4b2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5hZ9WRRMQ7u3FSVk5KjSxzb+TuJ8EX1DGmJMoBVuJCNzngkmqDOtV5Vd7NLOy78y1HbqbXhcTmbT&#13;
-a7rhgt18MQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_da384995-4c9b-45df-bdd6-046b0a761843"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SScJQfDF+4sLMoUymO0o9gMyVaPimicpLI/5dDHYd3iCfqv549g9UHt/WDURMj8p2YQKk0kplPYL&#13;
-+5ihQfS+6A==</DigestValue></Reference></SignedInfo><SignatureValue>UM/HVFY4W1OcjMkEsJXAKGum2C1Y9KD9mKS66qn3RqMZ+8WfegtAQrAdfjoTk4WthfpVIetcKzKT&#13;
-g0TY843zMH3z7facKVdh0w+fWG4TRzGYJMlJYkg62zKyOoAha5FBWuVBsJ51x37vJMVLJAX7JINq&#13;
-YZxajUHoFJbRlB6hRGl1nZUirMD9z3Zl+kDAOGBMlQB/ROHnVDIbQL0VSM4Kv+u1otghwWEHy+is&#13;
-K6WTurm1NzbzXPrzs88+rkVWQA9lEO78MTYl8EkBe4JPpEXjlhtnxdvadKhlgQ6d/wFGzN7gVLyK&#13;
-rtuyN7SKI/uKPzmw6MyqyCXdtrw1GD7Rhg+wRQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1a8a9e6d-13fe-4806-8694-0003a9bb4273"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>L9GyRmCjxR3UoCsA8/yru3Fd4m8kYPhycxNuGXKa9J6sBw98DqBjN80X7AKaiR4FyUNcmer+jhbA&#13;
+c+eCRC2MSw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3ed80e7d-e68e-4b31-858c-212037782f73"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zTjjnKkTyl4tWOmYOGNVx4zHr9z6nPF3EQWcl6I46ZtZbp9wR0jqdrNBjEBe3LhGS4oNQMqBLVln&#13;
+B9zsJIXhdw==</DigestValue></Reference></SignedInfo><SignatureValue>Qsq74bBocqnapTIutr03kB7lhOlEmkwVqz9ZCFYZ1yN1wD5xkjs83vgKR46TKiwnIHpIWFyGkISH&#13;
+dNsRkknCrR7GVmVkKnm77Y27QLU7e7UPcE3/+IpUWoyHW/HkK/HQ1aYCNRzywEHD1fuN6RFFToHr&#13;
+wPjNXe1BqasdPRmqSrpgWcTvWSC3ASWnEZ1ABEmd8+oc7Kfgw+xBXFYU655nRHmgryFG8GFJPosS&#13;
+MknVP3Iidisbm8FSk6LRhnTGqD4c9xIiB74FCG9z+ptT2zmFcVYfYSGVo7ZaL5pxyNR6eApEsHl/&#13;
+OmwbjjVFDFMVUznoN7uv1nkx2vZb0TuvFXamKA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2409,4 +2409,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_da384995-4c9b-45df-bdd6-046b0a761843" Target="#_266fb134-80c5-4948-bbaa-1e7b4870a4b2"><Timestamp>2021-01-08 16:58:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3ed80e7d-e68e-4b31-858c-212037782f73" Target="#_1a8a9e6d-13fe-4806-8694-0003a9bb4273"><Timestamp>2021-01-08 17:28:48</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
