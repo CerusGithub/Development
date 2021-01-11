@@ -1410,19 +1410,19 @@
   </node>
   <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-2944" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_12"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" show="false" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
     <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;10.50.0.28&quot;"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;Alligator.cerus.com&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;Alligator.cerus.com&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="ORACLE_SID"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1521&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;CERPRDDB&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1521&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;CERPRDDB&quot;"/>
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;PCLONE2&quot;"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot; ROUSER&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="P9QFbGcBWKV4luT06uhfdA=="/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot; ROUSER&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="P9QFbGcBWKV4luT06uhfdA=="/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;CASE_MASTER&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
@@ -1430,16 +1430,16 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
     <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#10;  ARGUS_APP.CASE_MASTER.CASE_ID, &#10;  ARGUS_APP.CASE_MASTER.CASE_NUM, &#10;  ARGUS_APP.CASE_MASTER.REV, &#10;  ARGUS_APP.CASE_MASTER.WORKFLOW_SEQ_NUM, &#10;  ARGUS_APP.CASE_MASTER.LAST_WORKFLOW_SEQ_NUM, &#10;  ARGUS_APP.CASE_MASTER.CREATE_TIME, &#10;  ARGUS_APP.CASE_MASTER.INIT_REPT_DATE, &#10;  ARGUS_APP.CASE_MASTER.\&quot;USER_ID\&quot;, &#10;  ARGUS_APP.CASE_MASTER.LAST_UPDATE_TIME, &#10;  ARGUS_APP.CASE_MASTER.LAST_UPDATE_USER_ID, &#10;  ARGUS_APP.CASE_MASTER.REQUIRES_FOLLOWUP, &#10;  ARGUS_APP.CASE_MASTER.FOLLOWUP_DATE, &#10;  ARGUS_APP.CASE_MASTER.OWNER_ID, &#10;  ARGUS_APP.CASE_MASTER.STATE_ID, &#10;  ARGUS_APP.CASE_MASTER.COUNTRY_ID, &#10;  ARGUS_APP.CASE_MASTER.LANG_ID, &#10;  ARGUS_APP.CASE_MASTER.PRIORITY, &#10;  ARGUS_APP.CASE_MASTER.SITE_ID, &#10;  ARGUS_APP.CASE_MASTER.SERIOUSNESS, &#10;  ARGUS_APP.CASE_MASTER.RPT_TYPE_ID, &#10;  ARGUS_APP.CASE_MASTER.LAST_STATE_ID, &#10;  ARGUS_APP.CASE_MASTER.ASSESSMENT_NEEDED, &#10;  ARGUS_APP.CASE_MASTER.PRIORITY_OVERRIDE, &#10;  ARGUS_APP.CASE_MASTER.SID, &#10;  ARGUS_APP.CASE_MASTER.SAFETY_DATE, &#10;  ARGUS_APP.CASE_MASTER.NORMAL_TIME, &#10;  ARGUS_APP.CASE_MASTER.MAX_TIME, &#10;  ARGUS_APP.CASE_MASTER.REPORT_SCHEDULING, &#10;  ARGUS_APP.CASE_MASTER.PRIORITY_ASSESSMENT, &#10;  ARGUS_APP.CASE_MASTER.CLOSE_USER_ID, &#10;  ARGUS_APP.CASE_MASTER.CLOSE_DATE, &#10;  ARGUS_APP.CASE_MASTER.CLOSE_NOTES, &#10;  ARGUS_APP.CASE_MASTER.DATE_LOCKED, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_1, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_2, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_3, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_4, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_5, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_6, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_7, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_8, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_9, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_10, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_11, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_12, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_1, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_2, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_3, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_4, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_5, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_6, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_7, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_8, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_9, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_10, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_11, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_12, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_1, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_2, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_3, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_4, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_5, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_6, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_7, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_8, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_9, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_10, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_11, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_12, &#10;  ARGUS_APP.CASE_MASTER.DELETED, &#10;  ARGUS_APP.CASE_MASTER.DUE_SOON, &#10;  ARGUS_APP.CASE_MASTER.GLOBAL_NUM, &#10;  ARGUS_APP.CASE_MASTER.PRIORITY_DATE_ASSESSED, &#10;  ARGUS_APP.CASE_MASTER.LAM_ASSESS_DONE, &#10;  ARGUS_APP.CASE_MASTER.E2B_WW_NUMBER, &#10;  ARGUS_APP.CASE_MASTER.WORKLIST_OWNER_ID, &#10;  ARGUS_APP.CASE_MASTER.SUSAR, &#10;  ARGUS_APP.CASE_MASTER.LAST_UPDATE_EVENT, &#10;  ARGUS_APP.CASE_MASTER.INITIAL_JUSTIFICATION, &#10;  ARGUS_APP.CASE_MASTER.FORCE_SOON, &#10;  ARGUS_APP.CASE_MASTER.DUE_SOON_J, &#10;  ARGUS_APP.CASE_MASTER.FOLLOWUP_DATE_J, &#10;  ARGUS_APP.CASE_MASTER.INIT_REPT_DATE_J, &#10;  ARGUS_APP.CASE_MASTER.JUST_INIT_REPT_DATE_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_1_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_2_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_3_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_4_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_5_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_6_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_7_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_8_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_9_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_10_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_11_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_12_J, &#10;  ARGUS_APP.CASE_MASTER.INITIAL_JUSTIFICATION_J, &#10;  ARGUS_APP.CASE_MASTER.LOCK_STATUS_ID, &#10;  ARGUS_APP.CASE_MASTER.MEDICALLY_CONFIRM, &#10;  ARGUS_APP.CASE_MASTER.ENTERPRISE_ID&#10;FROM ARGUS_APP.CASE_MASTER&#13;&#10;ORDER BY CASE_NUM DESC&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="oracle_id"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
     <elementParameter field="CHECK" name="IS_CONVERT_XMLTYPE" value="false"/>
     <elementParameter field="TABLE" name="CONVERT_XMLTYPE" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
     <elementParameter field="TEXT" name="CURSOR_SIZE" show="false" value="1000"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
@@ -2819,13 +2819,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_14c1da47-90e9-4291-a33d-4b014eef0336"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Oc6fyOaU7/HqVZwtwiPB8QI0q81WUEsnCueqGGZcrchnS11paWWmzE07eK48h3nkqZTgjTcm2d0G&#13;
-4nHr00sKpA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e8c9d039-aa9c-4bbd-af0e-4e5bfe75edef"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PjOPw/KWIMzzGpLIRCGhFUKIZke0jXSkP2ZY2XAVCRRQtG9Dp60P3YEvgWzgekO8M3SPzlXRxlMZ&#13;
-mRIZNiwsgg==</DigestValue></Reference></SignedInfo><SignatureValue>HE2LaSr0pVLHxcuxBFYo323bw6IHtaAbXKKnWm17OP7TQIi1yM40T9o3twvJ2IcppBxrwzONzo56&#13;
-mJF3QPBer/Z79HUN5eUKg9BjXhLxDk6ioGibVCvzRUjUIY/jlS2hloWNtRzRNEsHKwbE3yCHvqU4&#13;
-dvHsYWxC1/DFvZyGfFBccKFPzSzlLCmlCk8960Jr1FNYqXtWiT4vzEUWhvdEcD3m1cFAyTYQHV9F&#13;
-/ysNWtQUth3iTM61jLWJM6dF8YXvecrct9iwSh2yzS9aqaXr9UxMEYEwPMrVT7K7BfenIvdbj47L&#13;
-0Efn/ACLqOIeOalrKoJ/SQwbGRQaPL4VuCCgHw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ebccb4b8-8f85-42eb-9979-857708ebd132"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XSsOoAf+hCSVhfspqkPnjFm74/g7hTUpEcJJWWg+lyZQ7hQJB1/t0DNrR19VuJCVRPXCuiafVKpi&#13;
+EdLiLt1jWQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2202572d-83ce-4012-87d6-68bf1ade920d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZZ9EUJ/y23DgPhplj60Kzrbet9y8d4VND5ObXuCgP4thIZfHc83N163lkT+UxghV71c+Lm0tiHJR&#13;
+taBoyLFcwg==</DigestValue></Reference></SignedInfo><SignatureValue>UXDy5dAYh6EWm/GMGOX0HWLSkhQkYA0DWd/grfE7t3AgVoga14v66AyBPctrgqUedpcmPTcU1gvo&#13;
+1yeg+haf8EY9UqO5sO0f/ESAtid0uJUK4RkVgQOtCFT3SvkS8XZLxEARxJTnTjzAU/BZ1REjCdMZ&#13;
+qHRO6XYNiI6x3992Q5T1qJdZJdhegRRl3kw0/iHJFotjn4O5TfF8XbQfl3wIEVG1MAEHoWyeVH1b&#13;
+BEAfWJZds3m/VTTPKf2DL/vWDmQ2MdBHRiAXM6nFK6IuBazbfk4WPaVi3I7nAuwkPBjYLJwLb5qt&#13;
+Ih1Iaiq/wXnrjEYpUjkl1VFIlF3bH9eNpbOspA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2847,4 +2847,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e8c9d039-aa9c-4bbd-af0e-4e5bfe75edef" Target="#_14c1da47-90e9-4291-a33d-4b014eef0336"><Timestamp>2021-01-11 09:16:21</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2202572d-83ce-4012-87d6-68bf1ade920d" Target="#_ebccb4b8-8f85-42eb-9979-857708ebd132"><Timestamp>2021-01-11 09:17:24</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
