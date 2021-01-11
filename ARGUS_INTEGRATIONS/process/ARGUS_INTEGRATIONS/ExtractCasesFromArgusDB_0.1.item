@@ -126,20 +126,19 @@
   </parameters>
   <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-2976" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_12"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" show="false" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
     <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;10.50.0.28&quot;"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;Alligator.cerus.com&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;Alligator.cerus.com&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="ORACLE_SID"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1521&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;CERPRDDB&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1521&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;CERPRDDB&quot;"/>
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;PCLONE2&quot;"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot; ROUSER&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="P9QFbGcBWKV4luT06uhfdA=="/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot; ROUSER&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="P9QFbGcBWKV4luT06uhfdA=="/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;CASE_MASTER&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
@@ -147,16 +146,16 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
     <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#10;  ARGUS_APP.CASE_MASTER.CASE_ID, &#10;  ARGUS_APP.CASE_MASTER.CASE_NUM, &#10;  ARGUS_APP.CASE_MASTER.REV, &#10;  ARGUS_APP.CASE_MASTER.WORKFLOW_SEQ_NUM, &#10;  ARGUS_APP.CASE_MASTER.LAST_WORKFLOW_SEQ_NUM, &#10;  ARGUS_APP.CASE_MASTER.CREATE_TIME, &#10;  ARGUS_APP.CASE_MASTER.INIT_REPT_DATE, &#10;  ARGUS_APP.CASE_MASTER.\&quot;USER_ID\&quot;, &#10;  ARGUS_APP.CASE_MASTER.LAST_UPDATE_TIME, &#10;  ARGUS_APP.CASE_MASTER.LAST_UPDATE_USER_ID, &#10;  ARGUS_APP.CASE_MASTER.REQUIRES_FOLLOWUP, &#10;  ARGUS_APP.CASE_MASTER.FOLLOWUP_DATE, &#10;  ARGUS_APP.CASE_MASTER.OWNER_ID, &#10;  ARGUS_APP.CASE_MASTER.STATE_ID, &#10;  ARGUS_APP.CASE_MASTER.COUNTRY_ID, &#10;  ARGUS_APP.CASE_MASTER.LANG_ID, &#10;  ARGUS_APP.CASE_MASTER.PRIORITY, &#10;  ARGUS_APP.CASE_MASTER.SITE_ID, &#10;  ARGUS_APP.CASE_MASTER.SERIOUSNESS, &#10;  ARGUS_APP.CASE_MASTER.RPT_TYPE_ID, &#10;  ARGUS_APP.CASE_MASTER.LAST_STATE_ID, &#10;  ARGUS_APP.CASE_MASTER.ASSESSMENT_NEEDED, &#10;  ARGUS_APP.CASE_MASTER.PRIORITY_OVERRIDE, &#10;  ARGUS_APP.CASE_MASTER.SID, &#10;  ARGUS_APP.CASE_MASTER.SAFETY_DATE, &#10;  ARGUS_APP.CASE_MASTER.NORMAL_TIME, &#10;  ARGUS_APP.CASE_MASTER.MAX_TIME, &#10;  ARGUS_APP.CASE_MASTER.REPORT_SCHEDULING, &#10;  ARGUS_APP.CASE_MASTER.PRIORITY_ASSESSMENT, &#10;  ARGUS_APP.CASE_MASTER.CLOSE_USER_ID, &#10;  ARGUS_APP.CASE_MASTER.CLOSE_DATE, &#10;  ARGUS_APP.CASE_MASTER.CLOSE_NOTES, &#10;  ARGUS_APP.CASE_MASTER.DATE_LOCKED, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_1, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_2, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_3, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_4, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_5, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_6, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_7, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_8, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_9, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_10, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_11, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_12, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_1, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_2, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_3, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_4, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_5, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_6, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_7, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_8, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_9, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_10, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_11, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_12, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_1, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_2, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_3, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_4, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_5, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_6, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_7, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_8, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_9, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_10, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_11, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_12, &#10;  ARGUS_APP.CASE_MASTER.DELETED, &#10;  ARGUS_APP.CASE_MASTER.DUE_SOON, &#10;  ARGUS_APP.CASE_MASTER.GLOBAL_NUM, &#10;  ARGUS_APP.CASE_MASTER.PRIORITY_DATE_ASSESSED, &#10;  ARGUS_APP.CASE_MASTER.LAM_ASSESS_DONE, &#10;  ARGUS_APP.CASE_MASTER.E2B_WW_NUMBER, &#10;  ARGUS_APP.CASE_MASTER.WORKLIST_OWNER_ID, &#10;  ARGUS_APP.CASE_MASTER.SUSAR, &#10;  ARGUS_APP.CASE_MASTER.LAST_UPDATE_EVENT, &#10;  ARGUS_APP.CASE_MASTER.INITIAL_JUSTIFICATION, &#10;  ARGUS_APP.CASE_MASTER.FORCE_SOON, &#10;  ARGUS_APP.CASE_MASTER.DUE_SOON_J, &#10;  ARGUS_APP.CASE_MASTER.FOLLOWUP_DATE_J, &#10;  ARGUS_APP.CASE_MASTER.INIT_REPT_DATE_J, &#10;  ARGUS_APP.CASE_MASTER.JUST_INIT_REPT_DATE_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_1_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_2_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_3_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_4_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_5_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_6_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_7_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_8_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_9_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_10_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_11_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_12_J, &#10;  ARGUS_APP.CASE_MASTER.INITIAL_JUSTIFICATION_J, &#10;  ARGUS_APP.CASE_MASTER.LOCK_STATUS_ID, &#10;  ARGUS_APP.CASE_MASTER.MEDICALLY_CONFIRM, &#10;  ARGUS_APP.CASE_MASTER.ENTERPRISE_ID&#10;FROM ARGUS_APP.CASE_MASTER&#13;&#10;ORDER BY CASE_NUM DESC&#13;&#10;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="oracle_id"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
     <elementParameter field="CHECK" name="IS_CONVERT_XMLTYPE" value="false"/>
     <elementParameter field="TABLE" name="CONVERT_XMLTYPE" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
     <elementParameter field="TEXT" name="CURSOR_SIZE" show="false" value="1000"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
@@ -671,7 +670,6 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="-2688" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -910,7 +908,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-2688" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_5"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -1183,7 +1180,6 @@
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-2400" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_SdfUULScEems4_HGzAGUcw"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -1416,7 +1412,6 @@
   </node>
   <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-2944" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
@@ -1961,7 +1956,6 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="-2656" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -2192,7 +2186,6 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-2656" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -2463,7 +2456,6 @@
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-2368" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_3"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_SdfUULScEems4_HGzAGUcw"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -2748,11 +2740,9 @@
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBInput_2">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <connection connectorName="FLOW" label="Inserts" lineStyle="0" metaname="Inserts" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_2">
@@ -2765,27 +2755,22 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Inserts"/>
   </connection>
   <connection connectorName="FLOW" label="row5" lineStyle="8" metaname="tDBInput_5" offsetLabelX="0" offsetLabelY="0" source="tDBInput_5" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <connection connectorName="FLOW" label="Updates" lineStyle="0" metaname="Updates" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tDBOutput_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Updates"/>
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="8" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tDBConnection_1">
@@ -2836,13 +2821,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ba0c307a-38ba-49b8-a621-d19475e3af59"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7u/t1qYFTgKukjOWi9gTnnL4JnK6V3qFjsmLO9BrZFRIH64BGXpMYKE0wI30wM2tjgphm8pYAh2N&#13;
-fgaYpFgO/g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_dfe715be-b75e-44fe-9d00-f7231aaf3639"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lauM66Dx+VSO/dofpn5I+URpzxy0eV4cequROyYXG5bFCa6ppOHQBKwueqtdrKfMvF14q9JF+ETK&#13;
-ZrZdFEDmiA==</DigestValue></Reference></SignedInfo><SignatureValue>YEZugUwZ1AV9Q2PTUFVSd14/0dkWvoRsTi+H4ybxB0VQhn35wBNPs8YNHGiTjKVnzBYY2wMJ4m7j&#13;
-a62sP8u/BAflm++cXNu8MjHgobfuxwRkvNIV0YTYU61fE3Fa4orG7IQB2QlpHv9kyK2HTTBhZtuq&#13;
-mfXSd2y0f0bgTscBufYRllq9YscmGW0cPiKtVQkVJt/yPIMF56SHsP+Y8yulaSBxHJYWISNmrGIl&#13;
-3lI/nDWz667PLIzuRYOGtCJQ4FMIb8WHDoU1lc6vtzpv6C2B1BTf9TM4LzSYeYXo5EwotAiQzR+n&#13;
-FNl9J0e+mAgJ+xbdLrUIu7lNsNh8vqJazUhZGg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_01d17501-f0ac-424b-93bf-2eb2d4972447"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rAFsDfj34CcwDaZMDDkvW8HVY7EJ0Gz8yqwJ2Ndu8EPjaiAePuDI1MBPBFPnV6owSilJtUndjlsO&#13;
+XJxItQQPeg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3638888c-d29b-4d1c-83f0-1d2a4091f1ad"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tp/Z8EkYGfGd5cUTYEYZA7v8iXWaUB8m0SfYAcQcT7UhFbC7lkikMuNfxlvnzyuE9GSIkgpGr7FU&#13;
+YkCOQOvnGg==</DigestValue></Reference></SignedInfo><SignatureValue>VDOkSa+BntDZcSIQa7JHveVSWoP7D1FvAZK6VKFhzBaMfPkYCNpi3tZatb8MDyHyWsOQvaIB7eif&#13;
+/3W8nF/X+5gwjjKTuYiOlJvMGLXVkBZTVAZySlE1VvZX+CaEl22rvZPy2cBVYP9yZ7XRvIuoSdHA&#13;
+CU+QHToqZWTr4u87g+caZIed9q9PDf7e2FIRDspkxhNavfn+unqWIGHxFSchstZ0IXnHhqhJj9Ph&#13;
+W4JwEMHikGSjDKzY32Y/plVBL16n0ySglBpYJxY5j4Ka8ryvL1MH/frlCoyEPYVGZuedVB755Jve&#13;
+UfGmE1sVtPTACoojCzp+ZHS6K3xbDQ4OSufg1A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2864,4 +2849,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_dfe715be-b75e-44fe-9d00-f7231aaf3639" Target="#_ba0c307a-38ba-49b8-a621-d19475e3af59"><Timestamp>2021-01-11 09:09:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3638888c-d29b-4d1c-83f0-1d2a4091f1ad" Target="#_01d17501-f0ac-424b-93bf-2eb2d4972447"><Timestamp>2021-01-11 09:09:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
