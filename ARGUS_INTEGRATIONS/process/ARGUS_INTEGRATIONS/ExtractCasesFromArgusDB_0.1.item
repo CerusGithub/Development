@@ -40,7 +40,7 @@
     <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="true"/>
     <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="true"/>
     <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false"/>
-    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;C:/Users/dnarisetti/Desktop/ARGUS_INTEGRATIONS/credientials.txt&quot;"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;C:/TSC_V7.2.1/Config_files/credientials.txt&quot;"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;=&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
@@ -2735,6 +2735,7 @@
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:thin:USER/MDP@server&quot;"/>
     <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-2144" posY="-96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_2"/>
@@ -2969,14 +2970,14 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBInput_2">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
+  </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBInput_2">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <connection connectorName="FLOW" label="Inserts" lineStyle="0" metaname="Inserts" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_2">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -2996,18 +2997,18 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
   </connection>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tMap_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+  <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tWarn_2">
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobError1"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tWarn_1">
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk5"/>
   </connection>
-  <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tWarn_2">
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tMap_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobError1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <connection connectorName="FLOW" label="Updates" lineStyle="0" metaname="Updates" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tDBOutput_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -3097,13 +3098,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3960b01c-cf50-4dca-8f50-89fd9fa27dc4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GGX2lB+lty2vV2Hye26snaaWIDCN0Wl3ijTNKxUoUkVufPoOZQYDkE1hqFjYzU9U0QBpHXxu3qGa&#13;
-f+Bhq6kCTA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_296e575e-1c70-424b-b7ed-89da6311e06a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ghKNBJh9OQXFm4ICOpcHOvaB0Vg8LRUL3zEBhkr9cGteE3w7JMowXOkcK3cuaHXFbULlRDbDOaae&#13;
-y3/FYjsJfg==</DigestValue></Reference></SignedInfo><SignatureValue>pxTuvkLRuL4hhVYUEHII+iB6zHzdHqgU+ZRRFfoC5KtXhb/EReAKI19FprwN0nFpsyyvFJRKyvrn&#13;
-ShJ58ze1aQBMKiV4O9FowlAFhDc+5PquU4jhrEnlwnHoOSLGY6HAJvhy8ioz5iAsvGfV1FFgvyhB&#13;
-nOnkTGO71i4g9VSy23WWo/6fr5JqWxWJTtguM5M6mfjkkJu3FpL2C9XYTSh50U6ird3OFUN62Arf&#13;
-oblBw2PD+lJZktNOdKk2yiHgJGGa0vqavmPRA7qAWFhYMgTbyCmol2WEydRIlzyenjKipf2Hmm0C&#13;
-OFOkd5PyGrO+zkwxknbfcAxUofD09wc2GErBzw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_14052d24-0e0e-49da-84ad-16220561b661"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>f3W7omhQ8DFwLPFqUeEPpYbTyvY6DaGz8k6tgC6yfnI0DNr7WNgi2OxnV3GBZwXJTBXHnVjv7NA0&#13;
+JQu3zCpHzg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e34b07bb-74e8-408b-8e0f-3aa89d048cad"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Do/A7oZ/igQlkhL0uKNdjql9lc/U9aIC/0kpU809wrrkmsOZKvcsIuH2hewFq+EbqqL9y/1KpPp7&#13;
+tcofC+UaOQ==</DigestValue></Reference></SignedInfo><SignatureValue>KvDPCCcZWbswO9uZpLA8kN0TKkzHijj1h8tvD00tvO/Y7MIJfFVJ6tmnbY8cqovRX8qa3iuZ4NFM&#13;
+0LTtdczwIf4cJI3Gfl6N8xKCtIgEjMmRm/YhUun2pPO8r0i0dKcdjIowAdbA4NaOhindCskdF7Ly&#13;
+v8+APgHwLn85uzr6hLKv7gkiv7IuJd6s4UzKrMAuMXocsQ80EAzLgan9Hf5ImXss548D7kU4TVxH&#13;
+t5TLAwd4iSdy0/eLYRGxXigXkOarwTdbHqxXOvy3BHE58qfm1i5KGkRSMGmZRHUsh4I+ig8Ex5vc&#13;
+Q3DHP+WoyuEkHfe0W09jQ4qFEIXOmed0Fa+a8A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -3125,4 +3126,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_296e575e-1c70-424b-b7ed-89da6311e06a" Target="#_3960b01c-cf50-4dca-8f50-89fd9fa27dc4"><Timestamp>2021-01-14 21:26:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e34b07bb-74e8-408b-8e0f-3aa89d048cad" Target="#_14052d24-0e0e-49da-84ad-16220561b661"><Timestamp>2021-01-14 22:03:46</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
