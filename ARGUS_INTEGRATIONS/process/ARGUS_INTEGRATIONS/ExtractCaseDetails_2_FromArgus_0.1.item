@@ -1157,29 +1157,29 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_SdfUULScEems4_HGzAGUcw"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;BISON&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;BISON&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="MSSQL_PROP"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;cer_prdint&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;cerprdint&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="j0JamvwEukEGJaYMHYPJFnmCzSbFpKRR"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;cer_prdint&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;cerprdint&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="j0JamvwEukEGJaYMHYPJFnmCzSbFpKRR"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;ARGUS_CASE_MASTER&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
     <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.ARGUS_CASE_MASTER.\&quot;ID\&quot;,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CASE_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CASE_NUM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.RPT_TYPE_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.REPORT_TYPE,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CREATE_TIME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.FOLLOWUP_DATE,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.RECEIPT_DATE,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INIT_REPT_DATE,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.STATE_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CASE_STATUS,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SERIOUSNESS,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SERIOUSNESS_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.EVENT_DEATH_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.\&quot;USER_ID\&quot;,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.\&quot;USER_NAME\&quot;,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.OWNER_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.OWNER_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.PATIENT_SUBJ_NUM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.STUDY_NUM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.EVENT_DEATH,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.EVENT_DESC,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.PREF_TERM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.PRODUCT_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.WORKLIST_OWNER_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.RPT_CAUSALITY_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.PRT_CAUSALITY_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.DET_CAUSALITY_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.DET_CAUSALITY_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.DET_LISTEDNESS_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.DET_LISTEDNESS_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.REQUIRES_FOLLOWUP,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CASE_SIGNIFICANT,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.EVT_SEQ_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SFDC_ROW_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.STUDY_DRUG,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.WORKLIST_OWNER_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INT_MON_NUM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INT_YEAR,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INT_QTR,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INT_MON,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SYS_CREATED,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SYS_CREATEDBY,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SYS_LASTUPDATED,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SYS_LASTUPDBY,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.FOLLOWUP_SEQ_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INITIAL_CASE&#10;FROM&#9;dbo.ARGUS_CASE_MASTER WHERE dbo.ARGUS_CASE_MASTER.INITIAL_CASE = 'Yes' &quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;integratedSecurity=true&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;integratedSecurity=true&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
@@ -1518,19 +1518,19 @@
   </node>
   <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_12"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" show="false" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
     <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;10.50.0.28&quot;"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;Alligator.cerus.com&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;Alligator.cerus.com&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="ORACLE_SID"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1521&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;CERPRDDB&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1521&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;CERPRDDB&quot;"/>
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;PCLONE2&quot;"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot; ROUSER&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="P9QFbGcBWKV4luT06uhfdA=="/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot; ROUSER&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="P9QFbGcBWKV4luT06uhfdA=="/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;CFG_WORKFLOW_STATES&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
@@ -1538,16 +1538,16 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
     <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#10;  ARGUS_APP.CFG_WORKFLOW_STATES.STATE_ID, &#10;  ARGUS_APP.CFG_WORKFLOW_STATES.STATE_NAME, &#10;  ARGUS_APP.CFG_WORKFLOW_STATES.STATE_DESC, &#10;  ARGUS_APP.CFG_WORKFLOW_STATES.SORT_ID, &#10;  ARGUS_APP.CFG_WORKFLOW_STATES.DELETED, &#10;  ARGUS_APP.CFG_WORKFLOW_STATES.SITE_ID, &#10;  ARGUS_APP.CFG_WORKFLOW_STATES.ARCHIVING, &#10;  ARGUS_APP.CFG_WORKFLOW_STATES.PREF_STATE_ID, &#10;  ARGUS_APP.CFG_WORKFLOW_STATES.ENTERPRISE_ID&#10;FROM ARGUS_APP.CFG_WORKFLOW_STATES&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="oracle_id"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
     <elementParameter field="CHECK" name="IS_CONVERT_XMLTYPE" value="false"/>
     <elementParameter field="TABLE" name="CONVERT_XMLTYPE" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
     <elementParameter field="TEXT" name="CURSOR_SIZE" show="false" value="1000"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
@@ -1832,13 +1832,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_357a5367-067c-463c-ac6c-b927b9e6b9bc"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OLLu0CLlVlyXXMMi2spvcuEUeYKs0jzak9URzE0a+jiCJHB8R17qSINVVZeAX/nDiDiE5qI6kQ4b&#13;
-z2al/yJPXA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_467f9e42-4616-43e7-8153-664623e624b8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>mNiFQDMQUFLWCQS1Yue15IAmcIKnVsNkQvOW8bvs8cyJO+Fng12koYbJqZ7a2EOC25IBBkYWJTb6&#13;
-q1T8QKbkrw==</DigestValue></Reference></SignedInfo><SignatureValue>HjTI8NWsXupsHeLFSgatRgVSHX2XfCHZoVdJogWtJb+zy2jTBPWT/sxbcyb8prT61OGhMAU85zop&#13;
-5fb8TQ039cVkMM5NnbP7Dxr0yttg0XXgovapsiw7/VhYDmdX0gF4msupCFClNELDM/csblr7+1DN&#13;
-MGIdsFFIlFj3c80fF2UrP2j26s7/y1Xj66ipsLofaJs6I9/WG3oEKKicTszrQvrS8+kzvQT4uAUZ&#13;
-6thACUkz5ZB6OHZv5NdSqPBcKcIiAzWzODLmSxqLdih8Zo5fGyntJ+GRYVT65HvuNf5ZbiAqCg8r&#13;
-iwsq0aGEnzBUIC1CGj5ex7QUz4l3Mu9r8JrfEA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_56c9b004-61f3-41e8-ae6e-b33a61ca0e5f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sj1a7HAK8/dNITJmcKNn4VE9KTxf99jw4ImunoMjUCLqp45eE9xhzqtTsTltXnlhn1RtBwKLLRiM&#13;
+muXlMKqXdQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ae198ee2-e85d-4f1f-bdb9-0f423a19d91e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FObrErMYkyxD3yvjQq5SZY+Mcs2zjbZlp98Q3Qy3dqgEEL6iuq31uUPjlnb5D7Jpn7Q1lzU1bs8Q&#13;
+JilhRNp5Kg==</DigestValue></Reference></SignedInfo><SignatureValue>YN+Vtz6CPT784MCsg26WZ9Fr3BTEj8BupJXU0vMDcBKAPFPhY1FCFp6d994WnfXFYytpmK0bKasP&#13;
+Owm3MMvYSnxQc8ky/U2FeZZKNCmbZgFjOQgqxBgz8XWaYjf2i01xQg/Oir6o96SeBhiFf4J8scuz&#13;
+MZ4da6bRqxMyf2tjexnscOzhoG7KxjYryRo/M4WFystwm/sXMzHB5RGl6g4fpliqUTdJdirxAEHj&#13;
+x8TlIHhImAQ6LtWvZ4uL6jJfwQv5e6D9Ft0VcLyLdgZCaWEPpjNXqEv86lS9GgkDM+y1N3d++vto&#13;
+8035RLWfuvgDbfeufqoYetC1ENIhQHbuxdo3xg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1860,4 +1860,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_467f9e42-4616-43e7-8153-664623e624b8" Target="#_357a5367-067c-463c-ac6c-b927b9e6b9bc"><Timestamp>2021-01-15 06:41:08</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ae198ee2-e85d-4f1f-bdb9-0f423a19d91e" Target="#_56c9b004-61f3-41e8-ae6e-b33a61ca0e5f"><Timestamp>2021-01-15 06:41:38</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
