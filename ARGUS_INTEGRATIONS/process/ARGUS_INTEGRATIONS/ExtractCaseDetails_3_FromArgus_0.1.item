@@ -1523,29 +1523,29 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="768">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_7"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_SdfUULScEems4_HGzAGUcw"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;BISON&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;BISON&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="MSSQL_PROP"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;cer_prdint&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;cerprdint&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="j0JamvwEukEGJaYMHYPJFnmCzSbFpKRR"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;cer_prdint&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;cerprdint&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="j0JamvwEukEGJaYMHYPJFnmCzSbFpKRR"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;ARGUS_CASE_MASTER&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
     <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.ARGUS_CASE_MASTER.\&quot;ID\&quot;,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CASE_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CASE_NUM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.RPT_TYPE_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.REPORT_TYPE,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CREATE_TIME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.FOLLOWUP_DATE,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.RECEIPT_DATE,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INIT_REPT_DATE,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.STATE_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CASE_STATUS,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SERIOUSNESS,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SERIOUSNESS_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.EVENT_DEATH_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.\&quot;USER_ID\&quot;,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.\&quot;USER_NAME\&quot;,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.OWNER_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.OWNER_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.PATIENT_SUBJ_NUM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.STUDY_NUM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.EVENT_DEATH,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.EVENT_DESC,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.PREF_TERM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.PRODUCT_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.WORKLIST_OWNER_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.RPT_CAUSALITY_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.PRT_CAUSALITY_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.DET_CAUSALITY_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.DET_CAUSALITY_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.DET_LISTEDNESS_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.DET_LISTEDNESS_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.REQUIRES_FOLLOWUP,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CASE_SIGNIFICANT,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.EVT_SEQ_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SFDC_ROW_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.STUDY_DRUG,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.WORKLIST_OWNER_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INT_MON_NUM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INT_YEAR,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INT_QTR,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INT_MON,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SYS_CREATED,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SYS_CREATEDBY,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SYS_LASTUPDATED,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SYS_LASTUPDBY,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.FOLLOWUP_SEQ_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INITIAL_CASE&#10;FROM&#9;dbo.ARGUS_CASE_MASTER WHERE dbo.ARGUS_CASE_MASTER.INITIAL_CASE = 'Yes' &quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;integratedSecurity=true&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;integratedSecurity=true&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
@@ -2475,13 +2475,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_32f709e8-d5f5-4d54-8e9e-ab6c7e0f445f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WyZ4lKnirPJIKyYo+8IemHAyXtznd7hJljbvtJo1TZQ9B3xxgDQFrmT//dYgufvGoPcy0i5ssvpi&#13;
-IQBo7QW4wQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8585a689-83fa-4652-b386-88093e871fae"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YTCGg9g7/VnCWkj7Os5JO8uoWicAjNgu8iQLH0ZAGh6AX5byd9K+8tXgE7I6bepYF7MPfMiBGVTh&#13;
-0lhE7ZT7BQ==</DigestValue></Reference></SignedInfo><SignatureValue>ZbnWWOz0BX7f/lMS1toDegdxxiS7uFRFPYT2S5a0Q0jUcNi8HBXT6IMIYZ0HOmnCxqL1rr9d9fuS&#13;
-IM4Vw5H9qXtL1sr1oOMTXaHyMFJUlUhOmPnSUqbmQdFLVuiWkERiYz3QFEudC8JaWxVtWX76ehzC&#13;
-2BRbPo7/5rcxQXKE8QUyLa1ESznVVFvYztjKk95+xo5c50dkjeTl+CPkDdFy2HtK6K4ReQ8prcDN&#13;
-3kgA1YmnrohcBpIoIgX0L5dvst5LT2gd8iCOtGlozm821FGyF1lzp1ndlTTe1JLwXEJlIDsGl5zL&#13;
-VtapQBYIOZ5DdWDuyUwr/5xxsbmKglAjHoXaNg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_58f150ff-008f-43fe-8044-be0bf498723b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vQKK3gpFCahq+KtVCTSfwOBqw7hiUxCez94isD1SiaCOqseKl/RUlY48HuB1zFYp4pdbN7G3Uc7b&#13;
+7lqXvTo3Kg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b0e1932c-10ba-4723-a35a-b1ef57b10907"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gLDNsJQOz+/rkBE2ptguePhVE0nKOPDeI7EJ5dH4yTDhoyIuYjndhi/Qv6yB3xZ9CpQxYUSTYcpe&#13;
+uWE9JMTqEA==</DigestValue></Reference></SignedInfo><SignatureValue>egrxPERyF47fp/2mgQdep4/msRmcxOBhWRM9J1EkhUqe5QAGyE6j9w4o12tqC6LSgpexTbVS/6Ar&#13;
+f8nGwV8QxiRoLz5DvtHrOn0fsfTcy7Ht1ujAN+2dcinuh/06D+oYKNRBlPJ6uQsrJFoWK/zb/t63&#13;
+8S/ccZ+4m1nY4iCAKBInKmGgmDeuJWKlnMaC5I3LO8uFcwsRgy6lgF4v04kcJ974CaihX9tsEGZH&#13;
+wfFj2KuovWhFAd9j0+8eQp6JbpJXnP42t7v/0aLKIvvYS8GqUqmI3RWf4nM1z/nLJCzp2Eq44cSj&#13;
+lEItNs5BCq2zCVckr+iFUo6gN8WlaCdWD5Ywzg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2503,4 +2503,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8585a689-83fa-4652-b386-88093e871fae" Target="#_32f709e8-d5f5-4d54-8e9e-ab6c7e0f445f"><Timestamp>2021-01-15 08:04:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b0e1932c-10ba-4723-a35a-b1ef57b10907" Target="#_58f150ff-008f-43fe-8044-be0bf498723b"><Timestamp>2021-01-15 08:04:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
