@@ -1941,19 +1941,19 @@
   </node>
   <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_12"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" show="false" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
     <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;10.50.0.28&quot;"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;Alligator.cerus.com&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;Alligator.cerus.com&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="ORACLE_SID"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1521&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;CERPRDDB&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1521&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;CERPRDDB&quot;"/>
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;PCLONE2&quot;"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot; ROUSER&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="P9QFbGcBWKV4luT06uhfdA=="/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot; ROUSER&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="P9QFbGcBWKV4luT06uhfdA=="/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;LM_PRODUCT&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
@@ -1961,16 +1961,16 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
     <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#10;  ARGUS_APP.LM_PRODUCT.PRODUCT_ID, &#10;  ARGUS_APP.LM_PRODUCT.PROD_NAME, &#10;  ARGUS_APP.LM_PRODUCT.FAMILY_ID, &#10;  ARGUS_APP.LM_PRODUCT.FORMULATION_ID, &#10;  ARGUS_APP.LM_PRODUCT.MANUFACTURER_ID, &#10;  ARGUS_APP.LM_PRODUCT.CONCENTRATION, &#10;  ARGUS_APP.LM_PRODUCT.CONC_UNIT_ID, &#10;  ARGUS_APP.LM_PRODUCT.INDICATION_ID, &#10;  ARGUS_APP.LM_PRODUCT.CODE_DICT, &#10;  ARGUS_APP.LM_PRODUCT.INDICATION_TEXT, &#10;  ARGUS_APP.LM_PRODUCT.INTL_BIRTH_DATE, &#10;  ARGUS_APP.LM_PRODUCT.MODEL_NO, &#10;  ARGUS_APP.LM_PRODUCT.DRL_ID, &#10;  ARGUS_APP.LM_PRODUCT.DRUG_CODE, &#10;  ARGUS_APP.LM_PRODUCT.DELETED, &#10;  ARGUS_APP.LM_PRODUCT.PROD_GENERIC_NAME, &#10;  ARGUS_APP.LM_PRODUCT.IND_LLT_CODE, &#10;  ARGUS_APP.LM_PRODUCT.IND_LLT, &#10;  ARGUS_APP.LM_PRODUCT.IND_HLT_CODE, &#10;  ARGUS_APP.LM_PRODUCT.IND_HLT, &#10;  ARGUS_APP.LM_PRODUCT.IND_HLGT_CODE, &#10;  ARGUS_APP.LM_PRODUCT.IND_HLGT, &#10;  ARGUS_APP.LM_PRODUCT.IND_SOC_CODE, &#10;  ARGUS_APP.LM_PRODUCT.IND_SOC, &#10;  ARGUS_APP.LM_PRODUCT.IND_SYN_CODE, &#10;  ARGUS_APP.LM_PRODUCT.IND_CODE_STATUS, &#10;  ARGUS_APP.LM_PRODUCT.MEDICINAL_PROD_ID, &#10;  ARGUS_APP.LM_PRODUCT.PROD_NAME_ABBRV, &#10;  ARGUS_APP.LM_PRODUCT.DEVICE_CODE, &#10;  ARGUS_APP.LM_PRODUCT.PSUR_GROUP_NAME, &#10;  ARGUS_APP.LM_PRODUCT.COMMENTS, &#10;  ARGUS_APP.LM_PRODUCT.IND_CODED, &#10;  ARGUS_APP.LM_PRODUCT.IND_REPTD, &#10;  ARGUS_APP.LM_PRODUCT.DRL_ID_J, &#10;  ARGUS_APP.LM_PRODUCT.DRUG_CODE_J, &#10;  ARGUS_APP.LM_PRODUCT.DRUG_CODE_TYPE_J, &#10;  ARGUS_APP.LM_PRODUCT.INDICATION_TEXT_J, &#10;  ARGUS_APP.LM_PRODUCT.IND_CODE_STATUS_J, &#10;  ARGUS_APP.LM_PRODUCT.IND_HLGT_J, &#10;  ARGUS_APP.LM_PRODUCT.IND_HLT_J, &#10;  ARGUS_APP.LM_PRODUCT.IND_LLT_CODE_J, &#10;  ARGUS_APP.LM_PRODUCT.IND_LLT_J, &#10;  ARGUS_APP.LM_PRODUCT.IND_SOC_J, &#10;  ARGUS_APP.LM_PRODUCT.PROD_GENERIC_NAME_J, &#10;  ARGUS_APP.LM_PRODUCT.PROD_NAME_J, &#10;  ARGUS_APP.LM_PRODUCT.IND_SYN_CODE_J, &#10;  ARGUS_APP.LM_PRODUCT.IND_CODED_J, &#10;  ARGUS_APP.LM_PRODUCT.IND_REPTD_J, &#10;  ARGUS_APP.LM_PRODUCT.DEV_INTL_BIRTH_DATE, &#10;  ARGUS_APP.LM_PRODUCT.COMMENTS_J, &#10;  ARGUS_APP.LM_PRODUCT.ENTERPRISE_ID&#10;FROM ARGUS_APP.LM_PRODUCT&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="oracle_id"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
     <elementParameter field="CHECK" name="IS_CONVERT_XMLTYPE" value="false"/>
     <elementParameter field="TABLE" name="CONVERT_XMLTYPE" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
     <elementParameter field="TEXT" name="CURSOR_SIZE" show="false" value="1000"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
@@ -2999,13 +2999,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6b7596e1-83da-46bd-aecc-b80cb827e374"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Srj7/mvvxcamthf/2Sx16Npamj2YreTJJZ6uBpKaqa0GeklP9QgtO0kXIPMgbYn55o5tPpJE5QEj&#13;
-TpGHJsIW9Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_985f4a17-b2e7-47ce-99e2-942e64720d56"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cXv3O1xxMBXIiUspcaZeIS2ryL5PvbwNoFF6KahsD6NkHI9y6nohTOXVeFRMZWilulpSBgj17unf&#13;
-X/oEMn1hVw==</DigestValue></Reference></SignedInfo><SignatureValue>NQEHDds9DngQvJuwEtCfvl3QOW6W39uaYuKmbozOD6XADL1qwQIxNizpQ05CXJjHgmAYjIjC27X0&#13;
-aGRzG8Qkn23Chfn63EvFsxJWuFiH06IxBxZtjMW3dv/VoX3pIai6NsLr5aBE5Hr208Q4ZcQMJUzZ&#13;
-eB4QmJf2Psf2xSOJHiv7vITxEv9V+FZePZ+Q33/H2RoRWdAn/lp6WqAjiUH86EbavAReLeVuquK4&#13;
-oB2qfSz2S4FMFR9dIJ/GyUeXtW4nV4OUQWbfqupvFOJDD3W8CVGWVbbXQyGwxQE/8WkWGSxfVnaC&#13;
-ocJxr5bQ0+0r+8bZbTraesvOmrlV+6tSJ6AUuw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e11dfc2e-19a1-4b01-91b2-fe9e1edf4c86"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2GSu8eoumeEWvS3/dA+My9ub2LJuZG5828MlozkwgndWr/8egFfAGE6FlTZKKdoRwZip528Cf8Bl&#13;
+7eujk6Fcbg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_273bac7d-3837-4cab-86ec-95a2d1e43538"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6WVqtNeFa7hRQtgTiR+haha1DNgl5ir9SvVbP22eXjqZI9ptTaAlWzk5J1zRpZyTaik5diskYkqY&#13;
+Ea4K1gy04Q==</DigestValue></Reference></SignedInfo><SignatureValue>C8pgGDCfvRwf/P8ZxXLVoCovJLql2MTMk9/3Ghd1E649QJGmnPdJUeRsNHGqnEKNN5wYQNJmpXVG&#13;
+gjS9RwacQbo/Ho9w/MjjY8XxRsiF7afS0B8kKnJtmznfTEdu7BqVbThFPFcPg2AEZEQbrpxGsFrd&#13;
+9sNwGREbpY6tgZXhWo3k9DDW+Tfx7YmKDK8iiw/CDKvYdmTeOf3h63DKiapMNE7/75FoN3Hyfu0o&#13;
+6s3bu0K26sCtQt+a+z4++cT4Y8aBxPfYmg4emUxyJ0vTnMCkhqZl4lXq7dVjVyfjoapxncQU48/Z&#13;
+AeZaJ9U/O5LBnM5xwfV3mOzaltdumt3jlbHhSA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -3027,4 +3027,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_985f4a17-b2e7-47ce-99e2-942e64720d56" Target="#_6b7596e1-83da-46bd-aecc-b80cb827e374"><Timestamp>2021-01-15 05:20:19</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_273bac7d-3837-4cab-86ec-95a2d1e43538" Target="#_e11dfc2e-19a1-4b01-91b2-fe9e1edf4c86"><Timestamp>2021-01-15 05:20:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
