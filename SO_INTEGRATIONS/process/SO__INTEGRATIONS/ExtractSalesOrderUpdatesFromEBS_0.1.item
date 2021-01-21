@@ -142,7 +142,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT distinct &#13;&#10;&#9;&#9;dbo.EBS_SALESORDERS.EBS_LASTUPDBY_ID&#13;&#10;&#9;FROM&#9;dbo.EBS_SALESORDERS&#13;&#10;WHERE dbo.EBS_SALESORDERS.EBS_LASTUPDBY_ID  IS NOT NULL&#13;&#10; AND (dbo.EBS_SALESORDERS.EBS_LASTUPDBY != 'CONCURRENT' or dbo.EBS_SALESORDERS.EBS_LASTUPDBY is null) &quot;&#13;&#10;&#13;&#10;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT distinct &#13;&#10;&#9;&#9;dbo.EBS_SALESORDERS.EBS_LASTUPDBY_ID&#13;&#10;&#9;FROM&#9;dbo.EBS_SALESORDERS&#13;&#10;WHERE dbo.EBS_SALESORDERS.EBS_LASTUPDBY_ID  IS NOT NULL&#13;&#10; AND dbo.EBS_SALESORDERS.EBS_LASTUPDBY != 'CONCURRENT'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -150,10 +150,10 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;integratedSecurity=true&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="true"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN" show="false">
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
       <elementValue elementRef="SCHEMA_COLUMN" value="EBS_LASTUPDBY_ID"/>
-      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="EBS_SALESORDERS"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -189,7 +189,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables name="Var" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row6.USER_NAME +&quot;@cerus.com&quot; " name="var1" type="id_String"/>
       </varTables>
@@ -237,18 +237,18 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;integratedSecurity=true&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="true"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN" show="false">
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
       <elementValue elementRef="SCHEMA_COLUMN" value="ID"/>
-      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="USER_ID"/>
-      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="USER_NAME"/>
-      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="EBS_USER_ID"/>
-      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="SFDC_USER_NAME"/>
-      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="EBS_USER_MASTER"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -1895,7 +1895,7 @@
       <column comment="" key="false" length="-1" name="inserted_date" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="out1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="&quot;SO_INTEGRATIONS&quot;" name="project_name" nullable="true" type="id_String"/>
@@ -2160,7 +2160,12 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
-  <connection connectorName="FLOW" label="OrderExtract" lineStyle="0" metaname="OrderExtract" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tDBOutput_1">
+  <connection connectorName="FLOW" label="Cancelled" lineStyle="0" metaname="Cancelled" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tDBOutput_5">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Cancelled"/>
+  </connection>
+  <connection connectorName="FLOW" label="OrderExtract" lineStyle="0" metaname="OrderExtract" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tDBOutput_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="SYS_CREATED"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -2184,11 +2189,6 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OrderExtract"/>
-  </connection>
-  <connection connectorName="FLOW" label="Cancelled" lineStyle="0" metaname="Cancelled" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tDBOutput_5">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Cancelled"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="8" metaname="XXCER_OM_HEADER_V" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2381,13 +2381,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a4d334e6-21fa-41ec-b380-1070994358ed"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>L9GyRmCjxR3UoCsA8/yru3Fd4m8kYPhycxNuGXKa9J6sBw98DqBjN80X7AKaiR4FyUNcmer+jhbA&#13;
-c+eCRC2MSw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_91ccc405-d516-4d17-a2d2-b3df7467d0ea"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pu2rX9yHpMv78VaM/asBSBthIUE7tN9/QP7urzNpl5JgZUxbP6iHOK5f9Zg9sfdi4jOUPGbB0MZi&#13;
-cqGxPg129w==</DigestValue></Reference></SignedInfo><SignatureValue>Tdv/fCKIUeNfbo+IeE4rAApsY9y4gD464Bt+bSTMogQ7MdVGP5qTWPTINB6ekos9fn/GheHGq+u7&#13;
-CSUcizn5az9De2pAgFfiU9j9fw/tJthMJagSlZCm7HJrE9L7Nwn8Bq/Mi0GpbxFnC2YQBFRNYHjP&#13;
-DIlm55PM7HepmN/rzce4xL99+oAk2g9e2ZORqrEXpSy2d+OIG86B6t0PUof4U7aveDd3jtNV79fA&#13;
-LeKe57m+Q/ZZhrWWd2+pxaGLlqdtD1s3ohm4WHH5BxAm0qS/6tXLsWxEeTHTGBnnVlIl0VYfyPpC&#13;
-m2wiIfMhrBbsVe8lX3WiBxXi6kEmQqhlDVmK7A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f915afe1-74a8-4eff-bfaa-99bd12c93d35"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>717QgbdfjdicCX9KH6ifQxPHa5X+JUsCkY2chaR029EPXkSvcSvm1HQNPXwR5EE9V9K9FtxOjZTd&#13;
+1V1QiSc7ig==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7b173528-2489-4b86-bc4d-edcf7bafc104"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>oiKXZ63AesGz2dDwaeHsJYdbF8+nmxBkGZRffujDdJmIHEbz0yDL+LJZD6l59UVKvktoRMg3LW1G&#13;
+PxznUG9MOg==</DigestValue></Reference></SignedInfo><SignatureValue>WfOYWYbYcSgCuFQSh+aEx9T2+Z/cfXt48+H4Kxh0VxZ81D+WstY+BouVD+KPeuR8DAlbU4z8rGai&#13;
+PTQMbVYIc1xmrmE8byhYAgzSEuk43k/FLPbKzen3AvwZ1c0SUxpQp+XxBgnXAIBncPZP6245RvDz&#13;
+EGohDpVZUEJznIZF3xr5fw6Y0o7I+KyyhxQyaJjLY2hg8qT8wZtcD6J+Pyef9MOy3qF82ZntzuA2&#13;
+WWYw/fPMHB4aRBNaH7sUzEgPbScOS2G6zZEe4IQJsAyoKKyNIyzO7xNmM3J//zJ/eNQyU4CyOlOb&#13;
+b5mBAzG3mTTWir1Vnc6SA6p3CL6Zb/T6DHXRQQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2409,4 +2409,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_91ccc405-d516-4d17-a2d2-b3df7467d0ea" Target="#_a4d334e6-21fa-41ec-b380-1070994358ed"><Timestamp>2021-01-08 17:32:51</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7b173528-2489-4b86-bc4d-edcf7bafc104" Target="#_f915afe1-74a8-4eff-bfaa-99bd12c93d35"><Timestamp>2021-01-13 07:03:43</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
