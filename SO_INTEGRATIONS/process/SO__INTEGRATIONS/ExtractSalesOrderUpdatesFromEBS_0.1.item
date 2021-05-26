@@ -39,7 +39,7 @@
     <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="true"/>
     <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="true"/>
     <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false"/>
-    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;C:/TSC_V7.2.1/Config_files/prod_config/credientials.txt&quot;"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;C:/Users/INFOVITY-LT-236/Desktop/Credientials/configuration_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;=&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
@@ -177,7 +177,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="copyOfout1">
+    <metadata connector="FLOW" name="Main1">
       <column comment="" key="false" length="50" name="EBS_LASTUPDBY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -193,7 +193,7 @@
       <varTables name="Var" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row6.USER_NAME +&quot;@cerus.com&quot; " name="var1" type="id_String"/>
       </varTables>
-      <outputTables name="copyOfout1" sizeState="INTERMEDIATE">
+      <outputTables name="Main1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row6.USER_NAME " name="EBS_LASTUPDBY" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.USER_ID " name="EBS_LASTUPDBY_ID" nullable="true" type="id_String"/>
         <mapperTableEntries expression="Var.var1 " name="SFDC_USER_NAME" nullable="true" type="id_String"/>
@@ -2133,7 +2133,7 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tJava_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
   </connection>
-  <connection connectorName="FLOW" label="copyOfout1" lineStyle="0" metaname="copyOfout1" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tDBOutput_2">
+  <connection connectorName="FLOW" label="Main1" lineStyle="0" metaname="Main1" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tDBOutput_2">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="EBS_CREATEDBY_ID"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -2149,7 +2149,7 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfout1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Main1"/>
   </connection>
   <connection connectorName="FLOW" label="row6" lineStyle="8" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2194,12 +2194,7 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
-  <connection connectorName="FLOW" label="Cancelled" lineStyle="0" metaname="Cancelled" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tDBOutput_5">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Cancelled"/>
-  </connection>
-  <connection connectorName="FLOW" label="OrderExtract" lineStyle="0" metaname="OrderExtract" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tDBOutput_1">
+  <connection connectorName="FLOW" label="OrderExtract" lineStyle="0" metaname="OrderExtract" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tDBOutput_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="SYS_CREATED"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -2223,6 +2218,11 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OrderExtract"/>
+  </connection>
+  <connection connectorName="FLOW" label="Cancelled" lineStyle="0" metaname="Cancelled" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tDBOutput_5">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Cancelled"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="8" metaname="XXCER_OM_HEADER_V" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2453,13 +2453,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_eb20bd1d-7d6e-49e6-bb2e-b60dfd87794e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hzwsMEQY0FJ8FpRIj7gf4gzXIjsqNt9GOV8KrGDakIAAckeHezszYSbGpwYZgwatkPw7wnmJYnxO&#13;
-4V2v34uxyw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6fd6d77b-d933-4ce8-b919-72572c747339"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xzGKf/7hpqX6fJJNugeHO9OsEF8yaolMvvlRx+c83VboQW3NJqHbLTqtNrswE91dtuj1f8nMVL9a&#13;
-fF+NSHce8g==</DigestValue></Reference></SignedInfo><SignatureValue>jaDtPp4IgNF4LnVlmR0tXIBVzSX1mf+e2e788Xwr0GYJNPyDrgvAloAxn5Lt9GfVh/Wp3IfbyOZE&#13;
-KqjLlPZ+3HmWfTb6taAMGfgHi3YDlIkus7MkSM4beetkawUpPybnALfx6QIe3sGe7zXpOyuZRqee&#13;
-a2cL2gdtsTeOeLtjBBXNg4RvD4TEr7gejtLJ5f3GGDGcz9MOe6sOzAEOH/X3bVDJXEF3wF3+uLEt&#13;
-mS8b+JnDYxVwDSqN5yjJzBbh1dmZlieBhEKm5dUleIb3mWYhaxRftqAxbEQr3FOw23nxEVghK3GJ&#13;
-QM39JrO8V/PziOsUbWVfTQPax+Wf4M8Y1XNjvA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fe1bb82a-f711-4a64-b10d-365d4eedfeb4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>r2kehq4N058cfL75QA2GHMrHlnEHjZo0ZxDLdmzZPKL0HHuyoze7zrp9gvsQwoV5OKVcF/hBJNrn&#13;
+fU4W66DVgA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ccd7412a-8bc9-4d1d-a6c8-d9b94f9a1a4c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Ya+u9xKdJEfcGUWySOmU1AFsSciFaw6Scv9Qy+GIuqBKr5gXhq8Su+WmyQTigWdgYLJIB+6yH0qk&#13;
+o/HDtLoepw==</DigestValue></Reference></SignedInfo><SignatureValue>D6SXhx7v0svo6A3S9cmHce6NSEmRkkimZl2WYtCB43FcAACt0Tp6PEHt4SWU2kto/41eDrKbjWsv&#13;
+xtBBXDT3eSs/4NEg8t5oH7rqu/rgZ5oRKgcLaVlo1gp5JmOK/qnpuNgy9T+R5XvWdlecO+hqo4uq&#13;
+jO3kNokcD12MO16iczx9MwJdUHrYbPE1afrPjD3hUnV8D6OqcezTQH0XVDZUNpXHuyrS99qBYrSs&#13;
+q79GsYe20saKJgkX/lzaXiJpWyO8w8A9YNDIfPpiLvDmcOQ6YxBtAhn0VURD5IE4+/CXNsLPr0mD&#13;
+Aq1JpxV656y3DGSSSTaW+I+wWZAvi1mGbKXvIg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2481,4 +2481,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6fd6d77b-d933-4ce8-b919-72572c747339" Target="#_eb20bd1d-7d6e-49e6-bb2e-b60dfd87794e"><Timestamp>2021-01-23 13:43:44</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ccd7412a-8bc9-4d1d-a6c8-d9b94f9a1a4c" Target="#_fe1bb82a-f711-4a64-b10d-365d4eedfeb4"><Timestamp>2021-05-26 11:03:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
