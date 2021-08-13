@@ -272,18 +272,20 @@
       </inputTables>
       <inputTables activateCondensedTool="true" innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="SQLAllocDB" sizeState="INTERMEDIATE">
         <mapperTableEntries name="Prd_Alloc_id" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="Allocation_Qty" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="Allocation_Qty" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="Balance_Qty" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="PreAllocation_Qty" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="Sys_created" nullable="true" type="id_Date"/>
         <mapperTableEntries name="Sys_lastupd" nullable="true" type="id_Date"/>
         <mapperTableEntries name="Syst_created_by" nullable="true" type="id_String"/>
         <mapperTableEntries name="Sys_lastupd_by" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="STGsqlDB.customer_id " name="Customer" nullable="true" operator="=" type="id_String"/>
-        <mapperTableEntries expression="STGsqlDB.partnum " name="Part" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="STGsqlDB.period " name="Period" nullable="true" operator="=" type="id_String"/>
+        <mapperTableEntries name="Customer" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Part" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Period" nullable="true" type="id_String"/>
         <mapperTableEntries name="total_grp_actual_qty" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="territory" nullable="true" type="id_String"/>
+        <mapperTableEntries name="EBS_ALLOC_QTY" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PreBalance_Qty" nullable="true" type="id_Integer"/>
       </inputTables>
     </nodeData>
   </node>
@@ -400,27 +402,29 @@
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
-    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="JTDS"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tDBConnection_2"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;BISON&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="0RMsyjmybrE="/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;cer_devint&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;cerdevint&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_vZapwPxrEeuLnaNXnnM98g - XXCER_PRODUCT_ALLOCATION"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER_PRODUCT_ALLOCATION&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * from XXCER_PRODUCT_ALLOCATION&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.XXCER_PRODUCT_ALLOCATION.Prd_Alloc_id,&#10;&#9;&#9;dbo.XXCER_PRODUCT_ALLOCATION.Allocation_Qty,&#10;&#9;&#9;dbo.XXCER_PRODUCT_ALLOCATION.Balance_Qty,&#10;&#9;&#9;dbo.XXCER_PRODUCT_ALLOCATION.PreAllocation_Qty,&#10;&#9;&#9;dbo.XXCER_PRODUCT_ALLOCATION.Sys_created,&#10;&#9;&#9;dbo.XXCER_PRODUCT_ALLOCATION.Sys_lastupd,&#10;&#9;&#9;dbo.XXCER_PRODUCT_ALLOCATION.Syst_created_by,&#10;&#9;&#9;dbo.XXCER_PRODUCT_ALLOCATION.Sys_lastupd_by,&#10;&#9;&#9;dbo.XXCER_PRODUCT_ALLOCATION.Customer,&#10;&#9;&#9;dbo.XXCER_PRODUCT_ALLOCATION.Part,&#10;&#9;&#9;dbo.XXCER_PRODUCT_ALLOCATION.Period,&#10;&#9;&#9;dbo.XXCER_PRODUCT_ALLOCATION.total_grp_actual_qty,&#10;&#9;&#9;dbo.XXCER_PRODUCT_ALLOCATION.territory,&#10;&#9;&#9;dbo.XXCER_PRODUCT_ALLOCATION.EBS_ALLOC_QTY,&#10;&#9;&#9;dbo.XXCER_PRODUCT_ALLOCATION.PreBalance_Qty&#10;FROM&#9;dbo.XXCER_PRODUCT_ALLOCATION&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
-    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
@@ -451,22 +455,58 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="territory"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EBS_ALLOC_QTY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PreBalance_Qty"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDBInput_2">
-      <column comment="" key="false" length="-1" name="Prd_Alloc_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="Allocation_Qty" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="Balance_Qty" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="PreAllocation_Qty" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Sys_created" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Sys_lastupd" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Syst_created_by" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Sys_lastupd_by" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Customer" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Part" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Period" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="total_grp_actual_qty" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="territory" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    <metadata connector="FLOW" label="XXCER_PRODUCT_ALLOCATION" name="tDBInput_2">
+      <column comment="" key="false" length="255" name="Prd_Alloc_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="Allocation_Qty" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="Balance_Qty" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="PreAllocation_Qty" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="Sys_created" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="Sys_lastupd" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Syst_created_by" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Sys_lastupd_by" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Customer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Part" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Period" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="total_grp_actual_qty" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="territory" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="EBS_ALLOC_QTY" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="PreBalance_Qty" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
     </metadata>
   </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="512">
@@ -835,13 +875,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c5656b41-606d-43e1-9eb7-8e56d393c03d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XciH0EsA46/Ab8f3ls0alKzaIYCf8A4GlgBPEH7j2ihkfVTcn9MLnyZGlLf+ememE8dqN543L2hI&#13;
-P1JMZ3yA0w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_adbb918b-8f5b-427b-9781-212a6bfd07fc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8vGFdt2Apm063P7oKxvEPnSfI1vjYC8q+lkwWwOUS+Um976n1qaDF0ePm8upZmnphzRyo7gJWicd&#13;
-HRLraEAtKQ==</DigestValue></Reference></SignedInfo><SignatureValue>fY6KdVEgKLRga536znFjP/9E+Ob92AJodjv69AfLHMRFh+UazNxqjLfs3S4n/lBgWWr9oHr3je4m&#13;
-4IlgqGKktZaeLFqnuO98lUNHdoa4uLkrThBAO3yNaV/LrHKaF7QW6Y74GJhYdAEsAT3QyhtEwKvD&#13;
-qx4j7nNL7tCi+uGGOPjfZ4Y6UOj8Pg780PrF5fgPhx1KcQ6rIaMaMIOAlnAtSPkAp/6mhW+OrC4z&#13;
-F/4aiES7nlD9xPnDanOEnURicQDzqlVay8q2PvWIfXt5DkrDwE6kUj74dDQwWQhMzASEsGxTpFxu&#13;
-PKKljNe9d2THxY/vinUo+pw6hUZLn3kFXeyYXg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e13d48e1-5e9b-4eb9-b9f3-c2b3701884be"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>w1RMObWrTB299lGeaUhHprkTxGu1ui5skHhrm7QKl02sVbY7pvuEPJSHAAI0bOOPGrbp9a+M304P&#13;
+JuQv6OyRoQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_82130871-4089-473b-a74a-238051d7f633"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>HIX1/AFjV6BK4UKLUvgT2QTt69RJFyvafv8+adBFwI1XqzZQvPhBBcRKN4VfO/juc4Zh8yj8HKYt&#13;
+Wze5zd7+KQ==</DigestValue></Reference></SignedInfo><SignatureValue>lmbjebW1roV5z+wIC96CrZJ52cWCTcr9RUz3wf5I3RiD3+nFFqsb/RBLr7KFbUnPk952Hdt5EMkx&#13;
+T85qwJBZ6hR3caRF2hUrTNea7zqvNgjY0JYI0mwctEuUa5xHxTxN2Rfm/wddcqdUZv92p8BpoKTF&#13;
+ADfP8b2vKfvb0U4KOMHAA7rXVLqC/CHxn2U2rnGEHi1beMkPZb5Dy1o6ISqmMWWdUa4zJjQQmEaT&#13;
+z2OFcjHkDqtGunWlhJLx0WfDPboXO7ZvMhg6e28NgoSgGlkJ8Z6BzTOmbdDdGa9jeyb4NXNBQLei&#13;
+MwvljlkEaInaKHA07u/Nh7Co8kf1BHLPyxZH4Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -863,4 +903,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_adbb918b-8f5b-427b-9781-212a6bfd07fc" Target="#_c5656b41-606d-43e1-9eb7-8e56d393c03d"><Timestamp>2021-08-13 19:39:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_82130871-4089-473b-a74a-238051d7f633" Target="#_e13d48e1-5e9b-4eb9-b9f3-c2b3701884be"><Timestamp>2021-08-13 19:40:13</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
