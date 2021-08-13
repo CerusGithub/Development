@@ -186,12 +186,14 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" show="false" value="0RMsyjmybrE="/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;STG_XXCER_PRODUCT_ALLOCATION&quot;"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_vZapwPxrEeuLnaNXnnM98g - STG_PRODUCT_ALLOCATION"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;STG_PRODUCT_ALLOCATION&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot; select territory,customer_id,partnum,aug as allocation_quantity &#13;&#10; from STG_XXCER_PRODUCT_ALLOCATION &#13;&#10;where territory not in('American Red Cross','France')&#13;&#10;period= current month&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT STG_PRODUCT_ALLOCATION.Area,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Region,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Territory,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.CountryName,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Customer_Name,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Customer_ID,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Short,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Prod_Group,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Rollup,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.PartNum,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.jan,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.feb,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.march,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.april,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.may,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.june,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.july,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.aug,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.sep&#10;FROM&#9;STG_PRODUCT_ALLOCATION&#13;&#10;where &#9;&#9;STG_PRODUCT_ALLOCATION.aug,= 'Aug'&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -201,25 +203,105 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="territory"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Area"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="customer_id"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Region"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="partnum"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Territory"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="allocation_quantity"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CountryName"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="period"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Customer_Name"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Customer_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Short"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Prod_Group"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Rollup"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PartNum"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="jan"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="feb"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="march"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="april"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="may"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="june"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="july"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aug"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="sep"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="STGdata"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDBInput_1">
-      <column comment="" key="false" length="-1" name="territory" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="customer_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="partnum" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="allocation_quantity" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="period" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    <metadata connector="FLOW" label="STG_PRODUCT_ALLOCATION" name="tDBInput_1">
+      <column comment="" key="false" length="255" name="Area" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Region" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Territory" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="CountryName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Customer_Name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Customer_ID" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Short" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Prod_Group" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Rollup" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="PartNum" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="jan" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="feb" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="march" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="april" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="may" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="june" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="july" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="aug" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="sep" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="416" posY="224">
@@ -248,7 +330,7 @@
       <column comment="" key="false" length="-1" name="territory" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables activateCondensedTool="true" name="row13" reject="true" rejectInnerJoin="true" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row7.customer_id+&quot; &quot; +row7.partnum+&quot; &quot;+&quot;202108&quot; " name="Prd_Alloc_id" nullable="true" type="id_String"/>
@@ -262,11 +344,25 @@
         <mapperTableEntries expression="" name="territory" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="territory" nullable="true" type="id_String"/>
-        <mapperTableEntries name="customer_id" nullable="true" type="id_String"/>
-        <mapperTableEntries name="partnum" nullable="true" type="id_String"/>
-        <mapperTableEntries name="allocation_quantity" nullable="true" type="id_String"/>
-        <mapperTableEntries name="period" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Area" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Region" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Territory" nullable="true" type="id_String"/>
+        <mapperTableEntries name="CountryName" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Customer_Name" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Customer_ID" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Short" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Prod_Group" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Rollup" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PartNum" nullable="true" type="id_String"/>
+        <mapperTableEntries name="jan" nullable="true" type="id_String"/>
+        <mapperTableEntries name="feb" nullable="true" type="id_String"/>
+        <mapperTableEntries name="march" nullable="true" type="id_String"/>
+        <mapperTableEntries name="april" nullable="true" type="id_String"/>
+        <mapperTableEntries name="may" nullable="true" type="id_String"/>
+        <mapperTableEntries name="june" nullable="true" type="id_String"/>
+        <mapperTableEntries name="july" nullable="true" type="id_String"/>
+        <mapperTableEntries name="aug" nullable="true" type="id_String"/>
+        <mapperTableEntries name="sep" nullable="true" type="id_String"/>
       </inputTables>
       <inputTables activateCondensedTool="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
         <mapperTableEntries name="Prd_Alloc_id" nullable="true" type="id_String"/>
@@ -505,13 +601,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_34ed1c3a-426a-4dee-8a85-6e774cdf4415"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UBtztQAxGIYvarMLdHY3hFRHbWnseSWVQ8KAO1oMrQ2FUzBxnp77yTyNl2WgvYhbhq2ydCbRd/7d&#13;
-GRWpk+l23w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e9edf286-28ba-49f2-b9fb-62d15809160b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>d16P8fOXZRGsvQYTxnyGV/5g11OFog8fxTJ53K9P5ExHJh4D9VEsUzK4MESio2PmVG5f8ClRqPM5&#13;
-bO7Xp0v8IQ==</DigestValue></Reference></SignedInfo><SignatureValue>RhZwXWj+c+z0L6/Aa1qrj3RNk0Ur+lm8ykFzp/ylVWwNPpCcG3NAYlJIaZuD4EuJl44VVGlGmNpS&#13;
-ifUcmGblH53U/acMqxzqmnJ//QJzEveGnijUy+9/GUZazSStG79O1y/eXs7jVdyQ5bcbZ/Mi3MNZ&#13;
-kxCcQxE1SPTrvwuUsDTwSXETkTyZSm+F3GXENXkCZ4dWQoG/zziiq9ZEtU4ixvWJ/6omi2fdmvGs&#13;
-EzB1g0HvbwVUkNmveN0t/PEEn0SaFjq+fwIDEPiWVnbIhpAke7gjbfu5ybkwZ3MRKxV7tQnPLmqQ&#13;
-yTE3bMuRvlAhChvU36wX8s9NrJeRSFhPWuMwXA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8ed46403-14c6-4133-b7c3-0e09386ba70f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2yFwYT0E6kDG0BTT64CLwh0YSeg0luDR8+98Zh7pUge4G2ACooanNpk/Fu35H1Z8nyUlhXEJz5E1&#13;
+HKP39kDokQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_092db849-c15a-4cc8-9ead-effbe6fc651f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>25bhLRhCTwa2fWsmXIePLAms9nOyPJtMwGhjCVkiCk3G5nOCzLMPGbbm/kv5uMCDcWEq6L7Nxku7&#13;
+XE0zfJTUZA==</DigestValue></Reference></SignedInfo><SignatureValue>iD0KnRE3zSj7xJLz48NS176Qi7NPtiCk7Mzek8FqN69TJrdI12dNRlmn4tRzt5zElrzHzZapAbtZ&#13;
+G3xUcz4+AsIpVd4dqFc/JbtpRG2TYfMfEzL+nKZHebA9v8SzJGAf+8+IOeced3MdnV8TUAch1emG&#13;
+b+LCZbF9Cvtgo+78DWQfnaWlAMtrdtFTvWQhQXPVk1NTuHtgzJeqyXThRLihO8PobWhwgwEYDbab&#13;
+K5XLmVT1f8lSEnHAmIlSoL5PATJ3JZ0B8eFyaOaCsi7ep8AKJD/UF56/53ex0fyEVbruxscYlAl6&#13;
+9TeSzSHaJ2FZAmi/XDA0dZ98Ja7skUO5wQT6RQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -533,4 +629,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e9edf286-28ba-49f2-b9fb-62d15809160b" Target="#_34ed1c3a-426a-4dee-8a85-6e774cdf4415"><Timestamp>2021-08-13 22:12:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_092db849-c15a-4cc8-9ead-effbe6fc651f" Target="#_8ed46403-14c6-4133-b7c3-0e09386ba70f"><Timestamp>2021-08-13 22:15:23</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
