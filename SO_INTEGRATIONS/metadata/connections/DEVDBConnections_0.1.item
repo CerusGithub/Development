@@ -2650,7 +2650,9 @@
         </feature>
       </ownedElement>
       <ownedElement id="_BdDX4Px4EeuLnaNXnnM98g" label="PRODUCT_ALLOCATION" name="PRODUCT_ALLOCATION" tableType="TABLE" xmi:id="_BdDX4fx4EeuLnaNXnnM98g" xsi:type="relational:TdTable">
-        <feature label="Prd_Alloc_id" length="255" name="Prd_Alloc_id" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_BdDX4vx4EeuLnaNXnnM98g" xsi:type="relational:TdColumn"/>
+        <feature label="Prd_Alloc_id" length="255" name="Prd_Alloc_id" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_BdDX4vx4EeuLnaNXnnM98g" xsi:type="relational:TdColumn">
+          <initialValue xmi:id="_SgvE4PyEEeuLnaNXnnM98g"/>
+        </feature>
         <feature label="PreAllocation_Qty" length="10" name="PreAllocation_Qty" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_BdDX5vx4EeuLnaNXnnM98g" xsi:type="relational:TdColumn"/>
         <feature label="Allocation_Qty" length="10" name="Allocation_Qty" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_BdDX6vx4EeuLnaNXnnM98g" xsi:type="relational:TdColumn"/>
         <feature label="Balance_Qty" length="10" name="Balance_Qty" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_BdDX7vx4EeuLnaNXnnM98g" xsi:type="relational:TdColumn"/>
@@ -2659,10 +2661,18 @@
         <feature label="Total_grp_actual_qty" length="10" name="Total_grp_actual_qty" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_BdDX-vx4EeuLnaNXnnM98g" xsi:type="relational:TdColumn"/>
         <feature label="Total_actual_qty" length="10" name="Total_actual_qty" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_BdDX_vx4EeuLnaNXnnM98g" xsi:type="relational:TdColumn"/>
         <feature label="group_name" length="10" name="group_name" pattern="&quot;dd-MM-yyyy&quot;" sourceType="INT" talendType="id_Integer" xmi:id="_BdDYAvx4EeuLnaNXnnM98g" xsi:type="relational:TdColumn"/>
-        <feature label="Territory" length="255" name="Territory" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_BdDYBvx4EeuLnaNXnnM98g" xsi:type="relational:TdColumn"/>
-        <feature label="Customer" length="255" name="Customer" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_BdDYCvx4EeuLnaNXnnM98g" xsi:type="relational:TdColumn"/>
-        <feature label="Part" length="255" name="Part" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_BdDYDvx4EeuLnaNXnnM98g" xsi:type="relational:TdColumn"/>
-        <feature label="Period" length="255" name="Period" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_BdDYEvx4EeuLnaNXnnM98g" xsi:type="relational:TdColumn"/>
+        <feature label="Territory" length="255" name="Territory" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_BdDYBvx4EeuLnaNXnnM98g" xsi:type="relational:TdColumn">
+          <initialValue xmi:id="_SgvE4fyEEeuLnaNXnnM98g"/>
+        </feature>
+        <feature label="Customer" length="255" name="Customer" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_BdDYCvx4EeuLnaNXnnM98g" xsi:type="relational:TdColumn">
+          <initialValue xmi:id="_SgvE4vyEEeuLnaNXnnM98g"/>
+        </feature>
+        <feature label="Part" length="255" name="Part" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_BdDYDvx4EeuLnaNXnnM98g" xsi:type="relational:TdColumn">
+          <initialValue xmi:id="_SgvE4_yEEeuLnaNXnnM98g"/>
+        </feature>
+        <feature label="Period" length="255" name="Period" pattern="&quot;dd-MM-yyyy&quot;" sourceType="VARCHAR" talendType="id_String" xmi:id="_BdDYEvx4EeuLnaNXnnM98g" xsi:type="relational:TdColumn">
+          <initialValue xmi:id="_SgvE5PyEEeuLnaNXnnM98g"/>
+        </feature>
       </ownedElement>
       <ownedElement id="_sLPj8PxzEeuLnaNXnnM98g" label="STG_PRODUCT_ALLOCATION" name="STG_PRODUCT_ALLOCATION" tableType="TABLE" xmi:id="_sLZU8PxzEeuLnaNXnnM98g" xsi:type="relational:TdTable">
         <feature label="Area" length="255" name="Area" sourceType="VARCHAR" talendType="id_String" xmi:id="_sLZU8fxzEeuLnaNXnnM98g" xsi:type="relational:TdColumn">
@@ -2927,13 +2937,13 @@
       </ownedElement>
     </ownedElement>
   </orgomg.cwm.resource.relational:Catalog>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b630d744-5262-4266-89f8-a1d9479c7464"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Sfhnz1zcGHBoQmcE25Miwjugm1RV2Xba7hHkS1hJo13NqAv2ChMaDypX6OI1wbzyYaiTSUnILZDt&#13;
-fRjzdX3w8g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_673249c5-653f-4c0a-a05c-158102ea8102"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>elMHVbNhM/crnz4ml/jvK3JQ94XYW2y77w0mpeyw0qoYbj4raYZhte9BXSQeGE1NAvdm8EiQjAPB&#13;
-mKuJSvBtzQ==</DigestValue></Reference></SignedInfo><SignatureValue>PA/BSftxKRCjqndMywatPfEWn/CVIHu4Pnsp6Ax0P+M25J0b01IL+owUkzl7SUVOPYhmix0fGSDr&#13;
-yDl/VOBNt1eNiG94lQO/Ndiyqd6V27wv9wSoELPxi9B6nCDCGXgiM0mJWBjHoxp3RrmFSNGCJlC3&#13;
-BzAaGDK1g+k+iF4oXQADT9pCs4tGlW7NGynAU6Uufd7FFGNjmOvvASJzJMui2wbcCljUDYAZPjhE&#13;
-NcE0hTiEvsylVPIKwH3CIQtduN/YYN6Zn7RRk9UCzRTnhoemgwthatovxkzhjcZd31HwKykAWGoA&#13;
-VrFQw3vY2k4UunCX76YAlLDF8uxc3bsExQ+lvQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_724b4a79-c04f-4026-9e5a-38b15c2235ae"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FX9HDxPR8ib9BSGR6rutmu19sBD8w3Lb6mD+PmfPBnz+VgiLNNxts0bMbLuklomzHtDe/jrk92Ec&#13;
+59zyZbaspg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e892db03-3e85-4805-ac09-339d8a078674"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>D8fh8BPHtWU0Urau4KQJQ7AksV7vyTNm3CXnDiSmAiHQqy/GrdRMeg903f9uUatRHUgQN7udPsdu&#13;
+PpIgB0eCtA==</DigestValue></Reference></SignedInfo><SignatureValue>huBwt3hImlSkzogR6WYu7n70qRJ+GY0fOVAfYH0/KOYZELXcDuWSwGfcq7dOpx+gKQhkYM41xZ6x&#13;
+xhlrkdBZgC3Pj9DmV0piAmsNjgFv977FEhNaTe+mXcJMaTIywWk/AucxY0CDMYYERPo1pE0DetVU&#13;
+DozjuisVYLoJOF1i5lyyRoDjr5Yb6ODl9eUbsFN/Zy6MOjhLO7eVdCVhnob9ogv+871jqduVOxYZ&#13;
+T3BpwgjsEBvw4WrpGZ9Tfwr8no7BUAo9VU9hiBEqVG9Rl0joLnG2M4yhay4T4Hsa24zy4LQRYam1&#13;
+5cu4TS3TzNlNn2S+9ZTuMicCSD6eOk2iSWXwRQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2955,4 +2965,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_673249c5-653f-4c0a-a05c-158102ea8102" Target="#_b630d744-5262-4266-89f8-a1d9479c7464"><Timestamp>2021-08-13 22:11:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e892db03-3e85-4805-ac09-339d8a078674" Target="#_724b4a79-c04f-4026-9e5a-38b15c2235ae"><Timestamp>2021-08-13 22:17:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
