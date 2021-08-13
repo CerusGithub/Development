@@ -193,7 +193,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT STG_PRODUCT_ALLOCATION.Area,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Region,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Territory,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.CountryName,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Customer_Name,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Customer_ID,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Short,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Prod_Group,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Rollup,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.PartNum,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.jan,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.feb,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.march,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.april,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.may,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.june,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.july,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.aug,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.sep&#10;FROM&#9;STG_PRODUCT_ALLOCATION&#13;&#10;where &#9;&#9;STG_PRODUCT_ALLOCATION.aug,= 'Aug'&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT STG_PRODUCT_ALLOCATION.Area,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Region,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Territory,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.CountryName,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Customer_Name,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Customer_ID,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Short,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Prod_Group,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Rollup,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.PartNum,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.jan,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.feb,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.march,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.april,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.may,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.june,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.july,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.aug,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.sep&#10;FROM&#9; STG_PRODUCT_ALLOCATION&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -333,7 +333,7 @@
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables activateCondensedTool="true" name="row13" reject="true" rejectInnerJoin="true" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row1.customer_id+&quot; &quot; +row1.PartNum+&quot; &quot;+&quot;202108&quot; " name="Prd_Alloc_id" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Customer_ID+&quot; &quot; +row1.PartNum+&quot; &quot;+&quot;202108&quot; " name="Prd_Alloc_id" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.aug" name="Allocation_Qty" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression=" " name="Balance_Qty" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="" name="PreAllocation_Qty" nullable="true" type="id_Integer"/>
@@ -608,13 +608,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9287a663-2a92-492d-b2b9-7eb7564e869b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GQjAgGkhKdalQIDssNjy2BSTX5qzp22zOBWdKb8wiw3quWnBLibrS3aG2AfOPHJk+8Gn+50ONXkY&#13;
-H/wdGIrt/A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9059428b-3d83-43f1-9a87-70cdee737dec"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+bam9fdwjPQym1u1qPyTqmBnGcgw4hQfippW6/p9St8LdgzyAoX0WCJ/XUxZ6FmhS84lvR9pTKMm&#13;
-ICncBnKAtg==</DigestValue></Reference></SignedInfo><SignatureValue>ip1sgOEO5CsiRwvPaMFeR5gKGSqQLgXdr88UHdi5vrxapRUVeCAsPu4a1oA4y83mvOxwG1mJi/0I&#13;
-x51Ztx5+fX8CaHPcNoPVqf+CZPOZqZDeEdyXhYG+hsyHZcE7myPmndX88W8MllAIxb22RpXnsjS6&#13;
-db0xTMyCe4VHHJqRa0kKgTp+trgRyYiPH/67f5kRzPaB43rC0/+gYRsKmyC82iPKBLRDN1d/fz1d&#13;
-RaA2gbN4wiu/qoa2iBOmT9StBw+GshAKJigvYtW22czo5lshakrLBGAMRjdbrFTs5P3N0KR1WM/4&#13;
-RhjfLVi7tpvkeeLZoCR88Apuz8Pji+s/HtjqUw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_33afb34d-781b-4bbb-b679-38e39fd0dc4a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>H8KIgkAh237RClKD90dqoKvatnGfXkOXlMrw2kQla2DqNG98dbHL2s7QIMDTjaYU9bnloHVRp14I&#13;
+fJI4TFDE7A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e40b91f8-c4d0-4961-a0c3-0d939b63a8d5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rOrosNrCAmePBzwNRFfodEdVv6h4koLP3ejBAraRb/MY2vDkgJs+86qUImsFNKwxTp8ViTNmFnyn&#13;
+Qq21dNF80Q==</DigestValue></Reference></SignedInfo><SignatureValue>mEEYDY0rWd0mSqfxt0M/zZpgW4WUsliLkowtzzBIz4y7/OA1ZCR1sUKNFlTYAHGYpbek0BwTog6o&#13;
+G33rnCCrN0vJsU0aHO9pd8IVKW1o6IiGkeJZNiMXwTDtSz/LzKCdZEo2B1zzFj13thk6chHN9rOs&#13;
+Y5B/dzyvGWGhX4n/OhOYPhj0K5navtDseolT4HYzt2WnQQUvusCBluMDckKgRkx97Y74seBxeoYD&#13;
+BrT4La8AnOsnduKDQy57pfoHt1/RPqK77z05bhQh3xzVxFAcsXaWvsWRfmaBuRxqWXcfnDacVkNI&#13;
+syJR6RH3C0sXDSAvHynoPL1cAUTxuuTHuiUdqw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -636,4 +636,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9059428b-3d83-43f1-9a87-70cdee737dec" Target="#_9287a663-2a92-492d-b2b9-7eb7564e869b"><Timestamp>2021-08-13 22:31:20</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e40b91f8-c4d0-4961-a0c3-0d939b63a8d5" Target="#_33afb34d-781b-4bbb-b679-38e39fd0dc4a"><Timestamp>2021-08-13 22:33:18</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
