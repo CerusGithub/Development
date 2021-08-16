@@ -109,7 +109,7 @@
     <routinesParameter id="_jC4qcFCfEeurLaZN3Zkqpg" name="TalendStringUtil"/>
     <routinesParameter id="_jClvgFCfEeurLaZN3Zkqpg" name="TalendString"/>
   </parameters>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="96">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
@@ -128,7 +128,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT STG_PRODUCT_ALLOCATION.Area,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Region,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Territory,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.CountryName,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Customer_Name,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Customer_ID,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Short,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Prod_Group,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Rollup,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.PartNum,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.jan,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.feb,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.march,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.april,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.may,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.june,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.july,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.aug,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.sep&#10;FROM&#9;STG_PRODUCT_ALLOCATION&#13;&#10;where &#9;&#9;STG_PRODUCT_ALLOCATION.aug, != 'Aug'&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT STG_PRODUCT_ALLOCATION.Area,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Region,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Territory,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.CountryName,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Customer_Name,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Customer_ID,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Short,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Prod_Group,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.Rollup,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.PartNum,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.jan,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.feb,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.march,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.april,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.may,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.june,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.july,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.aug,&#10;&#9;&#9;STG_PRODUCT_ALLOCATION.sep&#10;FROM&#9;STG_PRODUCT_ALLOCATION&#13;&#10;where &#9;&#9;STG_PRODUCT_ALLOCATION.aug,= 'Aug'&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -239,12 +239,12 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="352" posY="96">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="384" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_LRexEPxREeuLnaNXnnM98g-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_PuRFcPxREeuLnaNXnnM98g-tMap_1-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -269,14 +269,14 @@
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables activateCondensedTool="true" name="row13" reject="true" rejectInnerJoin="true" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row7.customer_id+&quot; &quot; +row7.partnum+&quot; &quot;+&quot;202108&quot; " name="Prd_Alloc_id" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.Aug" name="Allocation_Qty" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression=" row2.Balance_Qty " name="Balance_Qty" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression=" " name="Allocation_Qty" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="(row1.Aug - row2.PreAllocation_Qty) + row2.Pre_balance_qty " name="Balance_Qty" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="" name="PreAllocation_Qty" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="" name="Customer" nullable="true" type="id_String"/>
         <mapperTableEntries expression="" name="Part" nullable="true" type="id_String"/>
         <mapperTableEntries expression="" name="Period" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="total_grp_actual_qty" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression=" " name="territory" nullable="true" type="id_String"/>
+        <mapperTableEntries name="total_grp_actual_qty" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="" name="territory" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="Area" nullable="true" type="id_String"/>
@@ -317,7 +317,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="224">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tDBConnection_2"/>
@@ -338,7 +338,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.PRODUCT_ALLOCATION.Prd_Alloc_id,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.PreAllocation_Qty,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Allocation_Qty,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Balance_Qty,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Ebs_alloc_qty,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Pre_balance_qty,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Total_grp_actual_qty,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Total_actual_qty,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.group_name,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Territory,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Customer,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Part,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Period&#10;FROM&#9;dbo.PRODUCT_ALLOCATION&#13;&#10;Where  dbo.PRODUCT_ALLOCATION.Period != '2021-08'&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.PRODUCT_ALLOCATION.Prd_Alloc_id,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.PreAllocation_Qty,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Allocation_Qty,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Balance_Qty,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Ebs_alloc_qty,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Pre_balance_qty,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Total_grp_actual_qty,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Total_actual_qty,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.group_name,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Territory,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Customer,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Part,&#10;&#9;&#9;dbo.PRODUCT_ALLOCATION.Period&#10;FROM&#9;dbo.PRODUCT_ALLOCATION&#13;&#10;Where &#9;&#9;dbo.PRODUCT_ALLOCATION.Period = '2021-07'&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -423,7 +423,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="96">
+  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_vZapwPxrEeuLnaNXnnM98g"/>
@@ -555,13 +555,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5a8c0bbd-ac99-432a-89fb-186616b54144"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Sx212iE/in0r52JoaVvjn1Cfomn8VSbmBFOGQ3/YrCWpMJkiYGrlMnrQRJlCkUxLuMlj5hG/FlvY&#13;
-0FemiSRT3Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_effaafcc-97d5-4b08-8026-78ec08de48dd"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Wujfk0K8bzGuUHmSHFYYIY+zTR7rQ7jJ4mKBlB1/rjYOmHRXXFvhue4fiqXdFrTeppZPXtyvpFi3&#13;
-3172Gq0LWg==</DigestValue></Reference></SignedInfo><SignatureValue>Z5sEiOtNUTiaOpVWHyt0X8TyZnhaoMjqWYsgr61YJtfOxgGciY4wK3lmGZvEsptiVrdEl0nsnRdU&#13;
-YAD/7EkdxWzmRQQnhDF78pYAAhgSVIQmS0WqlKy7PMFS8ywspsXRerwgdJ3U+4Fa/uQ071KJEqWL&#13;
-pKOpljzirAOHaGFTSv9Sk8uTtvZtJ4UUJPBImdGkCiCpsMyCT7rUXKKoPlMUGiaqUCldbuGwRA5G&#13;
-hb5pwrCQHUTBeRw4x8B99JspKGtHEUomplGkRlzUsicbVySzecg8iHtTaWRJ3WH0W2qbeVZ0hTZb&#13;
-ivRr4AYpEi4gzi0J3Ss8m0EIyaL4sBs0/pKtAA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7f1aecfe-38b4-419f-afbc-f74e5e1b961f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ARZ9gS/OyOnAosJ8/jH1wQ/30lJPUkSaG39QIWNoe0luJiKDRQXi91mOohLFIhGizNwYLZaSdIR1&#13;
+TJnmff3u1w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d87fb992-7ebf-4b7c-87e7-e052d7b4929f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>EhcPlIBPJ4YMC9GWx+uUiXrJWtoR93aPFzu3TGF/CMXxVZmEVkxhi+vV6pf1ET5ysdnoyy2Gz2Mv&#13;
+YMnH2UApvw==</DigestValue></Reference></SignedInfo><SignatureValue>dnNhRmDN9lay6dAGORMG/T6nwJ1/8XSkF9+QJh48epzz+eXIds4YPZC3N/w26mmmyrySoORW6dkI&#13;
+8zZGwyM6aNY7hbhbNFHUAxqCqFC0cPSYOKhf/9s/2122pumK39rhlljH0rrEhAnjhNLYBoBrdhp4&#13;
+NlMztf8Y7RxyyujzOWnZyEsJcBiCNRaYpYACm4Ggp2bdUuHy9p3JBBmejKJdL5P2XPCUiP3QYSr7&#13;
+l4MijBhPavQela9HlNlmAF49YCbXJQlNQiC8pQJOvOnGt6dUfzOKLWTPDp/T170CRti1DpgJvTY7&#13;
+80++kQfP7tZuX59TOcfWp0AnM+fjStC7XvcLSg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -583,4 +583,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_effaafcc-97d5-4b08-8026-78ec08de48dd" Target="#_5a8c0bbd-ac99-432a-89fb-186616b54144"><Timestamp>2021-08-13 23:06:50</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d87fb992-7ebf-4b7c-87e7-e052d7b4929f" Target="#_7f1aecfe-38b4-419f-afbc-f74e5e1b961f"><Timestamp>2021-08-16 21:19:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
