@@ -259,6 +259,7 @@
       <column comment="" key="true" length="-1" name="Customer" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="true" length="-1" name="Part" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="true" length="-1" name="Period" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Period_int" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CREATED_BY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CREATION_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LAST_UPDATED_BY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -276,6 +277,7 @@
         <mapperTableEntries expression="row10.customer_id " name="Customer" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row10.partnum " name="Part" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row10.period.equals(&quot;202101&quot;)?&quot;JAN-21&quot;:row10.period.equals(&quot;202102&quot;)?&quot;FEB-21&quot;:&#13;&#10;row10.period.equals(&quot;202103&quot;)?&quot;MAR-21&quot;:row10.period.equals(&quot;202104&quot;)?&quot;APR-21&quot;:row10.period.equals(&quot;202105&quot;)?&quot;MAY-21&quot;:row10.period.equals(&quot;202106&quot;)?&quot;JUN-21&quot;:row10.period.equals(&quot;202107&quot;)?&quot;JUL-21&quot;:row10.period.equals(&quot;202108&quot;)?&quot;AUG-21&quot;:row10.period.equals(&quot;202109&quot;)?&quot;SEP-21&quot;:row10.period.equals(&quot;202110&quot;)?&quot;OCT-21&quot;:row10.period.equals(&quot;202111&quot;)?&quot;NOV-21&quot;:row10.period.equals(&quot;202112&quot;)?&quot;DEC-21&quot;:row10.period.equals(&quot;202201&quot;)?&quot;JAN-22&quot;:row10.period.equals(&quot;202202&quot;)?&quot;FEB-22&quot;:row10.period.equals(&quot;202203&quot;)?&quot;MAR-22&quot;:row10.period.equals(&quot;202204&quot;)?&quot;APR-22&quot;:row10.period.equals(&quot;202205&quot;)?&quot;MAY-22&quot;:row10.period.equals(&quot;202206&quot;)?&quot;JUN-22&quot;:row10.period.equals(&quot;202207&quot;)?&quot;JUL-22&quot;:row10.period.equals(&quot;202208&quot;)?&quot;AUG-22&quot;:row10.period.equals(&quot;202209&quot;)?&quot;SEP-22&quot;:row10.period.equals(&quot;202210&quot;)?&quot;OCT-22&quot;:row10.period.equals(&quot;202211&quot;)?&quot;NOV-22&quot;:row10.period.equals(&quot;202212&quot;)?&quot;DEC-22&quot;:row10.period " name="Period" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row10.period " name="Period_int" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="&quot;ETL&quot;" name="CREATED_BY" nullable="true" type="id_String"/>
         <mapperTableEntries expression="TalendDate.getCurrentDate() " name="CREATION_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="&quot;ETL&quot;" name="LAST_UPDATED_BY" nullable="true" type="id_String"/>
@@ -360,6 +362,11 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Period_int"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="CREATED_BY"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
@@ -401,6 +408,7 @@
       <column comment="" key="true" length="-1" name="Customer" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="true" length="-1" name="Part" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="true" length="-1" name="Period" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Period_int" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CREATED_BY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CREATION_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LAST_UPDATED_BY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -415,6 +423,7 @@
       <column comment="" key="true" length="-1" name="Customer" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="true" length="-1" name="Part" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="true" length="-1" name="Period" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Period_int" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CREATED_BY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CREATION_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LAST_UPDATED_BY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -734,6 +743,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="LAST_UPDATE_DATE"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Period_int"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out6"/>
@@ -857,13 +869,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d3bd0a4c-cf8a-4bf8-953b-308bf6da730e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bKnv6if0hPtVHwGfJSg7+SYmcq4IMp922wnWkTrhVw+cj8vjCE+2y++VeBTPBfath4HiZkYgOZtv&#13;
-Z7AOEIoeOw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c444ffcd-1c54-40fc-a0e3-447498b823b2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vGjUIZkQM7rWT1yfQVhwfnc4bbgC3XAhvDmHwiFuLGrlgRdWUzEeU26x0uOTflv2Y00f8l7DjrNs&#13;
-50ve1+1Q0A==</DigestValue></Reference></SignedInfo><SignatureValue>VTFPskKO1XJFmHzyvr+8tsmT9c5syHiBgOIZ4EZ2/AMPW7Dtg9wImyqkGlDWMFHv7m3Dwf4OriUl&#13;
-gIl0dMNqiPXzDXUU71IsWBePYIe2uQiYHVVMmizK464X4+quS8z9vXWKQ7O5kYd/ckDsFBZJ6Gya&#13;
-kxwSyr72KlQKlZuB39siyPmGnt2Sx0q44MyBP/65r/MFFVVLf6oVDNbJ15jfgljz1X/n4Tam1hUb&#13;
-ioMLJWqtHyY/zWlq1S1+SuNCpd5QWpDYTKBOMwrPE3F0IC/kPLJrJ9PgqOlx46hl08zD7zLHXEmm&#13;
-gEOo8FD0VayWVkVjcmmipcBW4lyqaLiPR3Hd9A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e7169049-0738-4e23-acd5-d0db0c93672a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8ZaUyie1pqV5lGPNHth87xnHD0zSYhtxSw4tEoz+LqshYi9m3ag9U/vLCnhvQdN7oaunhQh7koDg&#13;
+NbshYRu12Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ecb8aed5-47ee-44e9-8092-3c245ebddd40"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qL2QZKdo5bkb5im7tDSjXO1Qjc10gvrJlwnpLjO+8t+VMGYKtvSw/q865sH+mDplQXfA0DjtuCuN&#13;
+vJICE1FdhA==</DigestValue></Reference></SignedInfo><SignatureValue>Qh0/ha1AgP24HbB6yxSl9CUU6VlzdaEWKgh/eEgLAwm2CrR0CljZWQjXIEEjg+Z8G6vU367Tq221&#13;
+GRi1i74/O1hdnXKVaNr5TdJD4CQtvbDl2FkSrG5BhnGrQokSmm/iP5HXtLlKOf2QsMjSrGwEJxWA&#13;
+e9jOcw2u5tiURxH5q774BRuomr1KjN8wjHfOgJ9WWuwCVft6M/UTJK9jlalK8teTOLzPn7UaSooP&#13;
+LsqFnG+ntIRP3RYJ5vVly2MlIkH71hJmNBX+SXgo5IGWvnF8vvEQHZCIMLx9bghrVvrDigYGTxSG&#13;
+hXlreK2OHmI/2QJ8vgsrGbITDq7Dh/nEHVzikg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -885,4 +897,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c444ffcd-1c54-40fc-a0e3-447498b823b2" Target="#_d3bd0a4c-cf8a-4bf8-953b-308bf6da730e"><Timestamp>2021-08-17 02:26:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ecb8aed5-47ee-44e9-8092-3c245ebddd40" Target="#_e7169049-0738-4e23-acd5-d0db0c93672a"><Timestamp>2021-08-17 02:37:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
