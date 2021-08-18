@@ -300,6 +300,7 @@
         <mapperTableEntries name="sep" nullable="true" type="id_String"/>
       </inputTables>
       <inputTables activateCondensedTool="true" lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row2" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="ID" type="id_Integer"/>
         <mapperTableEntries name="Prd_Alloc_id" nullable="true" type="id_String"/>
         <mapperTableEntries name="Customer" nullable="true" type="id_String"/>
         <mapperTableEntries name="Part" nullable="true" type="id_String"/>
@@ -315,7 +316,6 @@
         <mapperTableEntries name="LAST_UPDATED_BY" nullable="true" type="id_String"/>
         <mapperTableEntries name="LAST_UPDATE_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries name="oracle_period" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Period_int" nullable="true" type="id_Integer"/>
       </inputTables>
     </nodeData>
   </node>
@@ -350,6 +350,8 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Prd_Alloc_id"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Customer"/>
@@ -380,11 +382,12 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="oracle_period"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Period_int"/>
-      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="PRODUCT_ALLOCATION" name="tDBInput_2">
+      <column comment="" key="false" length="10" name="ID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column comment="" key="false" length="255" name="Prd_Alloc_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -428,9 +431,6 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="oracle_period" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="Period_int" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
@@ -567,13 +567,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8358833b-823e-4f59-b958-340b8b0fc947"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9EpeZBdvRwO3fUsH4/+cWLvS+KjtcrQEk5vGggr3d0yE5xUhRYuGnVCAWTBli+P0mGHGQHbuVFP3&#13;
-7r2zXQrE0A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7afb08a5-a3ec-4ac6-bb83-e2f1104c306e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BzeNMsoKGAMHSc2UbihjABMDcCvEc/8Lzz1+/BPT573tWNbwEMyrpPZdw0PZaPzlRXFLwbxlSa0V&#13;
-M8QhOa9eYA==</DigestValue></Reference></SignedInfo><SignatureValue>nE89vOCxDBUwqw42isaCIzmGGeF4hzc/SEBWE7cDWX58oi2NEsrRtWtI439JRIYgYzQXPBFAeTkO&#13;
-lsSAk5i7HNHs4/iW7uogoMR7bhY2Kv5W9gSPd8QV8iaXM5r0FhS6+4Kyn1jeJs1kJdYu1pRl5nMd&#13;
-Xsham+BI1neT5MDGCwF2iD3nnu31VGEjxfu7j9QTGySgZNs2wJ4RHG4a16kmuNySb4wi3nS139tB&#13;
-8upcIVtH85Ip7KBmrReSQUZ3UtfKbQ0j9lYgYqyp+eLx6hhaemcquxpSQh5FaxZX9HabkRiAUj/6&#13;
-b+KGTyhQg44gGAtDIHrq35BmoXS15NJur6cqQQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e58fa87a-8e30-4d3f-b3bd-e28dc69d37de"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>McVFJ7OzlJxth5EW/9vtxiEhXSZgDyZtetb8IBaC85VRtteUkf+Xtf6Su+cP8hMvuJXT9FiVhkZL&#13;
+rRRQS3//6g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_259904ba-2731-4334-bfab-3a9b48a1e5aa"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vl7y2Q6xu0yqct3xapN/yKeFJ6E8ZU2YPPnqgB8+1a2+8qLskFrakWko49UB5GUWjzIaLrrBys56&#13;
+YhZBjU5MVQ==</DigestValue></Reference></SignedInfo><SignatureValue>cq6DFTPCWq0eNnQqbBvVgzLU0idy18bKMOBp5E/IvC+XgSJ1/gcvOjyM/koX98eD2bMFRVMjB8H1&#13;
+84tmwdEz5UXp0FmApjdADJAeCeGK3dHBZaLEkrAplbEi1KjzHCQu+mlMEIt5OpDe1IP5Q0Ko9xUN&#13;
+X5LPmQHVRK8aDPcGnzRi4CJWM9nSM0Is3A05FKislCweo69sSMXLv3cb737dmMFeXF4dS/M3XWBB&#13;
+znbMUIIqg7sjgtGZM+/yxsQVK35/zcsw8XhRYwuZIbnriZoniVaFKivyEaWT1fN+nqclPfbVSF89&#13;
+MxLzY7tsh/a4VwderkONaFRrbPJka/bO9BohhQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -595,4 +595,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7afb08a5-a3ec-4ac6-bb83-e2f1104c306e" Target="#_8358833b-823e-4f59-b958-340b8b0fc947"><Timestamp>2021-08-17 02:36:38</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_259904ba-2731-4334-bfab-3a9b48a1e5aa" Target="#_e58fa87a-8e30-4d3f-b3bd-e28dc69d37de"><Timestamp>2021-08-18 20:11:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
