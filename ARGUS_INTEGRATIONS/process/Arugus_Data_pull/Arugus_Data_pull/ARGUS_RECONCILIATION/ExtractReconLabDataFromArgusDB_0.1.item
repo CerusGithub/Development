@@ -70,7 +70,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Users/dnarisetti/Desktop/Talendsw/Te/Talend-Studio-20190620_1446-V7.2.1/workspace/.metadata&quot;"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/TSC_V7.2.1/Talend-Studio-20190620_1446-V7.2.1/workspace/.metadata&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
@@ -168,7 +168,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_muuVAEZuEeyLac_jMmlwcA-tMap_3-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_fmn5sVawEeywyat_BHsG2A-tMap_3-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -376,7 +376,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT&#9;&#9;&#9;&#13;&#10;CM.CASE_NUM ,&#9;&#9;&#9;&#13;&#10;CP.PAT_SUBJ_NUM ,&#9;&#9;&#9;&#9;&#13;&#10;CP.PAT_DOB ,&#9;&#9;&#9;&#13;&#10;CDR.START_DATETIME,&#9;&#13;&#10;CDR.STOP_DATETIME,&#9;&#13;&#10;CE.DESC_REPTD  ,&#9;&#9;&#9;&#9;&#13;&#10;CE.ONSET ,&#9;&#9;&#9;&#9;&#13;&#10;CE.STOP_DATE ,&#9;&#9;&#9;&#9;&#13;&#10;CE.BODY_SYS,&#9;&#9;&#9;&#9;&#13;&#10;LM.CAUSALITY,&#9;&#9;&#9;&#9;&#13;&#10;LMI.EVT_INTENSITY,&#9;&#9;&#9;&#9;&#13;&#10;decode (CE.SERIOUSNESS, 1, 'Yes', 0, 'No', ''),&#9;&#9;&#13;&#10;decode (CE.SC_DEATH, 1, 'Yes', 0, 'No', '')&#9;,&#9;&#9;&#13;&#10;decode (CE.SC_THREAT, 1 , 'Yes', 0, 'No', ''),&#9;&#9;&#9;&#13;&#10;decode (CE.SC_HOSP, 1, 'Yes', 0, 'No', ''),&#9;&#9;&#9;&#13;&#10;decode(CE.SC_DISABLE, 1,'Yes', 0, 'No', ''),&#9;&#9;&#9;&#13;&#10;decode(CE.MED_SERIOUS,1,'Yes', 0, 'No', ''),&#9;&#9;&#13;&#10;decode ( CE.SC_CONG_ANOM, 1, 'Yes', 0, 'No', ''),&#9;&#9;&#13;&#10;LMO.EVT_OUTCOME ,&#9;&#9;&#9;&#9;&#13;&#10;CD.DEATH_DATE,&#9;&#9;&#9;&#13;&#10;CPD.PRODUCT_NAME,&#9;&#9;&#9;&#9;&#13;&#10;CE.PREF_TERM ,&#13;&#10;CS.STUDY_NUM &#9;&#13;&#10;FROM&#9;&#9;&#9;&#9;&#13;&#10;CASE_MASTER CM,&#9;&#9;&#9;&#9;&#13;&#10;CASE_PAT_INFO CP,&#9;&#9;&#9;&#9;&#13;&#10;CASE_EVENT CE,&#9;&#9;&#9;&#9;&#13;&#10;CASE_EVENT_ASSESS CEA,&#9;&#9;&#9;&#9;&#13;&#10;LM_CAUSALITY LM,&#9;&#9;&#9;&#9;&#13;&#10;LM_EVT_INTENSITY LMI,&#9;&#9;&#9;&#9;&#13;&#10;LM_EVT_OUTCOME LMO,&#9;&#9;&#9;&#9;&#13;&#10;CASE_DEATH CD,&#9;&#9;&#9;&#9;&#13;&#10;CASE_PRODUCT CPD,&#13;&#10;CASE_DOSE_REGIMENS CDR,&#13;&#10;CASE_STUDY CS&#13;&#10;WHERE&#9;&#9;&#9;&#9;&#13;&#10;CM.CASE_ID&#9;=&#9;CE.CASE_ID AND&#9;&#9;&#13;&#10;CM.CASE_ID&#9;=&#9;CP.CASE_ID(+) AND&#9;&#9;&#13;&#10;CM.CASE_ID&#9;=&#9;CPD.CASE_ID(+) AND&#9;&#9;&#13;&#10;CM.CASE_ID&#9;=&#9;CEA.CASE_ID(+) AND&#9;&#9;&#13;&#10;CE.SEQ_NUM &#9;=&#9;CEA.EVENT_SEQ_NUM(+) AND&#9;&#9;&#13;&#10;CPD.SEQ_NUM = CDR.SEQ_NUM AND&#13;&#10;CM.CASE_ID = CDR.CASE_ID AND&#13;&#10;CEA.DET_LISTEDNESS_ID IS NULL AND&#9;&#9;&#9;&#9;&#13;&#10;LM.CAUSALITY_ID&#9;=&#9;CEA.RPT_CAUSALITY_ID AND  &#9;&#9;&#13;&#10;LMI.EVT_INTENSITY_ID&#9;=&#9;CE.EVT_INTENSITY_ID AND&#9;&#9;&#13;&#10; LMO.EVT_OUTCOME_ID &#9;=&#9;CE.EVT_OUTCOME_ID AND&#9;&#9;&#13;&#10;CM.CASE_ID&#9;=&#9;CD.CASE_ID(+) AND&#9;&#9;&#13;&#10;CM.CASE_ID&#9;=&#9; CPD.CASE_ID(+) AND&#13;&#10;CM.CASE_ID&#9;=&#9; CS.CASE_ID(+) &#13;&#10;ORDER BY CM.CASE_NUM DESC&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot; SELECT &#13;&#10;CM.CASE_NUM ,&#9;&#9;&#13;&#10;LMCC.DESCRIPTION,&#13;&#10;CP.PAT_SUBJ_NUM ,&#13;&#10;CL.TEST_DATE_PARTIAL  ,&#13;&#10;CL.LAB_TEST_NAME ,&#13;&#10;CL.RESULTS ,           &#13;&#10;LMA.ASSESSMENT ,&#9;&#13;&#10;CL.COMMENTS ,    &#13;&#10;CL.NOTES    ,&#13;&#10;CS.STUDY_NUM  &#13;&#10;FROM&#9;&#9;&#9;&#9;&#13;&#10;CASE_MASTER CM,&#9;&#13;&#10;CASE_PAT_INFO CP,&#13;&#10;CASE_LAB_DATA CL,&#13;&#10;CASE_CLASSIFICATIONS CAL,&#13;&#10;LM_CASE_CLASSIFICATION LMCC,&#13;&#10;LM_LAB_ASSESSMENT LMA,&#13;&#10;CASE_STUDY CS&#13;&#10;WHERE&#13;&#10;CM.CASE_ID = CP.CASE_ID(+) AND&#9;&#13;&#10;CM.CASE_ID = CL.CASE_ID(+) AND&#9;&#9;&#13;&#10;CL.ASSESSMENT = LMA.ASSESSMENT_ID (+) AND&#13;&#10;CM.CASE_ID = CAL.CASE_ID (+) AND&#13;&#10;CAL.CLASSIFICATION_ID = LMCC.CLASSIFICATION_ID (+) AND&#13;&#10;CM.CASE_ID = CS.CASE_ID (+) &#13;&#10;ORDER BY CM.CASE_NUM DESC&#9;&#9;&#9;&#9;&#13;&#10;   &quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -473,7 +473,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_muuVAEZuEeyLac_jMmlwcA-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_fmn5sVawEeywyat_BHsG2A-tMap_1-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -508,7 +508,7 @@
       <column comment="" key="false" length="-1" name="StudyID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ReconLabData" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row1.CASE_NUM " name="CaseNum" nullable="true" type="id_String"/>
@@ -982,13 +982,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b8a1e162-7dfa-4475-b22e-2258c2cbf582"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OD3gsKOPP6jQW1mzl+kplc1xTQ5DaMzuqt87nluSpkVdYmA+74ODkB/LBAbklFLh5zfLSdsL2GtG&#13;
-HWAGFZWN2g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a9336f84-ac5f-4d18-b879-9b018d307034"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Dk6aBD1ricNcwrIjXEROgzrROURXZD1E2EIl2Meu0UXBEkx8iXxA49bDzBAZRG1/VEBUfOvC1nkt&#13;
-fP80d+a2YQ==</DigestValue></Reference></SignedInfo><SignatureValue>K9l9zSnTGYZJ2syc6geRlseaq19V4RmjtdjTKQFr/byDNkfER3iYXjIhCPWehkwPoMIqajjLUqml&#13;
-Y5KzzpoUjbT5Q1gllIsgAGCtMbEp7XziIAOSwjnQ8N2usiFwSb/IMYR+1T6J9HH6wLjXr24M5JcY&#13;
-/hvyqhv0mcxhA7t2qZQLqZC4gwaAGxRICOvpXxxOK3CXbFzH6CsNasMNo0DEXu+BtUzip9VMKkYx&#13;
-robQ9S0iFpnvQMnYLYNemxjcrgjL3LgEfG1MTYlGTlzAONZGUPDPsSEq/Yt0sD84hbqJWHLjWQVR&#13;
-EwpUzwxxuuDn/lBAYp0RrH3+qcYQ2WbDBN0I9w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7ca1d8d2-bbef-4776-acc4-e87beeb7d111"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>o/y8HHD/U7CQJjsqbcOn/vWzac6p6GLd+EEDSon9d5Fgk8eyRrJNm9K8RYW4XptfzouTEXhw8Dxj&#13;
+01dO50lYFg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_10130a59-c76d-4226-af44-5699de53c38e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YcIBNeZnvE+v/wqg8inN1AeaQTzGfiHD5Cg8xfmzsUTocsKNCTQsShNoxUKDI5NRYHuYk4yiZD8s&#13;
+TH7qfOnbfg==</DigestValue></Reference></SignedInfo><SignatureValue>beGNN9uRm+24ed/X7/HC/Oq3qIJ8tHI/C3c6rJsR3HWbirLlD8STf2WK4ZKEs7DNB8zDAKpMAAhc&#13;
+WbHeHY3GQhH3Its26edb+cY6dxnkCJPHvu6GCDPvQ+gYfQiL5SBgf96Ut8zli/cc2TfOUA9uBW1a&#13;
+VH7W1yiKRIDaFemdlZae2okIWbzXPI3Qpquy24JYL6wnP8wJCa/IYGS4LUywf+0bsRyTG2lOgqiq&#13;
+gsyIWjgEiCS7u2JyQhzkVcdJuDrsZZK0KACvlEDwblO9qxGaOB1jC/QPTd5p66Nl2x4orJYcQoCU&#13;
+FEjTVt+HkLFOtci14PSscDj7CqvGCDvvE6CuTw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1010,4 +1010,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a9336f84-ac5f-4d18-b879-9b018d307034" Target="#_b8a1e162-7dfa-4475-b22e-2258c2cbf582"><Timestamp>2021-12-06 20:32:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_10130a59-c76d-4226-af44-5699de53c38e" Target="#_7ca1d8d2-bbef-4776-acc4-e87beeb7d111"><Timestamp>2021-12-06 20:35:50</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
