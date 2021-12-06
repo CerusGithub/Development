@@ -376,7 +376,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot; SELECT &#13;&#10;CM.CASE_NUM ,&#9;&#9;&#13;&#10;LMCC.DESCRIPTION,&#13;&#10;CP.PAT_SUBJ_NUM ,&#13;&#10;CL.TEST_DATE_PARTIAL  ,&#13;&#10;CL.LAB_TEST_NAME ,&#13;&#10;CL.RESULTS ,           &#13;&#10;LMA.ASSESSMENT ,&#9;&#13;&#10;CL.COMMENTS ,    &#13;&#10;CL.NOTES    ,&#13;&#10;CS.STUDY_NUM  &#13;&#10;FROM&#9;&#9;&#9;&#9;&#13;&#10;CASE_MASTER CM,&#9;&#13;&#10;CASE_PAT_INFO CP,&#13;&#10;CASE_LAB_DATA CL,&#13;&#10;CASE_CLASSIFICATIONS CAL,&#13;&#10;LM_CASE_CLASSIFICATION LMCC,&#13;&#10;LM_LAB_ASSESSMENT LMA,&#13;&#10;CASE_STUDY CS&#13;&#10;WHERE&#13;&#10;CM.CASE_ID = CP.CASE_ID(+) AND&#9;&#13;&#10;CM.CASE_ID = CL.CASE_ID(+) AND&#9;&#9;&#13;&#10;CL.ASSESSMENT = LMA.ASSESSMENT_ID (+) AND&#13;&#10;CM.CASE_ID = CAL.CASE_ID (+) AND&#13;&#10;CAL.CLASSIFICATION_ID = LMCC.CLASSIFICATION_ID (+) AND&#13;&#10;CM.CASE_ID = CS.CASE_ID (+) AND&#13;&#10;CM.CASE_NUM IS NOT NULL&#13;&#10;ORDER BY CM.CASE_NUM DESC&#9;&#9;&#9;&#9;&#13;&#10;   &quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot; SELECT &#13;&#10;CM.CASE_NUM ,&#9;&#9;&#13;&#10;LMCC.DESCRIPTION,&#13;&#10;CP.PAT_SUBJ_NUM ,&#13;&#10;CL.TEST_DATE_PARTIAL  ,&#13;&#10;CL.LAB_TEST_NAME ,&#13;&#10;CL.RESULTS ,           &#13;&#10;LMA.ASSESSMENT ,&#9;&#13;&#10;CL.COMMENTS ,    &#13;&#10;CL.NOTES    ,&#13;&#10;CS.STUDY_NUM  &#13;&#10;FROM&#9;&#9;&#9;&#9;&#13;&#10;CASE_MASTER CM,&#9;&#13;&#10;CASE_PAT_INFO CP,&#13;&#10;CASE_LAB_DATA CL,&#13;&#10;CASE_CLASSIFICATIONS CAL,&#13;&#10;LM_CASE_CLASSIFICATION LMCC,&#13;&#10;LM_LAB_ASSESSMENT LMA,&#13;&#10;CASE_STUDY CS&#13;&#10;WHERE&#13;&#10;CM.CASE_ID = CP.CASE_ID(+) AND&#9;&#13;&#10;CM.CASE_ID = CL.CASE_ID(+) AND&#9;&#9;&#13;&#10;CL.ASSESSMENT = LMA.ASSESSMENT_ID (+) AND&#13;&#10;CM.CASE_ID = CAL.CASE_ID (+) AND&#13;&#10;CAL.CLASSIFICATION_ID = LMCC.CLASSIFICATION_ID (+) AND&#13;&#10;CM.CASE_ID = CS.CASE_ID (+) AND&#13;&#10;CM.CASE_NUM IS NOT NULL&#13;&#10;AND CM.CASE_NUM  = 'AER202100805'&#13;&#10;ORDER BY CM.CASE_NUM DESC&#9;&#9;&#9;&#9;&#13;&#10;   &quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -725,6 +725,39 @@
       <elementValue elementRef="TRACE_COLUMN" value="DESCRIPTION"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CASE_NUM"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PAT_SUBJ_NUM"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TEST_DATE_PARTIAL"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LAB_TEST_NAME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="RESULTS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ASSESSMENT"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="COMMENTS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NOTES"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CAUSALITY"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="EVT_INTENSITY"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="STUDY_NUM"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
@@ -894,13 +927,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_35a0da2c-7672-433f-9d76-ad5b38c4c7b3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3BxBEMcevGa2RXt5reWQY33gFtNJQ8aBtlJFh2fQa/sLGMeyO1xW2Ayjm7lD4mB1yad7hBKxFeoh&#13;
-dBc+9LNi0w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5e8142d3-f5b3-4539-adaf-e9de944efd79"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FeolqxpPAvEgAEbVgHeCnx7JxkkkVRFnCM+O7ED3L6GqXzisbw2Qea96gPtTL84UsF9S96ARqQA2&#13;
-Lo/USnHUlg==</DigestValue></Reference></SignedInfo><SignatureValue>ecGYVxE6smvQZ7DN5QDr6PvLvGEQcfXb/QxCVNlGzDt4iMay/wWOOTt320Dm7zL2PV/8+zD1Y3Ol&#13;
-OixmoAYlrJWFfQFhPreoIocu/u0g8W93n6RobyPMCl1kxTTyqPGU/y2chAZECjaV7oBuAv10SrRG&#13;
-4Z5+cuTuSdz77CR8KMBHemd8O1V3kvWOIzsb+9veZc/mdVOLctshuIPkoag/MID7DLw/FV4RocmZ&#13;
-y2nvyMFi6G3WkoSO9HY5cca7ZMQKJBo4sns9DsGSceMNcwzap3NBvGdpwtiml1s5LYbWlUrCMSw/&#13;
-RNJj81Q6OYOjP7iTJqbEwjXLJqV0hiJxariAtw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_55f5ae71-c424-464a-bdb1-4ad823a2d566"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jNKchJRx6mPL1FulUyI1GA4bqRTALZ9JoeRNxbYBF9rG2ZQXxb7bcm/q2iVQ6A2oBqEsJ98bJBeD&#13;
+v5Yg4MlEkA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ac062571-b49a-4a38-a2d2-bb6eab7b4131"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fn64YxzCS3S/6lLHcxIMC5tmVscG1J9+AgXO1e0euYStxwz2M+dmkq2aG3AR1voI/VdTJG9fpVxC&#13;
+9XLpqRi/bw==</DigestValue></Reference></SignedInfo><SignatureValue>S2sG/pUZSf70erAwDqaFGlYtrQ3g0IX17Lj3mdNAv61B5qW+e7cGH1+5pGyAIcIxYbA1ifnveiNb&#13;
+nVKQCimdc3tlEbh2qBItaRAlueGq3vvVRQShU1l89ZKevetSV1dmqGjRrvZOvxHJf0RovyHyYW7V&#13;
+qzzZ7snganao01euLywsOaWYuHWopV4O0MIkix9NKiuu18a+LuPievUu0n+o8xnJ/vsqYPdVeuc+&#13;
+B4srONrlarliumCFw8e1qG54ETAwlEkGpTQc0tRlnwn9WygMhpTJKLMvj6WimgZOhlyESvhWIaDj&#13;
+bIXIV7pc+AuLLqOid+eDsx0o0/RwEmV9E4BqQA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -922,4 +955,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5e8142d3-f5b3-4539-adaf-e9de944efd79" Target="#_35a0da2c-7672-433f-9d76-ad5b38c4c7b3"><Timestamp>2021-12-06 20:56:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ac062571-b49a-4a38-a2d2-bb6eab7b4131" Target="#_55f5ae71-c424-464a-bdb1-4ad823a2d566"><Timestamp>2021-12-06 20:59:08</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
