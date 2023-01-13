@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" internalId="_S7kFcFxxEe2_6rJKfvmtlQ" name="HOST" prompt="HOST?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" internalId="_S7kFcVxxEe2_6rJKfvmtlQ" name="PORT" prompt="PORT?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" internalId="_S7kFclxxEe2_6rJKfvmtlQ" name="SCHEMA" prompt="SCHEMA?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" internalId="_S7kFc1xxEe2_6rJKfvmtlQ" name="DATABASE" prompt="DATABASE?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" internalId="_S7kFdFxxEe2_6rJKfvmtlQ" name="USERNAME" prompt="USERNAME?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" internalId="_S7kFdVxxEe2_6rJKfvmtlQ" name="PASSWORD" prompt="PASSWORD?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" internalId="_S7kFdlxxEe2_6rJKfvmtlQ" name="ORACLE_HOST" prompt="ORACLE_HOST?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" internalId="_S7kFd1xxEe2_6rJKfvmtlQ" name="ORACLE_PORT" prompt="ORACLE_PORT?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" internalId="_S7kFeFxxEe2_6rJKfvmtlQ" name="ORACLE_DATABASE" prompt="ORACLE_DATABASE?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" internalId="_S7kFeVxxEe2_6rJKfvmtlQ" name="ORACLE_SCHEMA" prompt="ORACLE_SCHEMA?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" internalId="_S7kFelxxEe2_6rJKfvmtlQ" name="ORACLE_USERNAME" prompt="ORACLE_USERNAME?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" internalId="_S7kFe1xxEe2_6rJKfvmtlQ" name="ORACLE_PASSWORD" prompt="ORACLE_PASSWORD?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" internalId="_S7kFfFxxEe2_6rJKfvmtlQ" name="start_date" prompt="start_date?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter comment="" internalId="_S7kFcFxxEe2_6rJKfvmtlQ" name="HOST" prompt="HOST?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_S7kFcVxxEe2_6rJKfvmtlQ" name="PORT" prompt="PORT?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_S7kFclxxEe2_6rJKfvmtlQ" name="SCHEMA" prompt="SCHEMA?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_S7kFc1xxEe2_6rJKfvmtlQ" name="DATABASE" prompt="DATABASE?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_S7kFdFxxEe2_6rJKfvmtlQ" name="USERNAME" prompt="USERNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_S7kFdVxxEe2_6rJKfvmtlQ" name="PASSWORD" prompt="PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_S7kFdlxxEe2_6rJKfvmtlQ" name="ORACLE_HOST" prompt="ORACLE_HOST?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_S7kFd1xxEe2_6rJKfvmtlQ" name="ORACLE_PORT" prompt="ORACLE_PORT?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_S7kFeFxxEe2_6rJKfvmtlQ" name="ORACLE_DATABASE" prompt="ORACLE_DATABASE?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_S7kFeVxxEe2_6rJKfvmtlQ" name="ORACLE_SCHEMA" prompt="ORACLE_SCHEMA?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_S7kFelxxEe2_6rJKfvmtlQ" name="ORACLE_USERNAME" prompt="ORACLE_USERNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_S7kFe1xxEe2_6rJKfvmtlQ" name="ORACLE_PASSWORD" prompt="ORACLE_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_S7kFfFxxEe2_6rJKfvmtlQ" name="start_date" prompt="start_date?" promptNeeded="false" repositoryContextId="built-in" type="id_Date" value=""/>
   </context>
   <parameters>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="96"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
@@ -41,6 +42,9 @@
     <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false"/>
     <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;C:/TSC_V7.2.1/Config_files/credientials.txt&quot;"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;=&quot;"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
     <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
     <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -53,7 +57,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:9VGxlRvFr3mF76uBxW8dT6YIjRBmEGMoDzhNoAPs"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:ClQ11QQV0UMsXCk/qHEQ7YUu1KBtWDtTV3XK5tx2"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -88,7 +92,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:XcSsyYiXbK8efbs/wrTvuJO3tQ8rq/re87PjJjXA"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:IwsWMEFX/IP4YpjsqSYjSs2Yb0ibaNOJvPuyMgdA"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -136,18 +140,19 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;cer_prdint&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;cerprdint&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:U0kg7ZZolLOdXzUem5QHhDEl/V6u0UMWVcpSi0Q6C8ZPoYEgrPcSsuHxycJF"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;ARGUS_CASE_MASTER&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:aBkVK2hbzpVMyaV9tIfPoZZ2uGoH9LdPcp/8efIyaEVt3T8L3jDnYXFcl3Dd"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;ARGUS_ALL_CASES&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.ARGUS_CASE_MASTER.\&quot;ID\&quot;,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CASE_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CASE_NUM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.RPT_TYPE_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.REPORT_TYPE,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CREATE_TIME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.FOLLOWUP_DATE,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.RECEIPT_DATE,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INIT_REPT_DATE,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.STATE_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CASE_STATUS,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SERIOUSNESS,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SERIOUSNESS_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.EVENT_DEATH_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.\&quot;USER_ID\&quot;,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.\&quot;USER_NAME\&quot;,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.OWNER_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.OWNER_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.PATIENT_SUBJ_NUM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.STUDY_NUM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.EVENT_DEATH,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.EVENT_DESC,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.PREF_TERM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.PRODUCT_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.WORKLIST_OWNER_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.RPT_CAUSALITY_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.PRT_CAUSALITY_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.DET_CAUSALITY_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.DET_CAUSALITY_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.DET_LISTEDNESS_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.DET_LISTEDNESS_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.REQUIRES_FOLLOWUP,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CASE_SIGNIFICANT,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.EVT_SEQ_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SFDC_ROW_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.STUDY_DRUG,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.WORKLIST_OWNER_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INT_MON_NUM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INT_YEAR,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INT_QTR,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INT_MON,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SYS_CREATED,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SYS_CREATEDBY,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SYS_LASTUPDATED,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SYS_LASTUPDBY,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.FOLLOWUP_SEQ_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INITIAL_CASE&#10;FROM&#9;dbo.ARGUS_CASE_MASTER  &#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.ARGUS_ALL_CASES.\&quot;ID\&quot;,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.CASE_ID,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.CASE_NUM,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.RPT_TYPE_ID,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.REPORT_TYPE,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.CREATE_TIME,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.FOLLOWUP_DATE,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.RECEIPT_DATE,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.INIT_REPT_DATE,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.STATE_ID,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.CASE_STATUS,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.SERIOUSNESS,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.SERIOUSNESS_ID,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.EVENT_DEATH_ID,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.\&quot;USER_ID\&quot;,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.\&quot;USER_NAME\&quot;,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.OWNER_ID,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.OWNER_NAME,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.PATIENT_SUBJ_NUM,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.STUDY_NUM,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.EVENT_DEATH,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.EVENT_DESC,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.PREF_TERM,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.PRODUCT_NAME,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.WORKLIST_OWNER_ID,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.RPT_CAUSALITY_ID,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.PRT_CAUSALITY_NAME,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.DET_CAUSALITY_ID,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.DET_CAUSALITY_NAME,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.DET_LISTEDNESS_ID,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.DET_LISTEDNESS_NAME,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.REQUIRES_FOLLOWUP,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.CASE_SIGNIFICANT,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.EVT_SEQ_ID,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.SFDC_ROW_ID,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.STUDY_DRUG,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.WORKLIST_OWNER_NAME,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.INT_MON_NUM,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.INT_YEAR,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.INT_QTR,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.INT_MON,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.SYS_CREATED,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.SYS_CREATEDBY,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.SYS_LASTUPDATED,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.SYS_LASTUPDBY,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.FOLLOWUP_SEQ_ID,&#10;&#9;&#9;dbo.ARGUS_ALL_CASES.INITIAL_CASE&#10;FROM&#9;dbo.ARGUS_ALL_CASES&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;integratedSecurity=true&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
@@ -518,7 +523,7 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;PCLONE2&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot; ROUSER&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Jqx76XoQeGyLRhv6KvOgltJkXyn88emqyUmjV7U0bSzT6ZIwnKU="/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:ckZvAF0gmqeraX3OmyTl/PxQ7dQ+vQAUBNBJO2yrgkoF2a8BAI0="/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;CASE_STUDY&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
@@ -706,7 +711,7 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;cer_prdint&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;cerprdint&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Y/wyZ4C3lIqPEEgPIK1wgsK7xb1kKxz2d61D78Yk+BIMtqTTa+wzlvJiLmcZ"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:kYDgKsWWypsnd+eb2SBoRNv8CIvkpjRImWV5osXhcD/nupjLmVwjy6GR0F7a"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;ARGUS_CASE_MASTER&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -722,6 +727,9 @@
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;integratedSecurity=true&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" value="false"/>
+    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="20"/>
@@ -780,7 +788,7 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;cer_prdint&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;cerprdint&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:hF1TcSqzeQqIME5zn3aX7MQktzBbJTQFaPxdSmpvUzCuGyNtKS9uiAv2rsSy"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:oDMFZueKjEB8YhGRSvSUSHITkMEovb2t5QGrCWRXCN7vfV/cHgQPrK2VzilH"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;ARGUS_CASE_MASTER&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -792,6 +800,7 @@
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;integratedSecurity=true&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
@@ -1298,7 +1307,7 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;PCLONE2&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot; ROUSER&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:gww5M3zpVGokUl23vwyOxAJ0yPHvWo6zsIedQfTXPkptKdlNsJg="/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:57D9eDTxMtbUGqjzFiKJCUyMQdW2HlznXRcRlZSYi2Z9/civzIg="/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;CASE_PRODUCT&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
@@ -1881,7 +1890,7 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;cer_prdint&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;cerprdint&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:UtPSIVsUsiz6IkCkSZMzLpp4aMuHROwqk+iZuZAceaPDy17nJ/AsjKRVw4hT"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:rhnz1OkRqyn4XsY9MNWdLSeQFVz1g9nWdvu1epwNnccDxdiU+VysKTfZvP7n"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;ARGUS_CASE_MASTER&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -1897,6 +1906,9 @@
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;integratedSecurity=true&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" value="false"/>
+    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="20"/>
@@ -1967,7 +1979,7 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;PCLONE2&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot; ROUSER&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:mjaclUnxAWO2tqXVKoAmy8Kqg4siVkxMQIJIBdw9EoW2dA3BYio="/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:8qMFRSnxKQ3l6m8FMYFXgS6nHaydVaBQqQZ+sqbV07EMDJd/6uE="/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;LM_PRODUCT&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
@@ -2265,7 +2277,7 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;cer_prdint&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;cerprdint&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:ElwJnhgrMVNSrEmEIRfjOp+0DivV5iE6eN3GlTa41yTg6tkOh9SuqSK40QuZ"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:3aqJk4lMAYU4VZbt5xpAnosil8BPmMbwNoJU/8KKG/68foYVSWQ95pNCTEgK"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;ARGUS_CASE_MASTER&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -2277,6 +2289,7 @@
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;integratedSecurity=true&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
@@ -2635,7 +2648,7 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;PCLONE2&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot; ROUSER&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:swtSdUFJpm3JRgOoWWMSrCCj5k/qrKpnDhEPammtDROpOQ7yPHU="/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:YOctkhwGWqznXnCJOMAl8GplXzoEpx6ScqzPgmtyZvj7/ZUYyxU="/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;LM_REPORT_TYPE&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
@@ -2743,7 +2756,7 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;cer_prdint&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;cerprdint&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:57SrxZzcL+dqtLnYwdpW4ItJq+mtMXxypkkCV1jJUSFtaA35xHHf6RtExbjG"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:xD6rqfur/uN5KFUh8vDT0Yh1nG4x+vNnBYXB0AAe1nTdhzAPtagUEJOMK42g"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;ARGUS_CASE_MASTER&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -2759,6 +2772,9 @@
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;integratedSecurity=true&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" value="false"/>
+    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="20"/>
@@ -2828,7 +2844,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="context.SCHEMA"/>
     <elementParameter field="TEXT" name="DBNAME" value="context.DATABASE"/>
     <elementParameter field="TEXT" name="USER" value="context.USERNAME"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:S4fqhFwF88zA8vn+ykckK7pDom3EBuu3adHd25FM4MwZWv+D7/7aKMUyyL4="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Oyrjx7G2HaKa6iI/M0EFDCUsPQY4rqkdYQx4PvBCH9864Y2L3LulacHB5L4="/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
@@ -2837,6 +2853,7 @@
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
     <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
     <elementParameter field="CHECK" name="SHARE_IDENTITY_SETTING" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="Mssql_connection"/>
@@ -2864,13 +2881,13 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="context.ORACLE_SCHEMA"/>
     <elementParameter field="TEXT" name="USER" value="context.ORACLE_USERNAME"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:tQfHZmFB7QoQcW9sA6Ezaps0M1i++VfA2o7WaxRUlm/9tnU1dCVbIYJbCIseTuZF9D+k"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:dxG1GTVYrTHJKeXDpS+RIX7sQ0Q6RT9dLElts+Xond9QRzCmtKxLf5ZWG8lBVrqRrdLP"/>
     <elementParameter field="CHECK" name="USE_SSL" show="false" value="false"/>
     <elementParameter field="FILE" name="SSL_TRUSTSERVER_TRUSTSTORE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:W8zZoHu0I8hod70b4NChLI+4+CWSiq9wAmKo0CdO"/>
+    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:xkKmURuOBC3OSPcvPc7+veF4K0VpWeq6l7OlVXqW"/>
     <elementParameter field="CHECK" name="NEED_CLIENT_AUTH" show="false" value="false"/>
     <elementParameter field="FILE" name="SSL_KEYSTORE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_KEYSTORE_PASSWORD" show="false" value="enc:system.encryption.key.v1:RQSh4BxRYV2+61S3RR899yvEygpF7Cck102tIt7H"/>
+    <elementParameter field="PASSWORD" name="SSL_KEYSTORE_PASSWORD" show="false" value="enc:system.encryption.key.v1:MCqt3kAqFQ43YatLHQSxnGAuffOK0qgElrwdSJnb"/>
     <elementParameter field="CHECK" name="DISABLE_CBC_PROTECTION" show="false" value="true"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
@@ -3005,7 +3022,7 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:42dTJ0B5L23CSqNERybBwMhP+gM8eed7/gNvRYqL"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:fjoNDsw0xLAXvkcJ0KYHDeAp+6n8MvdD5bSwn2qQ"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;ETL_JOB_LOG&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -3021,6 +3038,9 @@
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" value="false"/>
+    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
@@ -3310,13 +3330,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5ab48ba3-af19-41fb-a6b3-a0f818194409"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lVvs36wM9pBdTNktwGEGCtdViJjgPWF0+5gYO6pIKuM0fB2+VVZa/YGByZaJpLkLgR8A5w236DY0&#13;
-ybAzHpEYkA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a599f636-7b3b-4b7b-add7-9afe577b0fa6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>y6MkCN66cAum34eytcHTVFXJXSTvhl2oOQapNrrFo0GteS6FMorbQ7smmKmPVEr4tHG3wDQFoEiJ&#13;
-82WdVY+4pQ==</DigestValue></Reference></SignedInfo><SignatureValue>QZpIGrWPufP3+772lzA3ufgcDQ68I4SvfROrcIs+qT8lkHIqDDpstpIS+C7+LIKKsluFs/PA/Fmn&#13;
-r48dBFUmgMjv+RoxCrxQemlG01DirFjBrmdafwv8vbTIUsp6fTJT0N02RKdDqebBUilAGjH3ds3G&#13;
-NRtVB5sDXCOZWGe46g9cEE5qOkBtX/pOpKjGkIrUXRPD2wIxyvxdOhpvjGVnwGoqnj1JPwe0K+az&#13;
-C6hFiQxaDjfcuI68w0vEf8LE7v01XVCV3UV1Rho46fvBk24jTW1Au8XOuqGzodVsKkBx20LOKK+c&#13;
-LIWdBdot0Li1P0yI892GyrJOmbSeKRmzM0WvRA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4a357238-3c2a-4afc-b3b0-c681bc4d95d0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6Ww02/Pgt4S/B8mltPJ8lIzbxnNM38A3hk3Xi2n56ngzWbzwOvlvTGgL+b48TabbQWahPkcf4qr1&#13;
+Uh3MdI4U/g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7c5fcbfa-bcb8-47b5-ad90-adbd369d5928"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>kvk5IZBwhFLYlTo0pmoFs2NyE5W8t2bjWcj8s1cFeoOvcIL7WzR2NZSAsAlzbSo6IfiJa+ojEqlu&#13;
+em/ze7etkg==</DigestValue></Reference></SignedInfo><SignatureValue>kqResV92joKSWGWYYSwRP+opfXllJy6H4dzN9CMVCuYLF3wmiDKyCA4ijgyxGlADg2DriKmMfl8Z&#13;
+f/n1eQ3Xzq7dTBrJCzWvmjpwou2bhhAOMNT1U1jNezPYKRrWTMcR1i8iDZoOSQQ4DPLtcBkeOCOT&#13;
+GsTQDp61pkMve3YKZkSM9IUIzEXmz9LsqWhgoaRhLNqGgp2QYn9fzQKECcrgIBPwUEpBMOXNg83q&#13;
++Bjadhp9RLOpmk+g+bJMCRM5XhPs1+nhm0AkvgNjBFnX40MDCjzJVIOkkMiGjAS9/VRbGZLOdSD5&#13;
+vviyzILDBT2jyszaW/yqNv4TKl3cYISLQkySbA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -3338,4 +3358,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a599f636-7b3b-4b7b-add7-9afe577b0fa6" Target="#_5ab48ba3-af19-41fb-a6b3-a0f818194409"><Timestamp>2022-11-04 18:48:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7c5fcbfa-bcb8-47b5-ad90-adbd369d5928" Target="#_4a357238-3c2a-4afc-b3b0-c681bc4d95d0"><Timestamp>2023-01-13 20:53:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
