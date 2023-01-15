@@ -56,7 +56,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:b1YqlIvHRtMGhRPee/vSNIP47XonP8R7blCSoFir"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:N0n2t4Qfr0g7zLCD8UH1ExgUdOJ5ZFVoQlf9iwLn"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -91,7 +91,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:++iC8kJ84UwBkMRyYuIptuRIzbci0brZDW2mnwJW"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:4OnhoAsFthFkpqQdrkDCC7HIBRm8JvgnaTo/fCXi"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -130,1302 +130,6 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-2848" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
-    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" show="false" value="ORACLE_SID"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
-    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;10.50.0.28&quot;"/>
-    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;Alligator.cerus.com&quot;"/>
-    <elementParameter field="TEXT" name="TYPE" show="false" value="ORACLE_SID"/>
-    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1521&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;CERPRDDB&quot;"/>
-    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;PCLONE2&quot;"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="USER" show="false" value="&quot; ROUSER&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:RnbfA/qcNSq7ea/P51Vjch5IJ+g+qPvIHGB/Vg3W1vNDmFJFHYM="/>
-    <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;CASE_MASTER&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#10;  ARGUS_APP.CASE_MASTER.CASE_ID, &#10;  ARGUS_APP.CASE_MASTER.CASE_NUM, &#10;  ARGUS_APP.CASE_MASTER.REV, &#10;  ARGUS_APP.CASE_MASTER.WORKFLOW_SEQ_NUM, &#10;  ARGUS_APP.CASE_MASTER.LAST_WORKFLOW_SEQ_NUM, &#10;  ARGUS_APP.CASE_MASTER.CREATE_TIME, &#10;  ARGUS_APP.CASE_MASTER.INIT_REPT_DATE, &#10;  ARGUS_APP.CASE_MASTER.\&quot;USER_ID\&quot;, &#10;  ARGUS_APP.CASE_MASTER.LAST_UPDATE_TIME, &#10;  ARGUS_APP.CASE_MASTER.LAST_UPDATE_USER_ID, &#10;  ARGUS_APP.CASE_MASTER.REQUIRES_FOLLOWUP, &#10;  ARGUS_APP.CASE_MASTER.FOLLOWUP_DATE, &#10;  ARGUS_APP.CASE_MASTER.OWNER_ID, &#10;  ARGUS_APP.CASE_MASTER.STATE_ID, &#10;  ARGUS_APP.CASE_MASTER.COUNTRY_ID, &#10;  ARGUS_APP.CASE_MASTER.LANG_ID, &#10;  ARGUS_APP.CASE_MASTER.PRIORITY, &#10;  ARGUS_APP.CASE_MASTER.SITE_ID, &#10;  ARGUS_APP.CASE_MASTER.SERIOUSNESS, &#10;  ARGUS_APP.CASE_MASTER.RPT_TYPE_ID, &#10;  ARGUS_APP.CASE_MASTER.LAST_STATE_ID, &#10;  ARGUS_APP.CASE_MASTER.ASSESSMENT_NEEDED, &#10;  ARGUS_APP.CASE_MASTER.PRIORITY_OVERRIDE, &#10;  ARGUS_APP.CASE_MASTER.SID, &#10;  ARGUS_APP.CASE_MASTER.SAFETY_DATE, &#10;  ARGUS_APP.CASE_MASTER.NORMAL_TIME, &#10;  ARGUS_APP.CASE_MASTER.MAX_TIME, &#10;  ARGUS_APP.CASE_MASTER.REPORT_SCHEDULING, &#10;  ARGUS_APP.CASE_MASTER.PRIORITY_ASSESSMENT, &#10;  ARGUS_APP.CASE_MASTER.CLOSE_USER_ID, &#10;  ARGUS_APP.CASE_MASTER.CLOSE_DATE, &#10;  ARGUS_APP.CASE_MASTER.CLOSE_NOTES, &#10;  ARGUS_APP.CASE_MASTER.DATE_LOCKED, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_1, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_2, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_3, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_4, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_5, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_6, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_7, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_8, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_9, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_10, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_11, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_12, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_1, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_2, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_3, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_4, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_5, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_6, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_7, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_8, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_9, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_10, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_11, &#10;  ARGUS_APP.CASE_MASTER.UD_DATE_12, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_1, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_2, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_3, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_4, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_5, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_6, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_7, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_8, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_9, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_10, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_11, &#10;  ARGUS_APP.CASE_MASTER.UD_NUMBER_12, &#10;  ARGUS_APP.CASE_MASTER.DELETED, &#10;  ARGUS_APP.CASE_MASTER.DUE_SOON, &#10;  ARGUS_APP.CASE_MASTER.GLOBAL_NUM, &#10;  ARGUS_APP.CASE_MASTER.PRIORITY_DATE_ASSESSED, &#10;  ARGUS_APP.CASE_MASTER.LAM_ASSESS_DONE, &#10;  ARGUS_APP.CASE_MASTER.E2B_WW_NUMBER, &#10;  ARGUS_APP.CASE_MASTER.WORKLIST_OWNER_ID, &#10;  ARGUS_APP.CASE_MASTER.SUSAR, &#10;  ARGUS_APP.CASE_MASTER.LAST_UPDATE_EVENT, &#10;  ARGUS_APP.CASE_MASTER.INITIAL_JUSTIFICATION, &#10;  ARGUS_APP.CASE_MASTER.FORCE_SOON, &#10;  ARGUS_APP.CASE_MASTER.DUE_SOON_J, &#10;  ARGUS_APP.CASE_MASTER.FOLLOWUP_DATE_J, &#10;  ARGUS_APP.CASE_MASTER.INIT_REPT_DATE_J, &#10;  ARGUS_APP.CASE_MASTER.JUST_INIT_REPT_DATE_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_1_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_2_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_3_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_4_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_5_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_6_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_7_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_8_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_9_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_10_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_11_J, &#10;  ARGUS_APP.CASE_MASTER.UD_TEXT_12_J, &#10;  ARGUS_APP.CASE_MASTER.INITIAL_JUSTIFICATION_J, &#10;  ARGUS_APP.CASE_MASTER.LOCK_STATUS_ID, &#10;  ARGUS_APP.CASE_MASTER.MEDICALLY_CONFIRM, &#10;  ARGUS_APP.CASE_MASTER.ENTERPRISE_ID,&#13;&#10;NVL(to_char(m.init_rept_date, 'DD-MON-YYYY'), '[No Data]') CaseInitialReceiptDate&#10;FROM ARGUS_APP.CASE_MASTER&#13;&#10;ORDER BY CASE_NUM DESC&#13;&#10;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="oracle_id"/>
-    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" show="false" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
-    <elementParameter field="CHECK" name="IS_CONVERT_XMLTYPE" value="false"/>
-    <elementParameter field="TABLE" name="CONVERT_XMLTYPE" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
-    <elementParameter field="TEXT" name="CURSOR_SIZE" show="false" value="1000"/>
-    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="CASE_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CASE_NUM"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="REV"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="WORKFLOW_SEQ_NUM"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="LAST_WORKFLOW_SEQ_NUM"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CREATE_TIME"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="INIT_REPT_DATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="USER_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="LAST_UPDATE_TIME"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="LAST_UPDATE_USER_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="REQUIRES_FOLLOWUP"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FOLLOWUP_DATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="OWNER_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="STATE_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="COUNTRY_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="LANG_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PRIORITY"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SITE_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SERIOUSNESS"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="RPT_TYPE_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="LAST_STATE_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ASSESSMENT_NEEDED"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PRIORITY_OVERRIDE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SAFETY_DATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="NORMAL_TIME"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MAX_TIME"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="REPORT_SCHEDULING"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PRIORITY_ASSESSMENT"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CLOSE_USER_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CLOSE_DATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CLOSE_NOTES"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DATE_LOCKED"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_1"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_2"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_3"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_4"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_5"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_6"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_7"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_8"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_9"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_10"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_11"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_12"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_DATE_1"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_DATE_2"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_DATE_3"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_DATE_4"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_DATE_5"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_DATE_6"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_DATE_7"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_DATE_8"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_DATE_9"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_DATE_10"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_DATE_11"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_DATE_12"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_NUMBER_1"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_NUMBER_2"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_NUMBER_3"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_NUMBER_4"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_NUMBER_5"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_NUMBER_6"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_NUMBER_7"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_NUMBER_8"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_NUMBER_9"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_NUMBER_10"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_NUMBER_11"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_NUMBER_12"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DELETED"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DUE_SOON"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="GLOBAL_NUM"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PRIORITY_DATE_ASSESSED"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="LAM_ASSESS_DONE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="E2B_WW_NUMBER"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="WORKLIST_OWNER_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SUSAR"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="LAST_UPDATE_EVENT"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="INITIAL_JUSTIFICATION"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FORCE_SOON"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DUE_SOON_J"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FOLLOWUP_DATE_J"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="INIT_REPT_DATE_J"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="JUST_INIT_REPT_DATE_J"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_1_J"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_2_J"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_3_J"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_4_J"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_5_J"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_6_J"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_7_J"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_8_J"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_9_J"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_10_J"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_11_J"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UD_TEXT_12_J"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="INITIAL_JUSTIFICATION_J"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="LOCK_STATUS_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MEDICALLY_CONFIRM"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ENTERPRISE_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CaseInitialReceiptDate"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Extract_Argus_Case_Master"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="CASE_MASTER" name="tDBInput_1">
-      <column comment="Unique value of the case, used in all tables linked to the case" key="true" length="0" name="CASE_ID" nullable="false" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Unique value of the case, used in all tables linked to the case"/>
-      </column>
-      <column comment="Case number" key="false" length="20" name="CASE_NUM" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Case number"/>
-      </column>
-      <column comment="Revision of the case based on follow-up date changes" key="false" length="0" name="REV" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Revision of the case based on follow-up date changes"/>
-      </column>
-      <column comment="Value from CFG_WORKFLOW_RULES. This column is foreign key to CFG_WORKFLOW_RULES.SEQ_NUM." key="false" length="0" name="WORKFLOW_SEQ_NUM" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Value from CFG_WORKFLOW_RULES. This column is foreign key to CFG_WORKFLOW_RULES.SEQ_NUM."/>
-      </column>
-      <column comment="Value from CFG_WORKFLOW_RULES. This column is foreign key to CFG_WORKFLOW_RULES.SEQ_NUM." key="false" length="0" name="LAST_WORKFLOW_SEQ_NUM" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Value from CFG_WORKFLOW_RULES. This column is foreign key to CFG_WORKFLOW_RULES.SEQ_NUM."/>
-      </column>
-      <column comment="Initial creation date of case, stored in GMT" key="false" length="7" name="CREATE_TIME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Initial creation date of case, stored in GMT"/>
-      </column>
-      <column comment="Initial receipt date of case" key="false" length="7" name="INIT_REPT_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Initial receipt date of case"/>
-      </column>
-      <column comment="Value from CFG_USERS, originator of the case. This column is foreign key to CFG_USERS.USER_ID." key="false" length="0" name="USER_ID" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Value from CFG_USERS, originator of the case. This column is foreign key to CFG_USERS.USER_ID."/>
-      </column>
-      <column comment="Last date case was saved, stored in GMT" key="false" length="7" name="LAST_UPDATE_TIME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Last date case was saved, stored in GMT"/>
-      </column>
-      <column comment="Last user to save the case, value from CFG_USERS" key="false" length="0" name="LAST_UPDATE_USER_ID" nullable="false" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Last user to save the case, value from CFG_USERS"/>
-      </column>
-      <column comment="Case Requires Follow-up (yes = 1); Default=0" defaultValue="0" key="false" length="0" name="REQUIRES_FOLLOWUP" nullable="false" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Case Requires Follow-up (yes = 1); Default=0"/>
-      </column>
-      <column comment="Follow-up date" key="false" length="7" name="FOLLOWUP_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Follow-up date"/>
-      </column>
-      <column comment="User that created the initial case, value from CFG_USERS,Default 0" defaultValue="0" key="false" length="0" name="OWNER_ID" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User that created the initial case, value from CFG_USERS,Default 0"/>
-      </column>
-      <column comment="Current state the case is in, value from CFG_WORKFLOW_STATES. This column is foreign key to CFG_WORKFLOW_STATES.STATE_ID." key="false" length="0" name="STATE_ID" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Current state the case is in, value from CFG_WORKFLOW_STATES. This column is foreign key to CFG_WORKFLOW_STATES.STATE_ID."/>
-      </column>
-      <column comment="Country id, from LM_COUNTRIES. This column is foreign key to LM_COUNTRIES.COUNTRY_ID." key="false" length="0" name="COUNTRY_ID" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Country id, from LM_COUNTRIES. This column is foreign key to LM_COUNTRIES.COUNTRY_ID."/>
-      </column>
-      <column comment="Unused" key="false" length="0" name="LANG_ID" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Unused"/>
-      </column>
-      <column comment="Case priority value" key="false" length="0" name="PRIORITY" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Case priority value"/>
-      </column>
-      <column comment="Value from CFG_USERS which in turn comes from LM_SITES" key="false" length="0" name="SITE_ID" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Value from CFG_USERS which in turn comes from LM_SITES"/>
-      </column>
-      <column comment="0=No  1-Yes   2-Unknown  case serious" key="false" length="0" name="SERIOUSNESS" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="0=No  1-Yes   2-Unknown  case serious"/>
-      </column>
-      <column comment="Type of case entered, value from LM_REPORT_TYPE. This column is foreign key to LM_REPORT_TYPE.RPT_TYPE_ID." key="false" length="0" name="RPT_TYPE_ID" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Type of case entered, value from LM_REPORT_TYPE. This column is foreign key to LM_REPORT_TYPE.RPT_TYPE_ID."/>
-      </column>
-      <column comment="Last state the case was in, value from CFG_WORKFLOW_STATES" key="false" length="0" name="LAST_STATE_ID" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Last state the case was in, value from CFG_WORKFLOW_STATES"/>
-      </column>
-      <column comment="1 = Event Assessment to be run by AGService" defaultValue="0" key="false" length="0" name="ASSESSMENT_NEEDED" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="1 = Event Assessment to be run by AGService"/>
-      </column>
-      <column comment="0=No,  1=Yes, Default = 0." key="false" length="1" name="PRIORITY_OVERRIDE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="0=No,  1=Yes, Default = 0."/>
-      </column>
-      <column comment="Database in which this case was entered." key="false" length="128" name="SID" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Database in which this case was entered."/>
-      </column>
-      <column comment="Central Safety receipt date." key="false" length="7" name="SAFETY_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Central Safety receipt date."/>
-      </column>
-      <column comment="Normal priority update time." key="false" length="7" name="NORMAL_TIME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Normal priority update time."/>
-      </column>
-      <column comment="Max priority update time." key="false" length="7" name="MAX_TIME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Max priority update time."/>
-      </column>
-      <column comment="Scheduling Needed. 0 = Null, 1 = Drug, 2 = Device, 3 = Drug / Device, 4 = Local Report Scheduling" defaultValue="0" key="false" length="0" name="REPORT_SCHEDULING" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Scheduling Needed. 0 = Null, 1 = Drug, 2 = Device, 3 = Drug / Device, 4 = Local Report Scheduling"/>
-      </column>
-      <column comment="Priority Assessment Needed. 0 = No, 1 = Yes, Default = 0." defaultValue="0" key="false" length="0" name="PRIORITY_ASSESSMENT" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Priority Assessment Needed. 0 = No, 1 = Yes, Default = 0."/>
-      </column>
-      <column comment="Closing user id. This column is foreign key to CFG_USERS.USER_ID." key="false" length="0" name="CLOSE_USER_ID" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Closing user id. This column is foreign key to CFG_USERS.USER_ID."/>
-      </column>
-      <column comment="Closing date." key="false" length="7" name="CLOSE_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Closing date."/>
-      </column>
-      <column comment="Closing notes." key="false" length="200" name="CLOSE_NOTES" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Closing notes."/>
-      </column>
-      <column comment="Lock date." key="false" length="7" name="DATE_LOCKED" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Lock date."/>
-      </column>
-      <column comment="User Defined Text" key="false" length="100" name="UD_TEXT_1" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text"/>
-      </column>
-      <column comment="User Defined Text" key="false" length="100" name="UD_TEXT_2" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text"/>
-      </column>
-      <column comment="User Defined Text" key="false" length="100" name="UD_TEXT_3" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text"/>
-      </column>
-      <column comment="User Defined Text" key="false" length="100" name="UD_TEXT_4" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text"/>
-      </column>
-      <column comment="User Defined Text" key="false" length="100" name="UD_TEXT_5" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text"/>
-      </column>
-      <column comment="User Defined Text" key="false" length="100" name="UD_TEXT_6" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text"/>
-      </column>
-      <column comment="User Defined Text" key="false" length="100" name="UD_TEXT_7" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text"/>
-      </column>
-      <column comment="User Defined Text" key="false" length="100" name="UD_TEXT_8" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text"/>
-      </column>
-      <column comment="User Defined Text" key="false" length="100" name="UD_TEXT_9" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text"/>
-      </column>
-      <column comment="User Defined Text" key="false" length="100" name="UD_TEXT_10" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text"/>
-      </column>
-      <column comment="User Defined Text" key="false" length="100" name="UD_TEXT_11" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text"/>
-      </column>
-      <column comment="User Defined Text" key="false" length="100" name="UD_TEXT_12" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text"/>
-      </column>
-      <column comment="User Defined Date" key="false" length="7" name="UD_DATE_1" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Date"/>
-      </column>
-      <column comment="User Defined Date" key="false" length="7" name="UD_DATE_2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Date"/>
-      </column>
-      <column comment="User Defined Date" key="false" length="7" name="UD_DATE_3" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Date"/>
-      </column>
-      <column comment="User Defined Date" key="false" length="7" name="UD_DATE_4" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Date"/>
-      </column>
-      <column comment="User Defined Date" key="false" length="7" name="UD_DATE_5" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Date"/>
-      </column>
-      <column comment="User Defined Date" key="false" length="7" name="UD_DATE_6" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Date"/>
-      </column>
-      <column comment="User Defined Date" key="false" length="7" name="UD_DATE_7" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Date"/>
-      </column>
-      <column comment="User Defined Date" key="false" length="7" name="UD_DATE_8" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Date"/>
-      </column>
-      <column comment="User Defined Date" key="false" length="7" name="UD_DATE_9" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Date"/>
-      </column>
-      <column comment="User Defined Date" key="false" length="7" name="UD_DATE_10" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Date"/>
-      </column>
-      <column comment="User Defined Date" key="false" length="7" name="UD_DATE_11" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Date"/>
-      </column>
-      <column comment="User Defined Date" key="false" length="7" name="UD_DATE_12" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Date"/>
-      </column>
-      <column comment="User Defined Number" key="false" length="30" name="UD_NUMBER_1" nullable="true" pattern="" precision="10" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Number"/>
-      </column>
-      <column comment="User Defined Number" key="false" length="30" name="UD_NUMBER_2" nullable="true" pattern="" precision="10" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Number"/>
-      </column>
-      <column comment="User Defined Number" key="false" length="30" name="UD_NUMBER_3" nullable="true" pattern="" precision="10" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Number"/>
-      </column>
-      <column comment="User Defined Number" key="false" length="30" name="UD_NUMBER_4" nullable="true" pattern="" precision="10" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Number"/>
-      </column>
-      <column comment="User Defined Number" key="false" length="30" name="UD_NUMBER_5" nullable="true" pattern="" precision="10" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Number"/>
-      </column>
-      <column comment="User Defined Number" key="false" length="30" name="UD_NUMBER_6" nullable="true" pattern="" precision="10" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Number"/>
-      </column>
-      <column comment="User Defined Number" key="false" length="30" name="UD_NUMBER_7" nullable="true" pattern="" precision="10" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Number"/>
-      </column>
-      <column comment="User Defined Number" key="false" length="30" name="UD_NUMBER_8" nullable="true" pattern="" precision="10" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Number"/>
-      </column>
-      <column comment="User Defined Number" key="false" length="30" name="UD_NUMBER_9" nullable="true" pattern="" precision="10" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Number"/>
-      </column>
-      <column comment="User Defined Number" key="false" length="30" name="UD_NUMBER_10" nullable="true" pattern="" precision="10" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Number"/>
-      </column>
-      <column comment="User Defined Number" key="false" length="30" name="UD_NUMBER_11" nullable="true" pattern="" precision="10" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Number"/>
-      </column>
-      <column comment="User Defined Number" key="false" length="30" name="UD_NUMBER_12" nullable="true" pattern="" precision="10" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Number"/>
-      </column>
-      <column comment="Date the record was deleted. If NULL, the record is not deleted." key="false" length="7" name="DELETED" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Date the record was deleted. If NULL, the record is not deleted."/>
-      </column>
-      <column comment="Earliest date of a possible report for unlocked cases." key="false" length="7" name="DUE_SOON" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Earliest date of a possible report for unlocked cases."/>
-      </column>
-      <column comment="Global Number for case - will be used to store Global Case Number, for Lilly it will store GlobalID, in future also be used for E2b cases" key="false" length="20" name="GLOBAL_NUM" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Global Number for case - will be used to store Global Case Number, for Lilly it will store GlobalID, in future also be used for E2b cases"/>
-      </column>
-      <column comment="Internal use only" key="false" length="7" name="PRIORITY_DATE_ASSESSED" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Internal use only"/>
-      </column>
-      <column comment="Determines whether lam assessment is complete at the case level Default value = 0 - lam assessment pending 1 = LAM assessment is complete" defaultValue="0" key="false" length="1" name="LAM_ASSESS_DONE" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Determines whether lam assessment is complete at the case level Default value = 0 - lam assessment pending 1 = LAM assessment is complete"/>
-      </column>
-      <column comment="WWW unique number for the case" key="false" length="100" name="E2B_WW_NUMBER" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="WWW unique number for the case"/>
-      </column>
-      <column comment="User ID of the current owner of the Case (as assigned through Worklist). . This column is foreign key to CFG_USERS.USER_ID." key="false" length="0" name="WORKLIST_OWNER_ID" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User ID of the current owner of the Case (as assigned through Worklist). . This column is foreign key to CFG_USERS.USER_ID."/>
-      </column>
-      <column comment="The column identifies if the case is classified for SUSAR reporting. Default = 0.  1 if case is SUSAR." defaultValue="0" key="false" length="0" name="SUSAR" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="The column identifies if the case is classified for SUSAR reporting. Default = 0.  1 if case is SUSAR."/>
-      </column>
-      <column comment="Last Date when event was encoded using central coding" key="false" length="7" name="LAST_UPDATE_EVENT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Last Date when event was encoded using central coding"/>
-      </column>
-      <column comment="DATA WILL POPULATE FORM BOOKIN, GENERAL TAB,LAM ACCEPTANCE, E2B ACCEPTANCE NOTES" key="false" length="1000" name="INITIAL_JUSTIFICATION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="DATA WILL POPULATE FORM BOOKIN, GENERAL TAB,LAM ACCEPTANCE, E2B ACCEPTANCE NOTES"/>
-      </column>
-      <column comment="Date on which Report has to be scheduled forcibly" key="false" length="7" name="FORCE_SOON" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Date on which Report has to be scheduled forcibly"/>
-      </column>
-      <column comment="Earliest date of a possible report for unlocked cases. (Japanese)." key="false" length="7" name="DUE_SOON_J" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Earliest date of a possible report for unlocked cases. (Japanese)."/>
-      </column>
-      <column comment="Follow-up date (Japanese)." key="false" length="7" name="FOLLOWUP_DATE_J" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Follow-up date (Japanese)."/>
-      </column>
-      <column comment="Initial receipt date of case (Japanese)." key="false" length="7" name="INIT_REPT_DATE_J" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Initial receipt date of case (Japanese)."/>
-      </column>
-      <column comment="Justification for changing the Japanese initial receipt date from the default" key="false" length="1000" name="JUST_INIT_REPT_DATE_J" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Justification for changing the Japanese initial receipt date from the default"/>
-      </column>
-      <column comment="User Defined Text (Japanese)." key="false" length="100" name="UD_TEXT_1_J" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text (Japanese)."/>
-      </column>
-      <column comment="User Defined Text (Japanese)." key="false" length="100" name="UD_TEXT_2_J" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text (Japanese)."/>
-      </column>
-      <column comment="User Defined Text (Japanese)." key="false" length="100" name="UD_TEXT_3_J" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text (Japanese)."/>
-      </column>
-      <column comment="User Defined Text (Japanese)." key="false" length="100" name="UD_TEXT_4_J" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text (Japanese)."/>
-      </column>
-      <column comment="User Defined Text (Japanese)." key="false" length="100" name="UD_TEXT_5_J" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text (Japanese)."/>
-      </column>
-      <column comment="User Defined Text (Japanese)." key="false" length="100" name="UD_TEXT_6_J" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text (Japanese)."/>
-      </column>
-      <column comment="User Defined Text (Japanese)." key="false" length="100" name="UD_TEXT_7_J" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text (Japanese)."/>
-      </column>
-      <column comment="User Defined Text (Japanese)." key="false" length="100" name="UD_TEXT_8_J" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text (Japanese)."/>
-      </column>
-      <column comment="User Defined Text (Japanese)." key="false" length="100" name="UD_TEXT_9_J" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text (Japanese)."/>
-      </column>
-      <column comment="User Defined Text (Japanese)." key="false" length="100" name="UD_TEXT_10_J" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text (Japanese)."/>
-      </column>
-      <column comment="User Defined Text (Japanese)." key="false" length="100" name="UD_TEXT_11_J" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text (Japanese)."/>
-      </column>
-      <column comment="User Defined Text (Japanese)." key="false" length="100" name="UD_TEXT_12_J" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="User Defined Text (Japanese)."/>
-      </column>
-      <column comment="DATA WILL POPULATE FORM BOOKIN, GENERAL TAB,LAM ACCEPTANCE, E2B ACCEPTANCE NOTES (Japanese)." key="false" length="1000" name="INITIAL_JUSTIFICATION_J" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="DATA WILL POPULATE FORM BOOKIN, GENERAL TAB,LAM ACCEPTANCE, E2B ACCEPTANCE NOTES (Japanese)."/>
-      </column>
-      <column comment="Stores current lock status of the case" key="false" length="0" name="LOCK_STATUS_ID" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Stores current lock status of the case"/>
-      </column>
-      <column comment="" key="false" length="0" name="MEDICALLY_CONFIRM" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment=" This value is reference to CFG_ENTERPRISE.ENTERPRISE_ID" defaultValue="SYS_CONTEXT('Argus_ctx','enterprise_id')" key="false" length="0" name="ENTERPRISE_ID" nullable="false" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=" This value is reference to CFG_ENTERPRISE.ENTERPRISE_ID"/>
-      </column>
-      <column comment="" key="false" length="-1" name="CaseInitialReceiptDate" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <additionalProperties key="Comment" value="Master record for case form."/>
-    </metadata>
-  </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="-2560" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_1yhpcJQ5Ee2qmPQ9sHiaAw-tMap_1-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
-    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="Inserts">
-      <column comment="Unique value of the case, used in all tables linked to the case" key="true" length="0" name="CASE_ID" nullable="false" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Unique value of the case, used in all tables linked to the case"/>
-      </column>
-      <column comment="Case number" key="false" length="20" name="CASE_NUM" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Case number"/>
-      </column>
-      <column comment="Initial creation date of case, stored in GMT" key="false" length="7" name="CREATE_TIME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Initial creation date of case, stored in GMT"/>
-      </column>
-      <column comment="Initial receipt date of case" key="false" length="7" name="INIT_REPT_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Initial receipt date of case"/>
-      </column>
-      <column comment="Value from CFG_USERS, originator of the case. This column is foreign key to CFG_USERS.USER_ID." key="false" length="0" name="USER_ID" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Value from CFG_USERS, originator of the case. This column is foreign key to CFG_USERS.USER_ID."/>
-      </column>
-      <column comment="Follow-up date" key="false" length="7" name="FOLLOWUP_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Follow-up date"/>
-      </column>
-      <column comment="User that created the initial case, value from CFG_USERS,Default 0" defaultValue="0" key="false" length="0" name="OWNER_ID" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User that created the initial case, value from CFG_USERS,Default 0"/>
-      </column>
-      <column comment="Current state the case is in, value from CFG_WORKFLOW_STATES. This column is foreign key to CFG_WORKFLOW_STATES.STATE_ID." key="false" length="0" name="STATE_ID" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Current state the case is in, value from CFG_WORKFLOW_STATES. This column is foreign key to CFG_WORKFLOW_STATES.STATE_ID."/>
-      </column>
-      <column comment="0=No  1-Yes   2-Unknown  case serious" key="false" length="0" name="SERIOUSNESS" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="0=No  1-Yes   2-Unknown  case serious"/>
-      </column>
-      <column comment="Type of case entered, value from LM_REPORT_TYPE. This column is foreign key to LM_REPORT_TYPE.RPT_TYPE_ID." key="false" length="0" name="RPT_TYPE_ID" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Type of case entered, value from LM_REPORT_TYPE. This column is foreign key to LM_REPORT_TYPE.RPT_TYPE_ID."/>
-      </column>
-      <column comment="User ID of the current owner of the Case (as assigned through Worklist). . This column is foreign key to CFG_USERS.USER_ID." key="false" length="0" name="WORKLIST_OWNER_ID" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User ID of the current owner of the Case (as assigned through Worklist). . This column is foreign key to CFG_USERS.USER_ID."/>
-      </column>
-      <column comment="" key="false" length="-1" name="SYS_LASTUPDATED" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="SYS_CREATED" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="SYS_CREATEDBY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="SYS_LASTUPDBY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="INITIAL_CASE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="EVT_SEQ_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="FOLLOWUP_SEQ_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-    </metadata>
-    <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables activateCondensedTool="true" name="Inserts" rejectInnerJoin="true" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row1.CASE_ID    " name="CASE_ID" type="id_BigDecimal"/>
-        <mapperTableEntries expression="row1.CASE_NUM    " name="CASE_NUM" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.CREATE_TIME    " name="CREATE_TIME" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.INIT_REPT_DATE    " name="INIT_REPT_DATE" type="id_Date"/>
-        <mapperTableEntries expression="row1.USER_ID    " name="USER_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="row1.FOLLOWUP_DATE    " name="FOLLOWUP_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.OWNER_ID    " name="OWNER_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="row1.STATE_ID    " name="STATE_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="row1.SERIOUSNESS    " name="SERIOUSNESS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="row1.RPT_TYPE_ID    " name="RPT_TYPE_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="row1.WORKLIST_OWNER_ID    " name="WORKLIST_OWNER_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="TalendDate.getCurrentDate()    " name="SYS_LASTUPDATED" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="TalendDate.getCurrentDate()   " name="SYS_CREATED" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="&quot;Admin_CR&quot;   " name="SYS_CREATEDBY" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="&quot;Admin_CR&quot;   " name="SYS_LASTUPDBY" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="&quot;Yes&quot;  " name="INITIAL_CASE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="1 " name="EVT_SEQ_ID" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="row5.FOLLOWUP_SEQ_ID  " name="FOLLOWUP_SEQ_ID" nullable="true" type="id_BigDecimal"/>
-      </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="CASE_ID" type="id_BigDecimal"/>
-        <mapperTableEntries name="CASE_NUM" nullable="true" type="id_String"/>
-        <mapperTableEntries name="REV" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="WORKFLOW_SEQ_NUM" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="LAST_WORKFLOW_SEQ_NUM" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="CREATE_TIME" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="INIT_REPT_DATE" type="id_Date"/>
-        <mapperTableEntries name="USER_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="LAST_UPDATE_TIME" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="LAST_UPDATE_USER_ID" type="id_BigDecimal"/>
-        <mapperTableEntries name="REQUIRES_FOLLOWUP" type="id_BigDecimal"/>
-        <mapperTableEntries name="FOLLOWUP_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="OWNER_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="STATE_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="COUNTRY_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="LANG_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="PRIORITY" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="SITE_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="SERIOUSNESS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="RPT_TYPE_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="LAST_STATE_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="ASSESSMENT_NEEDED" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="PRIORITY_OVERRIDE" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="SID" nullable="true" type="id_String"/>
-        <mapperTableEntries name="SAFETY_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="NORMAL_TIME" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="MAX_TIME" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="REPORT_SCHEDULING" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="PRIORITY_ASSESSMENT" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="CLOSE_USER_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="CLOSE_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="CLOSE_NOTES" nullable="true" type="id_String"/>
-        <mapperTableEntries name="DATE_LOCKED" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="UD_TEXT_1" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_2" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_3" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_4" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_5" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_6" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_7" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_8" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_9" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_10" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_11" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_12" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_DATE_1" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="UD_DATE_2" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="UD_DATE_3" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="UD_DATE_4" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="UD_DATE_5" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="UD_DATE_6" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="UD_DATE_7" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="UD_DATE_8" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="UD_DATE_9" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="UD_DATE_10" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="UD_DATE_11" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="UD_DATE_12" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="UD_NUMBER_1" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="UD_NUMBER_2" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="UD_NUMBER_3" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="UD_NUMBER_4" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="UD_NUMBER_5" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="UD_NUMBER_6" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="UD_NUMBER_7" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="UD_NUMBER_8" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="UD_NUMBER_9" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="UD_NUMBER_10" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="UD_NUMBER_11" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="UD_NUMBER_12" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="DELETED" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="DUE_SOON" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="GLOBAL_NUM" nullable="true" type="id_String"/>
-        <mapperTableEntries name="PRIORITY_DATE_ASSESSED" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="LAM_ASSESS_DONE" type="id_BigDecimal"/>
-        <mapperTableEntries name="E2B_WW_NUMBER" nullable="true" type="id_String"/>
-        <mapperTableEntries name="WORKLIST_OWNER_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="SUSAR" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="LAST_UPDATE_EVENT" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="INITIAL_JUSTIFICATION" nullable="true" type="id_String"/>
-        <mapperTableEntries name="FORCE_SOON" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="DUE_SOON_J" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="FOLLOWUP_DATE_J" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="INIT_REPT_DATE_J" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="JUST_INIT_REPT_DATE_J" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_1_J" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_2_J" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_3_J" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_4_J" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_5_J" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_6_J" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_7_J" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_8_J" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_9_J" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_10_J" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_11_J" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UD_TEXT_12_J" nullable="true" type="id_String"/>
-        <mapperTableEntries name="INITIAL_JUSTIFICATION_J" nullable="true" type="id_String"/>
-        <mapperTableEntries name="LOCK_STATUS_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="MEDICALLY_CONFIRM" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="ENTERPRISE_ID" type="id_BigDecimal"/>
-        <mapperTableEntries name="CaseInitialReceiptDate" nullable="true" type="id_Date"/>
-      </inputTables>
-      <inputTables activateCondensedTool="true" innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row5" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="" name="ID" type="id_Integer"/>
-        <mapperTableEntries expression="row1.CASE_ID" name="CASE_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression=" " name="CASE_NUM" nullable="true" type="id_String"/>
-        <mapperTableEntries name="RPT_TYPE_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="" name="REPORT_TYPE" nullable="true" type="id_String"/>
-        <mapperTableEntries name="CREATE_TIME" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="FOLLOWUP_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="RECEIPT_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="INIT_REPT_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="STATE_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="CASE_STATUS" nullable="true" type="id_String"/>
-        <mapperTableEntries name="SERIOUSNESS" nullable="true" type="id_String"/>
-        <mapperTableEntries name="SERIOUSNESS_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="EVENT_DEATH_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="USER_ID" nullable="true" type="id_String"/>
-        <mapperTableEntries name="USER_NAME" nullable="true" type="id_String"/>
-        <mapperTableEntries name="OWNER_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="OWNER_NAME" nullable="true" type="id_String"/>
-        <mapperTableEntries name="PATIENT_SUBJ_NUM" nullable="true" type="id_String"/>
-        <mapperTableEntries name="STUDY_NUM" nullable="true" type="id_String"/>
-        <mapperTableEntries name="EVENT_DEATH" nullable="true" type="id_String"/>
-        <mapperTableEntries name="EVENT_DESC" nullable="true" type="id_String"/>
-        <mapperTableEntries name="PREF_TERM" nullable="true" type="id_String"/>
-        <mapperTableEntries name="PRODUCT_NAME" nullable="true" type="id_String"/>
-        <mapperTableEntries name="WORKLIST_OWNER_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="RPT_CAUSALITY_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="PRT_CAUSALITY_NAME" nullable="true" type="id_String"/>
-        <mapperTableEntries name="DET_CAUSALITY_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="DET_CAUSALITY_NAME" nullable="true" type="id_String"/>
-        <mapperTableEntries name="DET_LISTEDNESS_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="DET_LISTEDNESS_NAME" nullable="true" type="id_String"/>
-        <mapperTableEntries name="REQUIRES_FOLLOWUP" nullable="true" type="id_String"/>
-        <mapperTableEntries name="CASE_SIGNIFICANT" nullable="true" type="id_String"/>
-        <mapperTableEntries name="EVT_SEQ_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="SFDC_ROW_ID" nullable="true" type="id_String"/>
-        <mapperTableEntries name="STUDY_DRUG" nullable="true" type="id_String"/>
-        <mapperTableEntries name="WORKLIST_OWNER_NAME" nullable="true" type="id_String"/>
-        <mapperTableEntries name="INT_MON_NUM" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="INT_YEAR" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="INT_QTR" nullable="true" type="id_String"/>
-        <mapperTableEntries name="INT_MON" nullable="true" type="id_String"/>
-        <mapperTableEntries name="SYS_CREATED" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="SYS_CREATEDBY" nullable="true" type="id_String"/>
-        <mapperTableEntries name="SYS_LASTUPDATED" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="SYS_LASTUPDBY" nullable="true" type="id_String"/>
-        <mapperTableEntries name="FOLLOWUP_SEQ_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="INITIAL_CASE" nullable="true" type="id_String"/>
-      </inputTables>
-    </nodeData>
-  </node>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-2560" posY="448">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_SdfUULScEems4_HGzAGUcw"/>
-    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;BISON&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="MSSQL_PROP"/>
-    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;dbo&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;cer_prdint&quot;"/>
-    <elementParameter field="TEXT" name="USER" show="false" value="&quot;cerprdint&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:ww29QkEFWWpJDxDQe+GbtJcsvGM8ODJYUWG8rs6eGpZvqyi1FJ2WL+DV4lJa"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;ARGUS_CASE_MASTER&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.ARGUS_CASE_MASTER.\&quot;ID\&quot;,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CASE_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CASE_NUM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.RPT_TYPE_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.REPORT_TYPE,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CREATE_TIME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.FOLLOWUP_DATE,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.RECEIPT_DATE,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INIT_REPT_DATE,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.STATE_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CASE_STATUS,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SERIOUSNESS,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SERIOUSNESS_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.EVENT_DEATH_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.\&quot;USER_ID\&quot;,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.\&quot;USER_NAME\&quot;,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.OWNER_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.OWNER_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.PATIENT_SUBJ_NUM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.STUDY_NUM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.EVENT_DEATH,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.EVENT_DESC,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.PREF_TERM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.PRODUCT_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.WORKLIST_OWNER_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.RPT_CAUSALITY_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.PRT_CAUSALITY_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.DET_CAUSALITY_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.DET_CAUSALITY_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.DET_LISTEDNESS_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.DET_LISTEDNESS_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.REQUIRES_FOLLOWUP,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.CASE_SIGNIFICANT,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.EVT_SEQ_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SFDC_ROW_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.STUDY_DRUG,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.WORKLIST_OWNER_NAME,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INT_MON_NUM,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INT_YEAR,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INT_QTR,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INT_MON,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SYS_CREATED,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SYS_CREATEDBY,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SYS_LASTUPDATED,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.SYS_LASTUPDBY,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.FOLLOWUP_SEQ_ID,&#10;&#9;&#9;dbo.ARGUS_CASE_MASTER.INITIAL_CASE&#10;FROM&#9;dbo.ARGUS_CASE_MASTER&#13;&#10;WHERE dbo.ARGUS_CASE_MASTER.INITIAL_CASE = 'Yes'&#13;&#10;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
-    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;integratedSecurity=true&quot;"/>
-    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CASE_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CASE_NUM"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="RPT_TYPE_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="REPORT_TYPE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CREATE_TIME"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FOLLOWUP_DATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="RECEIPT_DATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="INIT_REPT_DATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="STATE_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CASE_STATUS"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SERIOUSNESS"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SERIOUSNESS_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="EVENT_DEATH_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="USER_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="USER_NAME"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="OWNER_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="OWNER_NAME"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PATIENT_SUBJ_NUM"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="STUDY_NUM"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="EVENT_DEATH"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="EVENT_DESC"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PREF_TERM"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PRODUCT_NAME"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="WORKLIST_OWNER_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="RPT_CAUSALITY_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PRT_CAUSALITY_NAME"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DET_CAUSALITY_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DET_CAUSALITY_NAME"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DET_LISTEDNESS_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DET_LISTEDNESS_NAME"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="REQUIRES_FOLLOWUP"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CASE_SIGNIFICANT"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="EVT_SEQ_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SFDC_ROW_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="STUDY_DRUG"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="WORKLIST_OWNER_NAME"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="INT_MON_NUM"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="INT_YEAR"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="INT_QTR"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="INT_MON"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SYS_CREATED"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SYS_CREATEDBY"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SYS_LASTUPDATED"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SYS_LASTUPDBY"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FOLLOWUP_SEQ_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="INITIAL_CASE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="LABEL" value="ARGUS_CASE_MASTER"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="ARGUS_CASE_MASTER" name="tDBInput_2">
-      <column comment="" key="false" length="10" name="ID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="CASE_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="CASE_NUM" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="RPT_TYPE_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="REPORT_TYPE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="CREATE_TIME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="FOLLOWUP_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="RECEIPT_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="INIT_REPT_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="STATE_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="CASE_STATUS" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="SERIOUSNESS" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="18" name="SERIOUSNESS_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="18" name="EVENT_DEATH_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="USER_ID" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="USER_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="OWNER_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="OWNER_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="PATIENT_SUBJ_NUM" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="STUDY_NUM" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="EVENT_DEATH" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="EVENT_DESC" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="PREF_TERM" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="PRODUCT_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="WORKLIST_OWNER_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="RPT_CAUSALITY_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="PRT_CAUSALITY_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="DET_CAUSALITY_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="DET_CAUSALITY_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="DET_LISTEDNESS_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="DET_LISTEDNESS_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="REQUIRES_FOLLOWUP" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="CASE_SIGNIFICANT" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="EVT_SEQ_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="SFDC_ROW_ID" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="STUDY_DRUG" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="WORKLIST_OWNER_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="INT_MON_NUM" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="INT_YEAR" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="INT_QTR" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="INT_MON" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="23" name="SYS_CREATED" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="SYS_CREATEDBY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="23" name="SYS_LASTUPDATED" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="SYS_LASTUPDBY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="FOLLOWUP_SEQ_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="INITIAL_CASE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-    </metadata>
-  </node>
-  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-2272" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_SdfUULScEems4_HGzAGUcw"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
-    <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="MSSQL_PROP"/>
-    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;BISON&quot;"/>
-    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;dbo&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;cer_prdint&quot;"/>
-    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="USER" show="false" value="&quot;cerprdint&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:YEwSRdJ4Em8rhO6lIlwz+DLrayazf5znAjLAJqsHkEeaB/MjTEP6TwDI+Jh1"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;ARGUS_CASE_MASTER&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
-    <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
-    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" show="false" value="false"/>
-    <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="CASE_ID"/>
-    <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
-    <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
-    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
-    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;integratedSecurity=true&quot;"/>
-    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
-    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" value="false"/>
-    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
-    <elementParameter field="TABLE" name="ADD_COLS"/>
-    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
-    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="CASE_ID"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CASE_NUM"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CREATE_TIME"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="INIT_REPT_DATE"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="USER_ID"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FOLLOWUP_DATE"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="OWNER_ID"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="STATE_ID"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SERIOUSNESS"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="RPT_TYPE_ID"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="WORKLIST_OWNER_ID"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SYS_LASTUPDATED"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SYS_CREATED"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SYS_CREATEDBY"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SYS_LASTUPDBY"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="INITIAL_CASE"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="EVT_SEQ_ID"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FOLLOWUP_SEQ_ID"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
-    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
-    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
-    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
-    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
-    <elementParameter field="TEXT" name="LABEL" value="CaseMaster"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDBOutput_1">
-      <column comment="Unique value of the case, used in all tables linked to the case" key="true" length="0" name="CASE_ID" nullable="false" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Unique value of the case, used in all tables linked to the case"/>
-      </column>
-      <column comment="Case number" key="false" length="20" name="CASE_NUM" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Case number"/>
-      </column>
-      <column comment="Initial creation date of case, stored in GMT" key="false" length="7" name="CREATE_TIME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Initial creation date of case, stored in GMT"/>
-      </column>
-      <column comment="Initial receipt date of case" key="false" length="7" name="INIT_REPT_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Initial receipt date of case"/>
-      </column>
-      <column comment="Value from CFG_USERS, originator of the case. This column is foreign key to CFG_USERS.USER_ID." key="false" length="0" name="USER_ID" nullable="true" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Value from CFG_USERS, originator of the case. This column is foreign key to CFG_USERS.USER_ID."/>
-      </column>
-      <column comment="Follow-up date" key="false" length="7" name="FOLLOWUP_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Follow-up date"/>
-      </column>
-      <column comment="User that created the initial case, value from CFG_USERS,Default 0" defaultValue="0" key="false" length="0" name="OWNER_ID" nullable="true" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User that created the initial case, value from CFG_USERS,Default 0"/>
-      </column>
-      <column comment="Current state the case is in, value from CFG_WORKFLOW_STATES. This column is foreign key to CFG_WORKFLOW_STATES.STATE_ID." key="false" length="0" name="STATE_ID" nullable="true" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Current state the case is in, value from CFG_WORKFLOW_STATES. This column is foreign key to CFG_WORKFLOW_STATES.STATE_ID."/>
-      </column>
-      <column comment="0=No  1-Yes   2-Unknown  case serious" key="false" length="0" name="SERIOUSNESS" nullable="true" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="0=No  1-Yes   2-Unknown  case serious"/>
-      </column>
-      <column comment="Type of case entered, value from LM_REPORT_TYPE. This column is foreign key to LM_REPORT_TYPE.RPT_TYPE_ID." key="false" length="0" name="RPT_TYPE_ID" nullable="true" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Type of case entered, value from LM_REPORT_TYPE. This column is foreign key to LM_REPORT_TYPE.RPT_TYPE_ID."/>
-      </column>
-      <column comment="User ID of the current owner of the Case (as assigned through Worklist). . This column is foreign key to CFG_USERS.USER_ID." key="false" length="0" name="WORKLIST_OWNER_ID" nullable="true" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User ID of the current owner of the Case (as assigned through Worklist). . This column is foreign key to CFG_USERS.USER_ID."/>
-      </column>
-      <column comment="" key="false" length="-1" name="SYS_LASTUPDATED" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="SYS_CREATED" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="SYS_CREATEDBY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="SYS_LASTUPDBY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="INITIAL_CASE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="EVT_SEQ_ID" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="FOLLOWUP_SEQ_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-    </metadata>
-    <metadata connector="REJECT" name="REJECT">
-      <column comment="Unique value of the case, used in all tables linked to the case" key="true" length="0" name="CASE_ID" nullable="false" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Unique value of the case, used in all tables linked to the case"/>
-      </column>
-      <column comment="Case number" key="false" length="20" name="CASE_NUM" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Case number"/>
-      </column>
-      <column comment="Initial creation date of case, stored in GMT" key="false" length="7" name="CREATE_TIME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Initial creation date of case, stored in GMT"/>
-      </column>
-      <column comment="Initial receipt date of case" key="false" length="7" name="INIT_REPT_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Initial receipt date of case"/>
-      </column>
-      <column comment="Value from CFG_USERS, originator of the case. This column is foreign key to CFG_USERS.USER_ID." key="false" length="0" name="USER_ID" nullable="true" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Value from CFG_USERS, originator of the case. This column is foreign key to CFG_USERS.USER_ID."/>
-      </column>
-      <column comment="Follow-up date" key="false" length="7" name="FOLLOWUP_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Follow-up date"/>
-      </column>
-      <column comment="User that created the initial case, value from CFG_USERS,Default 0" defaultValue="0" key="false" length="0" name="OWNER_ID" nullable="true" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User that created the initial case, value from CFG_USERS,Default 0"/>
-      </column>
-      <column comment="Current state the case is in, value from CFG_WORKFLOW_STATES. This column is foreign key to CFG_WORKFLOW_STATES.STATE_ID." key="false" length="0" name="STATE_ID" nullable="true" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Current state the case is in, value from CFG_WORKFLOW_STATES. This column is foreign key to CFG_WORKFLOW_STATES.STATE_ID."/>
-      </column>
-      <column comment="0=No  1-Yes   2-Unknown  case serious" key="false" length="0" name="SERIOUSNESS" nullable="true" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="0=No  1-Yes   2-Unknown  case serious"/>
-      </column>
-      <column comment="Type of case entered, value from LM_REPORT_TYPE. This column is foreign key to LM_REPORT_TYPE.RPT_TYPE_ID." key="false" length="0" name="RPT_TYPE_ID" nullable="true" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Type of case entered, value from LM_REPORT_TYPE. This column is foreign key to LM_REPORT_TYPE.RPT_TYPE_ID."/>
-      </column>
-      <column comment="User ID of the current owner of the Case (as assigned through Worklist). . This column is foreign key to CFG_USERS.USER_ID." key="false" length="0" name="WORKLIST_OWNER_ID" nullable="true" pattern="" precision="-1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="User ID of the current owner of the Case (as assigned through Worklist). . This column is foreign key to CFG_USERS.USER_ID."/>
-      </column>
-      <column comment="" key="false" length="-1" name="SYS_LASTUPDATED" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="SYS_CREATED" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="SYS_CREATEDBY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="SYS_LASTUPDBY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="INITIAL_CASE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="EVT_SEQ_ID" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="FOLLOWUP_SEQ_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
   <node componentName="tMSSqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-2720" posY="-96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
@@ -1435,7 +139,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="context.SCHEMA"/>
     <elementParameter field="TEXT" name="DBNAME" value="context.DATABASE"/>
     <elementParameter field="TEXT" name="USER" value="context.USERNAME"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:h+DGud/2G1bdm/X/Gbc3P+gifaIGIpdjwkCTEV5sBv4bLBjKNbAcJOyCVDk="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:LPxyJfuCIxNiHDDLAya+n3qIGyH8UkbPbovf3l3OSFRNPJEC7+jxKBdoUIk="/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
@@ -1465,13 +169,13 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="context.ORACLE_USERNAME"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:IUENHH40hyTU2Y6lPgU9m8SYRHWnbZKImvpeTV/4tjqsWWJO/gZtaFHzOQBsKTsgvEOM"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:m/4T4Kz68rwKPbAH8fY88cAduZjt3fuBBeI4GlsK/pKUM7JDRyfOyIXSMaJqyUL3LrfQ"/>
     <elementParameter field="CHECK" name="USE_SSL" show="false" value="false"/>
     <elementParameter field="FILE" name="SSL_TRUSTSERVER_TRUSTSTORE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:16WM4Y91p/vp1vfOsz5iP6MRskIIdP/UWkWOKo+L"/>
+    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:KwBZsedZQ5DDYmlPcKfDOu7gqt4XPeUmi0xoK40f"/>
     <elementParameter field="CHECK" name="NEED_CLIENT_AUTH" show="false" value="false"/>
     <elementParameter field="FILE" name="SSL_KEYSTORE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_KEYSTORE_PASSWORD" show="false" value="enc:system.encryption.key.v1:vJxwuc+KSo6QND+MWmkkoRST7kbWFpPDmJqLN1a+"/>
+    <elementParameter field="PASSWORD" name="SSL_KEYSTORE_PASSWORD" show="false" value="enc:system.encryption.key.v1:o851F2EZR7kNwdBloCo8sNn8op/ezm4mykTVEHSg"/>
     <elementParameter field="CHECK" name="DISABLE_CBC_PROTECTION" show="false" value="true"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
@@ -1602,7 +306,7 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:1XInDvLBcas+AXH2u/Cw4Tde9XVX89ltxN9VrQOm"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:dlWDdml86JdJ9cXHlwlrF8pDlF3tAfUvwmmD3RKF"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;ETL_JOB_LOG&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -2070,7 +774,7 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:3TwNPzNRPGNoMlwLfEfNhFbpbbxhl9eqyinky6fM"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:p4Z6YsJ6XGS04HG8ZLdLvkuOuDEMMipFJGm1nOGz"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER_GL_HYPERION_REV_COGS_VF&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -2314,11 +1018,12 @@
   </node>
   <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-2784" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_GaOzAJRwEe2qmPQ9sHiaAw"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/sparanjape/Desktop/export.xlsx&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:zbN5hc1YgTFcwKR9BijkzbeQTU6DiXMU3R/bL5pz"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:rmnoVBll88LXklwyRKAIylZDngaU6VzaMRQyLg5P"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="true"/>
     <elementParameter field="TABLE" name="SHEETLIST" show="false">
       <elementValue elementRef="SHEETNAME" value="&quot;export&quot;"/>
@@ -2563,6 +1268,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="-2528" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_4"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -2675,6 +1381,7 @@
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-2208" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_4"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="MSSQL_PROP"/>
@@ -2684,13 +1391,13 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:/c3QS1leKnrZS0qaX3kID28UsbGUBoOr+M7iO5GL"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:uQDpgjHjOWB4FRoeeD1sXrjD5kUQUnyrgYMEVpdO"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER_GL_HYPERION_REV_COGS_VF&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
-    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" value="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" show="false" value="false"/>
     <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="MONTH"/>
     <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
     <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
@@ -2860,6 +1567,7 @@
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="SQL Server Hyperion TBL "/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="gldata" name="tDBOutput_4">
       <column comment="" key="false" length="500" name="MONTH" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -2926,36 +1634,191 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-2784" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="MSSQL_PROP"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Bgbb5At6mPMWMm2RkBSK9FvQw1EkjsOd9PmyWgMu"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER_GL_HYPERION_REV_COGS_VF&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;SELECT MONTH,&#13;&#10;YEAR,&#13;&#10;CUSTOMER_ID,&#13;&#10;CUSTOMER_NAME,&#13;&#10;ACCOUNT,&#13;&#10;ITEM,&#13;&#10;ITEM_DESCRIPTION,&#13;&#10;Product_Line,&#13;&#10;ENTITY,&#13;&#10;LOCATION,&#13;&#10;ORDER_NUMBER,&#13;&#10;INVOICE_NUMBER,&#13;&#10;UNITS,&#13;&#10;UNIT_COST,&#13;&#10;TRANSACTION_CURRENCY,&#13;&#10;TRANSACTION_AMOUNT,&#13;&#10;REPORTING_CURRENCY,&#13;&#10;EXCHANGE_RATE,&#13;&#10;REPORTING_AMOUNT,&#13;&#10;SHIP_LOCATION,&#13;&#10;STANDARD_COST,&#13;&#10;LOT,&#13;&#10;SERIAL_NUMBER,&#13;&#10;JEL_CONTEXT,&#13;&#10;JEL_ATTRIBUTE1,&#13;&#10;JEL_ATTRIBUTE2 &#13;&#10;FROM XXCER_GL_HYPERION_REV_COGS_VF&#13;&#10;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="MONTH"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="YEAR"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CUSTOMER_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CUSTOMER_NAME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ACCOUNT"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ITEM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ITEM_DESCRIPTION"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ENTITY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRODUCT_LINE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LOCATION"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORDER_NUMBER"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="INVOICE_NUMBER"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="UNITS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="UNIT_COST"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TRANSACTION_CURRENCY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TRANSACTION_AMOUNT"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="REPORTING_CURRENCY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="REPORTING_AMOUNT"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EXCHANGE_RATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SHIP_LOCATION"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STANDARD_COST"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LOT"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SERIAL_NUMBER"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="JEL_CONTEXT"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="JEL_ATTRIBUTE1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="JEL_ATTRIBUTE2"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="SQL Server Hyperion TBL"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_1">
+      <column comment="" key="false" length="-1" name="MONTH" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="YEAR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CUSTOMER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CUSTOMER_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ACCOUNT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ITEM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ITEM_DESCRIPTION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ENTITY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRODUCT_LINE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LOCATION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ORDER_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="INVOICE_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UNITS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UNIT_COST" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TRANSACTION_CURRENCY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TRANSACTION_AMOUNT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="REPORTING_CURRENCY" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="REPORTING_AMOUNT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="EXCHANGE_RATE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SHIP_LOCATION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STANDARD_COST" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LOT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SERIAL_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="JEL_CONTEXT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="JEL_ATTRIBUTE1" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="JEL_ATTRIBUTE2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="-2528" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_1yhpcJQ5Ee2qmPQ9sHiaAw-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+    </nodeData>
+  </node>
+  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-2240" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" show="false" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_18"/>
+    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1521&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Oracle"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TABLESCHEMA" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:xBMvARNFzZcq5yefxm17B5YfyapliIzvxALykt8L"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;XXCER_GL_HYPERION_REV_CUBE_TBL&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="oracle_id"/>
+    <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" value="false"/>
+    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false"/>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
+    <elementParameter field="CHECK" name="CONVERT_COLUMN_TABLE_TO_UPPERCASE" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="USE_BATCH_AND_USE_CONN" value="false"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" show="false" value="10000"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_TIMESTAMP_FOR_DATE_TYPE" value="true"/>
+    <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBOutput_1"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tDBConnection_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
-  </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="CaseInitialReceiptDate"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
-  </connection>
-  <connection connectorName="FLOW" label="Inserts" lineStyle="0" metaname="Inserts" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_1">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="SYS_CREATED"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="SYS_CREATEDBY"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Inserts"/>
-  </connection>
-  <connection connectorName="FLOW" label="row5" lineStyle="8" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tMap_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tDBConnection_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
@@ -2994,10 +1857,12 @@
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tMap_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <connection connectorName="FLOW" label="copyOfgldata" lineStyle="0" metaname="copyOfgldata" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tDBOutput_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfgldata"/>
   </connection>
   <subjob>
@@ -3005,11 +1870,6 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
@@ -3067,13 +1927,28 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c3b33c48-1d00-4bf9-91d8-007af9a768ed"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zBljFL5lYUCbX4FaH4eZgvsf0l8rFWyXSXrjHU9rXZPxGBmWx5nQmiBpJOFKx3vbhoj5hbhZBgb/&#13;
-P29TvLxFMg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e4dd02df-23ca-459f-bc33-604dce98d68a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3nkvWqwnxhu4zUQi650RnSWMA2LK+bM8mJiPEY3hkSDXRJ3XFKVpUKl3NYkoQXv3pQwK+6nqD3vw&#13;
-OBVcEAjaqw==</DigestValue></Reference></SignedInfo><SignatureValue>mNZRMIMdT/1rHtsDwTZ63wpnnz+Li+dzrdh+Lgl1+PXN3EJaqItXCx2GBKr3P5jJ73jczQPjZzHl&#13;
-PLIMyz3WomNtxnte7afLUHAEhzPTuWWzsJAVvmHrStOPMxbUj9ElY2dqrcOV9FeNOjwHdaoZjKlf&#13;
-p+jEkAx+AunVa5eWuyHDxcJZxqFJ7Dlwr1siJfO9gY+5hV2H1wndyEe0Hd2ymx6eRZHIe6P0kk5r&#13;
-jiMOblVJ5okC0hXXvYMT9Z80zb6aqxDjgpMr0G4OXFMpkz31UER6Eh6pNOw2iNHMqztTL3GePWd8&#13;
-yO1rpuITEfQdQgyS5i/4DFwJJhAoLcnPgsRlVg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7e267e7f-66cb-4e80-8e18-a46d929e3ac1"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GOA2A36obo74DJ1ONe2YM+lesUMJ7aRgk5DHiTUGzeHHSxaUmx0FB8c1XmMGwJZ7p5zfs9hMgSu/&#13;
+y2tKj9mMKA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c38b7acf-b392-4a39-9c27-25391c37cbcb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bKFnDNH7EmDoHQepIZ4ZnmU617WiDke9QyDJwGdiQulC6lTejnmmIFqXCKF/feau6lyEZdoNlSC6&#13;
+aNwaXxqflg==</DigestValue></Reference></SignedInfo><SignatureValue>gvXuLzJ9GW3KPb4Jn5eSQKc+8Sl1qVgXWLp75QDGynDps/GpCGsb9DhocUY3l6gp4hcCcHFaIXMZ&#13;
+b9+T5+KrOFKvJspqyvD59TjMM5G1iyWPu+BAXX6gL1KdNoY+RhYk/pXmEwWGHO8/CkCtXvs9gEtq&#13;
+xu0YU88D2juNb+bDL2+9U6aez+Q4Oxh8h5q3yOfWt5X2VIOjRxgcKK8tYbKbm+r1yfEO/VaZopO+&#13;
+nkNTTGE5fR93XYY320UHiZTUtrVLzoYJI3LkrRZc6sn105q+r+m8ZtG58nimLnTF3WlSc98ZMMZH&#13;
+7Zqm95ydomOLJsWskbTIsmXaT8e+vYTa1obaeg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -3095,4 +1970,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e4dd02df-23ca-459f-bc33-604dce98d68a" Target="#_c3b33c48-1d00-4bf9-91d8-007af9a768ed"><Timestamp>2023-01-15 01:03:25</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c38b7acf-b392-4a39-9c27-25391c37cbcb" Target="#_7e267e7f-66cb-4e80-8e18-a46d929e3ac1"><Timestamp>2023-01-15 01:35:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
