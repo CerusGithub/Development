@@ -60,7 +60,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:BUCZBAwvoHKjzbsxOKEFEyfpYopeeAtWHa9lHL4i"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:X3yfQk3w9bGhX8e3GBq6eofb3AhqE3XZh7JV6RLx"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -95,7 +95,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:ZxblRnUPvOdZNndiW1qoOv2+J0UxVIAs5YGBVSxP"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:bwbZHE0gL2ntXV9L9LNBiWSGPXOmxNlf9ruNuYS0"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -146,14 +146,14 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;PRD&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;APPS&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;salesro&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:2/588fygoYZ71Cd+tzsU6UYbGCsMNWYqOg4QGkofx2c/4nDShQ=="/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:E/AgTepvkcQE6Ud9lchYTFn9uCTL+ZIFSzXiZzqUE9BAbZjQcQ=="/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER_OM_LINES_V&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10; SELECT&#13;&#10;    ooh.order_number,&#13;&#10;    ool.line_id,&#13;&#10;    ol.lot_number,&#13;&#10;    from_serial_number,&#13;&#10;    ml.expiration_date&#13;&#10;FROM&#13;&#10;    apps.oe_order_headers_all ooh,&#13;&#10;    apps.oe_order_lines_all   ool,&#13;&#10;    oe_lot_serial_numbers     ol,&#13;&#10;    mtl_lot_numbers           ml&#13;&#10;WHERE&#13;&#10;        ooh.header_id = ool.header_id&#13;&#10;    AND ool.line_id = ol.line_id&#13;&#10;    AND ool.inventory_item_id = ml.inventory_item_id&#13;&#10;    AND ool.ship_from_org_id = ml.organization_id;&#13;&#10;&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10; SELECT&#13;&#10;    ooh.order_number,&#13;&#10;    ool.line_number,&#13;&#10;    ol.lot_number,&#13;&#10;    from_serial_number serial_number,&#13;&#10;    ml.expiration_date&#13;&#10;FROM&#13;&#10;    apps.oe_order_headers_all ooh,&#13;&#10;    apps.oe_order_lines_all   ool,&#13;&#10;    oe_lot_serial_numbers     ol,&#13;&#10;    mtl_lot_numbers           ml&#13;&#10;WHERE&#13;&#10;        ooh.header_id = ool.header_id&#13;&#10;    AND ool.line_id = ol.line_id&#13;&#10;    AND ool.inventory_item_id = ml.inventory_item_id&#13;&#10;    AND ool.ship_from_org_id = ml.organization_id;&#13;&#10;&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -170,59 +170,13 @@
     <elementParameter field="TABLE" name="TRIM_COLUMN">
       <elementValue elementRef="SCHEMA_COLUMN" value="ORDER_NUMBER"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="LINE_STATUS"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="LINE_TYPE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SHIP_TO_CUSTOMER"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SHIP_TO_CUSTOMER_NUMBER"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="BILL_TO_CUSTOMER"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="BILL_TO_CUSTOMER_NUMBER"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SALESREP"/>
-      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LINE_NUMBER"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ORDERED_ITEM"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lot_number"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ITEM_DESCRIPTION"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="serial_number"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="LIST_PRICE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="QTY"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UNIT_SELLING_PRICE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="EXTENDED_PRICE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SHIP_DATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="REQUEST_DATE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FOB"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PAYMENT_TERMS"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PRICE_LIST"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UOM"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="WAREHOUSE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="QTY_CANCELLED"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="QTY_FULFILLED"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SECONDARY_SHIPPING_QTY"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SHIP_TO_LOCATION"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="BILL_TO_LOCATION"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="LAST_UPDATE_DATE"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="expiration_date"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
@@ -232,87 +186,12 @@
       <column comment="" key="false" length="0" name="ORDER_NUMBER" nullable="false" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="30" name="LINE_STATUS" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="LINE_TYPE" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="360" name="SHIP_TO_CUSTOMER" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="SHIP_TO_CUSTOMER_NUMBER" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="360" name="BILL_TO_CUSTOMER" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="BILL_TO_CUSTOMER_NUMBER" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="240" name="SALESREP" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
       <column comment="" key="false" length="81" name="LINE_NUMBER" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="2000" name="ORDERED_ITEM" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="240" name="ITEM_DESCRIPTION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="0" name="LIST_PRICE" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="0" name="QTY" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="0" name="UNIT_SELLING_PRICE" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="0" name="EXTENDED_PRICE" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="7" name="SHIP_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="7" name="REQUEST_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="FOB" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="PAYMENT_TERMS" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="240" name="PRICE_LIST" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="3" name="UOM" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="3" name="WAREHOUSE" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="0" name="QTY_CANCELLED" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="0" name="QTY_FULFILLED" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="0" name="SECONDARY_SHIPPING_QTY" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="786" name="SHIP_TO_LOCATION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="786" name="BILL_TO_LOCATION" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="7" name="LAST_UPDATE_DATE" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
+      <column comment="" key="false" length="-1" name="lot_number" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="serial_number" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="expiration_date" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="384" posY="192">
@@ -450,33 +329,10 @@
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row6" sizeState="INTERMEDIATE">
         <mapperTableEntries name="ORDER_NUMBER" type="id_BigDecimal"/>
-        <mapperTableEntries name="LINE_STATUS" nullable="true" type="id_String"/>
-        <mapperTableEntries name="LINE_TYPE" type="id_String"/>
-        <mapperTableEntries name="SHIP_TO_CUSTOMER" type="id_String"/>
-        <mapperTableEntries name="SHIP_TO_CUSTOMER_NUMBER" type="id_String"/>
-        <mapperTableEntries name="BILL_TO_CUSTOMER" type="id_String"/>
-        <mapperTableEntries name="BILL_TO_CUSTOMER_NUMBER" type="id_String"/>
-        <mapperTableEntries name="SALESREP" nullable="true" type="id_String"/>
         <mapperTableEntries name="LINE_NUMBER" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ORDERED_ITEM" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ITEM_DESCRIPTION" nullable="true" type="id_String"/>
-        <mapperTableEntries name="LIST_PRICE" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="QTY" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="UNIT_SELLING_PRICE" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="EXTENDED_PRICE" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="SHIP_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="REQUEST_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="FOB" nullable="true" type="id_String"/>
-        <mapperTableEntries name="PAYMENT_TERMS" nullable="true" type="id_String"/>
-        <mapperTableEntries name="PRICE_LIST" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UOM" nullable="true" type="id_String"/>
-        <mapperTableEntries name="WAREHOUSE" nullable="true" type="id_String"/>
-        <mapperTableEntries name="QTY_CANCELLED" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="QTY_FULFILLED" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="SECONDARY_SHIPPING_QTY" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="SHIP_TO_LOCATION" nullable="true" type="id_String"/>
-        <mapperTableEntries name="BILL_TO_LOCATION" nullable="true" type="id_String"/>
-        <mapperTableEntries name="LAST_UPDATE_DATE" type="id_Date"/>
+        <mapperTableEntries name="lot_number" nullable="true" type="id_String"/>
+        <mapperTableEntries name="serial_number" nullable="true" type="id_String"/>
+        <mapperTableEntries name="expiration_date" nullable="true" type="id_String"/>
       </inputTables>
     </nodeData>
   </node>
@@ -493,7 +349,7 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;cer_prdint&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;cerprdint&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:++ElvEDHzOkZ9ehdvzQc6uQJUeS2XL52d+syhbuR/qGqs7WH7By9pvpFgPCq"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:nkdKeqNbmtv3kdKUNpTOjmJ6KKugVRKcjaZGWBbO80tjXIdxHEqxAU7UGGMN"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;EBS_SALESORDERLINES&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -857,7 +713,7 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;cer_prdint&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;cerprdint&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:F1fHeLA9STQ5CDWLv1heKFoQ9iYVRFzyy+7ZVJYdAqdFD4qBDtL/zTOZIL6p"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:FSX4kwITvj+2ucE8ueup0RnYAjTo8nbDwxSo811cpOTDWcNtOdxuL+rJ0IEE"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;EBS_SALESORDERLINES&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -934,7 +790,7 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;cer_prdint&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;cerprdint&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:4GTNwQ3gOTKZfclAiW/rHVHOWPzOwbw2ABJXPqQGc64wdnQtVxpDFte8eD5p"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:owcKlnqGDF35Ip1fJhNiwwlaaWt0MMRJk0OMcMgwH/vVxIwgPX7gMVYKKfBZ"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;EBS_SALESORDERS&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -1012,7 +868,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="context.DATABASE"/>
     <elementParameter field="TEXT" name="USER" value="context.USERNAME"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:yT6LkTptQQi9UraItSkZnE0fDoskDSyB+ZCwEEV3Qb8mRMajbWUKj21gHys="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:jrhYsQrYq9R99Q0B+h0zy/vIXtEWyYOPT1NRPxxAFQTr0dZC32x1uDdcUSI="/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
@@ -1159,7 +1015,7 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:R+8X+9LueZ42GFCcV6MnzvACVX/5mpUtnaecBcVx"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:57ijNRlxIHLFLfSDut4MkhYd09Svj6YKkNqe6KKj"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;ETL_JOB_LOG&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -1290,13 +1146,13 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;PRD&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="context.ORACLE_SCHEMA"/>
     <elementParameter field="TEXT" name="USER" value="context.ORACLE_USERNAME"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:wKYEmam1WnF3OiOuG2DgwW9QCJcyOgBI8HXEk9rogDXUPelnHC96lt9E1raoI2hBMPLp"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:VE8lUAcGG+j9F6QPfEHR3GphedmPRSIiq75/Aq9B9O7ZptJv5oaV6S+Z32js240u6YuL"/>
     <elementParameter field="CHECK" name="USE_SSL" show="false" value="false"/>
     <elementParameter field="FILE" name="SSL_TRUSTSERVER_TRUSTSTORE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:NTq2caQO4ZguMkRZahBuM55Tf2gcz0KzkYPCV/5T"/>
+    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:PnGHhzRePYjpcCkuVvrzShZuoicHRszNyDvCrchf"/>
     <elementParameter field="CHECK" name="NEED_CLIENT_AUTH" show="false" value="false"/>
     <elementParameter field="FILE" name="SSL_KEYSTORE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_KEYSTORE_PASSWORD" show="false" value="enc:system.encryption.key.v1:3x5Lo+COv45Du3JutbpLic/qKTjbkg4EEi+Tz4Wx"/>
+    <elementParameter field="PASSWORD" name="SSL_KEYSTORE_PASSWORD" show="false" value="enc:system.encryption.key.v1:8gmIqSAUfl5snUTVupSMv2wtx89e0gC8bxqOY0xU"/>
     <elementParameter field="CHECK" name="DISABLE_CBC_PROTECTION" show="false" value="true"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
@@ -1343,6 +1199,17 @@
     <metadata connector="FLOW" name="tJava_6"/>
   </node>
   <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tMap_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="serial_number"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="expiration_date"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="lot_number"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
   </connection>
@@ -1535,13 +1402,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0fa5632d-a8ee-4bff-bd7a-f08fb5dc9e47"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8C5wxqYJzK0TwSZCaoNU3+pqWw9HRyd7nqebV3V9L0MLr8xSbR/7Ojtyn55a/KLs6/1CwbgW5TPh&#13;
-o/QBEp082g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d7042647-c021-4e86-817d-d6871c5b44e4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YtLwgY9jlIWNJ9DM9F1En6JdeP4601Rdyqxs+EpOhuuc5zkcQHdwQDpHUW30SxsMRPqz6sOxdbhA&#13;
-nQko1QpLpw==</DigestValue></Reference></SignedInfo><SignatureValue>gCJePnJxGQtsFjwOUE36rYkn4pE0SpUZNlyB8T4bvoeMI8SKoGy4n/tvzOCYpR0BMXICjdapuHUc&#13;
-DLHjNv9x5usDqkuq26cg3EIUu316rszS7sB3TnuhVxvu7b93QIV5CWHxYejt3VZwLefBHDZ1Wt1F&#13;
-szB0Bkyc9A03qt1vioPD9dA+9Ysk52Saexm0EZ4wYkR8RLV0RvvvaqrW2eCk8pdZiA0fs+kIrUdZ&#13;
-5b+L4/LyGkoUWd2lr+WrWqMLBaEqtw8mAijcz+bXTpXx++NlMHFS7nWZ6a3Nkib4ccvoYFWzfJWm&#13;
-7yxQDUCcXGOq693LrRYL3jpC/DSf3yoVhROWRg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7b5dd5ce-545c-4dd4-b5ed-2a19c429d8a8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>eXTkrb1Lus9aW5qG1oAvDEzXNGt4gKtZfiiIJxs+Qqgxigb96bKW5LXi7KOHYDkGB4VcZv3PyEt4&#13;
+iqS7e1NPig==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8fd3c8ed-fecb-4367-855d-fd858764c6e8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GRhwOi1E1WBnjYPkfalI4O+j4jaVwuI7ULFNTrasHyQNBqBId3yaHHfN0L+eXW+GI/SMOKFuX80v&#13;
+ZwAwLFR/pA==</DigestValue></Reference></SignedInfo><SignatureValue>c4zMb0wEoaJDjzgdKWOmK1+YWRXf+fzz19DuSkPZn3tvO2EMM/lOchB9L42Bj7O60MiTb95azyAL&#13;
+dS0bObgokrYhE63cME1g+fUCnwyTHNnKByaheWefWo5JN1ECtkxgQ3Y1V4mgFjaijRy8y/iq8uDc&#13;
+7gJ/4v6uessjsvgjNAjQL916EZsulm9hEYUzlhlsdbAEjsLs3CgkNnuzD2m5HJtGBpdtuzkEAb2o&#13;
+ZcaTv7Dz3XTZyuEzupQ1i7EB8SxB33/FXcTPO3cTd+7ZSzwfwxSLww0zbGK34h6N+chNDwc+bvYI&#13;
+CT7eWj0scpWlYm4tqijDY+xVqXwXO849F0Dnnw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1563,4 +1430,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d7042647-c021-4e86-817d-d6871c5b44e4" Target="#_0fa5632d-a8ee-4bff-bd7a-f08fb5dc9e47"><Timestamp>2023-02-13 21:12:58</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8fd3c8ed-fecb-4367-855d-fd858764c6e8" Target="#_7b5dd5ce-545c-4dd4-b5ed-2a19c429d8a8"><Timestamp>2023-02-13 21:22:19</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
