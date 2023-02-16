@@ -60,7 +60,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:Zo8p6XEFcRZNOZAatoXcrUhm7OCswe32RlzDB4hu"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:oTSWcVQT5qO12JFyxxB3X/6Y/XicdVgsAgxoNLf7"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -95,7 +95,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:UpjGqZiu5B4Hwq5F2CGg0DqR6Ov/vUExucFTOjzD"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Ock25O47de6aW1aB6X7rqqkF/N2N2g6Ohd+wLzZB"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -146,14 +146,14 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;PRD&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;APPS&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;salesro&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:oDiRSsznp+W1FR0BhsS7B75pijZ24o55tFskUbR6mNut0Q0Q+w=="/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:9PCT1mTLh7PO6WYLF/URlinEg9yKisOaVcXRx9UfT2S7tXadyw=="/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER_OM_LINES_V&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;SELECT  oe_order_headers_all.order_number, &#13;&#10;oe_order_headers_all.header_id, &#13;&#10;oe_order_lines_all.line_number, &#13;&#10;oe_order_lines_all.line_id, &#13;&#10;oe_order_lines_all.ordered_item, &#13;&#10;oe_order_lines_all.inventory_item_id,&#13;&#10;wsh_delivery_details.item_description, &#13;&#10;oe_order_lines_all.ship_from_org_id,&#13;&#10;wsh_delivery_details.delivery_detail_id, &#13;&#10;mtl_material_transactions.transaction_id,&#13;&#10; wsh_delivery_details.lot_number ,&#13;&#10;(SELECT expiration_date FROM mtl_lot_numbers &#13;&#10;WHERE inventory_item_id = oe_order_lines_all.inventory_item_id&#13;&#10;       AND organization_id = oe_order_lines_all.ship_from_org_id&#13;&#10;       AND lot_number = wsh_delivery_details.lot_number) lot_exp_date,&#13;&#10;       xxcer_940_outbound.xxcer_ics_so_serial_num(wsh_delivery_details.delivery_detail_id) serial_number&#13;&#10;FROM    apps.oe_order_headers_all    oe_order_headers_all,&#13;&#10;        apps.oe_order_lines_all  oe_order_lines_all,&#13;&#10;        apps.wsh_delivery_details    wsh_delivery_details,&#13;&#10;        apps.mtl_material_transactions   mtl_material_transactions&#13;&#10;  --      ,mtl_transaction_lot_val_v   mtl_transaction_lot_val_v&#13;&#10;  --     ,mtl_lot_numbers mtl_lot_numbers&#13;&#10;        &#13;&#10;WHERE   1=1&#13;&#10;AND     oe_order_headers_all.header_id = oe_order_lines_all.header_id&#13;&#10;AND     oe_order_headers_all.order_number = 519590&#13;&#10;AND     oe_order_headers_all.header_id = wsh_delivery_details.source_header_id&#13;&#10;AND     oe_order_lines_all.line_id = wsh_delivery_details.source_line_id&#13;&#10;AND     oe_order_lines_all.line_id = mtl_material_transactions.trx_source_line_id&#13;&#10;AND     mtl_material_transactions.subinventory_code = 'STAGE'&#13;&#10;AND     mtl_material_transactions.transaction_type_id = 52&#13;&#10;--AND     mtl_lot_numbers.inventory_item_id = oe_order_lines_all.inventory_item_id&#13;&#10;--AND     mtl_lot_numbers.organization_id = oe_order_lines_all.ship_from_org_id&#13;&#10;--AND     mtl_material_transactions.transaction_id = mtl_transaction_lot_val_v.transaction_id&#13;&#10;--AND     mtl_material_transactions.transaction_id = 4987372&#13;&#10;ORDER BY 1 DESC&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;SELECT  oe_order_headers_all.order_number, &#13;&#10;oe_order_headers_all.header_id, &#13;&#10;oe_order_lines_all.line_number, &#13;&#10;oe_order_lines_all.line_id, &#13;&#10;oe_order_lines_all.ordered_item, &#13;&#10;oe_order_lines_all.inventory_item_id,&#13;&#10;wsh_delivery_details.item_description, &#13;&#10;oe_order_lines_all.ship_from_org_id,&#13;&#10;wsh_delivery_details.delivery_detail_id, &#13;&#10;mtl_material_transactions.transaction_id,&#13;&#10; wsh_delivery_details.lot_number ,&#13;&#10;(SELECT expiration_date FROM mtl_lot_numbers &#13;&#10;WHERE inventory_item_id = oe_order_lines_all.inventory_item_id&#13;&#10;       AND organization_id = oe_order_lines_all.ship_from_org_id&#13;&#10;       AND lot_number = wsh_delivery_details.lot_number) lot_exp_date,&#13;&#10;       xxcer_940_outbound.xxcer_ics_so_serial_num(wsh_delivery_details.delivery_detail_id) serial_number&#13;&#10;FROM    apps.oe_order_headers_all    oe_order_headers_all,&#13;&#10;        apps.oe_order_lines_all  oe_order_lines_all,&#13;&#10;        apps.wsh_delivery_details    wsh_delivery_details,&#13;&#10;        apps.mtl_material_transactions   mtl_material_transactions&#13;&#10;  --      ,mtl_transaction_lot_val_v   mtl_transaction_lot_val_v&#13;&#10;  --     ,mtl_lot_numbers mtl_lot_numbers&#13;&#10;        &#13;&#10;WHERE   1=1&#13;&#10;AND     oe_order_headers_all.header_id = oe_order_lines_all.header_id&#13;&#10;--AND     oe_order_headers_all.order_number = 519590&#13;&#10;AND     oe_order_headers_all.header_id = wsh_delivery_details.source_header_id&#13;&#10;AND     oe_order_lines_all.line_id = wsh_delivery_details.source_line_id&#13;&#10;AND     oe_order_lines_all.line_id = mtl_material_transactions.trx_source_line_id&#13;&#10;AND     mtl_material_transactions.subinventory_code = 'STAGE'&#13;&#10;AND     mtl_material_transactions.transaction_type_id = 52&#13;&#10;--AND     mtl_lot_numbers.inventory_item_id = oe_order_lines_all.inventory_item_id&#13;&#10;--AND     mtl_lot_numbers.organization_id = oe_order_lines_all.ship_from_org_id&#13;&#10;--AND     mtl_material_transactions.transaction_id = mtl_transaction_lot_val_v.transaction_id&#13;&#10;--AND     mtl_material_transactions.transaction_id = 4987372&#13;&#10;ORDER BY 1 DESC&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -299,8 +299,8 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;cer_prdint&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;cerprdint&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:rnbZ4Ja9pMpLOs5toF/CzEEzht6xz44wzEYHIruTHtDB8Zun0dmTpjJ5yWMs"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot; EBS_SHIPMENT_LINES&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:y8v1VI1OnIwErW4pgVZgrfGXrWBX0pIKFDmptuWalnnpTWg5jgG92ZWjfy0R"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;EBS_SHIPMENT_LINES&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -458,7 +458,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="context.DATABASE"/>
     <elementParameter field="TEXT" name="USER" value="context.USERNAME"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:tAD8xwIK6fKxL3cTCKX6y+nFYJXXdpUSYnI11BkOXN99f72H/zYRoJUD+TQ="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:WParF2/YgBSN86oQexYXGY9zlRwO1Wi3IvARt02iYH+jtYRob5QHUYN4t3I="/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
@@ -591,7 +591,7 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:xo0lz0IL0gnUGODbx2JhKj5LtFW4U944EKE74X0y"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:tZSWcF6T+1wplTVvRbX3lS7K0W0qxsNXnrnNloFe"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;ETL_JOB_LOG&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -722,13 +722,13 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;PRD&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="context.ORACLE_SCHEMA"/>
     <elementParameter field="TEXT" name="USER" value="context.ORACLE_USERNAME"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:sguBk+KhzCEmJz4ckzktR0V+Tu6aI7nljxJmHBvV/BqaXIUx5XHuI0nwPU1veG1lsVIu"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:fSIgANF1zjzr6ONypHj4/lpAd4x6Ny1ZGbpN4vkVjIzt2JluNYXSWhOe21ZSVWt/fRO9"/>
     <elementParameter field="CHECK" name="USE_SSL" show="false" value="false"/>
     <elementParameter field="FILE" name="SSL_TRUSTSERVER_TRUSTSTORE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:5nx02d1QE0cIvHnCizfbkz3nWyP/cLzse73LtMZR"/>
+    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:RmqrU0rsYkU360ba6c7bKp4iOPVG29PQKww+eROY"/>
     <elementParameter field="CHECK" name="NEED_CLIENT_AUTH" show="false" value="false"/>
     <elementParameter field="FILE" name="SSL_KEYSTORE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_KEYSTORE_PASSWORD" show="false" value="enc:system.encryption.key.v1:X7589DNb3vjSScYH7qgoouCUARZGRtlV9Y0uJQUj"/>
+    <elementParameter field="PASSWORD" name="SSL_KEYSTORE_PASSWORD" show="false" value="enc:system.encryption.key.v1:HczAxh7rK/6oig0KaTAdrMeWj1v/SIHU3KsbydvJ"/>
     <elementParameter field="CHECK" name="DISABLE_CBC_PROTECTION" show="false" value="true"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
@@ -997,13 +997,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_63204cc5-4809-4de0-a1c1-f8b1db9f1833"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VThZuvj+B1IvJ2ohZOslA5vUNhEDf46Bf6fl5mrQks5k4HgHcqURbxFiowOjXTIW3lDf3m26RCZY&#13;
-h3by+pDM2g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4fcb95de-ed10-4e12-94b2-4522afa8ce48"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1VQb/3xgOQrzqx/UqN2kE2QeLBafj+TQ180+Lxmr14/F3BRIqNI8wC86RWZ31QXXZtMLma/coUlu&#13;
-Y6elRBuVGA==</DigestValue></Reference></SignedInfo><SignatureValue>EIEHajefc0/yZc0VWcfHo1zMT7fZasbvgXKCapvp5GnyLcu/7XecIw3YZAL9tRTHVX0hwXQcod7R&#13;
-038TYKnkgAdIS6F36qUs/cFh80yEYg5gLWWQRfruRjydVLktuhPjcVe2RDZNowZh2jKsUveWVjMs&#13;
-E4UFtrAq/fVYlKIpOOSXTJAMW+Z5qFswOZS7plBvmdYKM76HTGt5B0v+qrqp3BNWvZjWICcu3+46&#13;
-WVqQsUop78P0eDIEfufScAtx8UM14Ou4Kkw0zIRuZN7aQlSQOJ8pPLXYrlPxEfHw1/JfmM8EBZ5h&#13;
-MkjzEaJ6ceLSP3BrDB001DXg6c50V+89BXittw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e09d843f-3d63-496c-8666-ce774cb6b81f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5bbB2lHTGlBdR7ogYa0Rr6N1eTrQFmlizlL/g5Q0P8wYPsMZcT7VTsK0yFTUPDoNwBPeW8QWBDyE&#13;
+S8Xd8r9/9w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2796bd69-eafe-4642-8f90-3f4c7cd0944f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YOCfG7+oOI7Ya4n2XDsiOvwJlOSuIhYyW11sg8gaOKWw2wao90+DqmjP1qKC2MfDFcpQugV04WGs&#13;
+9LZrNv+bZg==</DigestValue></Reference></SignedInfo><SignatureValue>dLS08rVh+ko9zXtv4eiC+3igbwpgoKjYHEaDfds+cZeuuQmmEKhxhfNrAVR5cy25wSIsMJVEn1Rt&#13;
+I+nIGyWw/xgLWwFm6J+i1R26fcBQxMyOPgDMkyyMv51IIqrLnnJj8FkPc5r/j6lfzTVZeilqP9Lr&#13;
+yV6IbRXhnYSHj6N2PaF9e1yDy66c01BCEVfg+n/ivpqklCX0WEoHkhkyFA68Pv8QbKFs4DxSQ1le&#13;
+3ecKTEfdu5Oqh1Vjf4LeCwJd2+bTTdwNNbEhR+4Q7GOy826Yx5pllHHAceq/AIUVqJRGzKY/pXJ8&#13;
++CrEIW43clvzcEE1P1hWwq2WTIQrnfTHC6dNpg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1025,4 +1025,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4fcb95de-ed10-4e12-94b2-4522afa8ce48" Target="#_63204cc5-4809-4de0-a1c1-f8b1db9f1833"><Timestamp>2023-02-16 01:04:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2796bd69-eafe-4642-8f90-3f4c7cd0944f" Target="#_e09d843f-3d63-496c-8666-ce774cb6b81f"><Timestamp>2023-02-16 01:05:23</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
