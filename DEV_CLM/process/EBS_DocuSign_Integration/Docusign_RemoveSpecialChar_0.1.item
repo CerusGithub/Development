@@ -106,7 +106,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:qTtwO3ZnZ3aD9Jp/eXcUdNQ05FKAoZ47x3buNrRT"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:GK2ZFtKAMYENDA8h0Oq9o4Fl9s/t0vDV4iaLd1Ed"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -143,7 +143,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="context.singlestore_db_AdditionalParams"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value=""/>
     <elementParameter field="TEXT" name="USER" show="false" value="context.singlestore_db_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:NVZqOQR8D5K5XUNod1sDISS/GBbZe/N25I6uHNlVmo/QOHsPJ9/hQ2jvkuwoHSNAppqhUSXFanRZANE="/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:xYKgLXNQ2kFLmm8x6r+/fdZ0raCszMHE6vcGdBAahk5xW9zwcvN7G+fdN/L7pPepTYFXeg03zalNBIw="/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;stats_table&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;logs_table&quot;"/>
@@ -209,14 +209,14 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:ECDAqeq/p/yFiSVbj+qUptg89GpHmt2EBYbDEBhp"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:/Hj9lUH1MaGs4zcTMuPUgJ+FTnsCucQv2/qLEH4a"/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER.XXCER_REQ_SPECIAL_INFO&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER_REQ_SPECIAL_INFO&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * from XXCER.XXCER_REQ_SPECIAL_INFO &#13;&#10;where   &#13;&#10;REQUISITION_LINE_ID= '&quot;+context.latest_req_id+&quot;' &#13;&#10; --requisition_number in ( '118828' , '118829')&#13;&#10; AND( CONTRACT_STATUS != 'Contract Submitted' or CONTRACT_STATUS is null)&#13;&#10;AND CONTRACT_TYPE IN ('Other', 'Statement Of Work')&#13;&#10;and transfer_flag is null&#13;&#10;&quot; "/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * from XXCER.XXCER_REQ_SPECIAL_INFO &#13;&#10;where   &#13;&#10;--REQUISITION_LINE_ID= '&quot;+context.latest_req_id+&quot;'  and&#13;&#10;( CONTRACT_STATUS != 'Contract Submitted' or CONTRACT_STATUS is null)&#13;&#10;AND CONTRACT_TYPE IN ('Other', 'Statement Of Work')&#13;&#10;and transfer_flag is null&#13;&#10;and requisition_number = '120336'&#13;&#10;&quot; "/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -518,7 +518,7 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TABLESCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:STXuGhwsP3/5ZEgWoqsR39hayFvFqSwjs1SxIai5"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Ch9CTZ8in/IjEAM45xk9NYQlOGieUq5VpUuoaYy4"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER_REQ_SPECIAL_INFO&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete"/>
@@ -646,14 +646,14 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:oX0A9YkfEMg7Tyi8APdYLTIZgDt863h007X1IM2u"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:O1MT2MmrxpYai3+n4GufJavaiASl/ohRGJ7ogeVZ"/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER.XXCER_REQ_SPECIAL_INFO&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER_REQ_SPECIAL_INFO&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * from XXCER.XXCER_REQ_SPECIAL_INFO &#13;&#10;where   &#13;&#10;REQUISITION_LINE_ID= '&quot;+context.latest_req_id+&quot;' &#13;&#10;AND&#13;&#10; ( CONTRACT_STATUS != 'Contract Submitted' or CONTRACT_STATUS is null)&#13;&#10;and transfer_flag is null&#13;&#10;AND CONTRACT_TYPE IN ('Work Order')&#13;&#10;--and requisition_number in ( '118828' , '118829')&#13;&#10;&quot; "/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * from XXCER.XXCER_REQ_SPECIAL_INFO &#13;&#10;where   &#13;&#10;--REQUISITION_LINE_ID= '&quot;+context.latest_req_id+&quot;' AND&#13;&#10; ( CONTRACT_STATUS != 'Contract Submitted' or CONTRACT_STATUS is null)&#13;&#10;and transfer_flag is null&#13;&#10;AND CONTRACT_TYPE IN ('Work Order')&#13;&#10;and requisition_number = '120336'&#13;&#10;&quot; "/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -941,7 +941,7 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TABLESCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:UIjpjqx7JARHG4qsEpFBcWVggXx1q0ZHT0h70U2f"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:D70yKhrlVaHEsheS1exc8tcmjHYX3w6dUIoVJvKZ"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER_REQ_SPECIAL_INFO&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete"/>
@@ -1033,14 +1033,14 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Fjv+HNWUYcAGLnLJrkWPWrGoFKgySGXH6S69bAmG"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:hc7Jmp3yfNsLlKaafDrKiJk29vDEtCpNraua6GuE"/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER.XXCER_REQ_SPECIAL_INFO&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER_REQ_SPECIAL_INFO&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * from XXCER.XXCER_REQ_SPECIAL_INFO &#13;&#10;where   &#13;&#10;REQUISITION_LINE_ID= '&quot;+context.latest_req_id+&quot;' &#13;&#10;and&#13;&#10; ( CONTRACT_STATUS != 'Contract Submitted' or CONTRACT_STATUS is null)&#13;&#10;and transfer_flag is null&#13;&#10;--and requisition_number in ( '118828' , '118829')&#13;&#10;&quot; "/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * from XXCER.XXCER_REQ_SPECIAL_INFO &#13;&#10;where   &#13;&#10;--REQUISITION_LINE_ID= '&quot;+context.latest_req_id+&quot;' and&#13;&#10; ( CONTRACT_STATUS != 'Contract Submitted' or CONTRACT_STATUS is null)&#13;&#10;and transfer_flag is null&#13;&#10;and requisition_number = '120336'&#13;&#10;&quot; "/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1329,7 +1329,7 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TABLESCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:SW35xngkHVhnW79a9egkIAV+LKtyIlBLoHOLpCwy"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:0i4o7LkGy5cW1yZ581gLdTGDp76p9KyhJgCuDyph"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER_REQ_SPECIAL_INFO&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete"/>
@@ -1421,14 +1421,14 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:teGSX3BMqpn1pxXN5fH1JcLqv4cVQv6xeYRRbaBe"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:nI7fsUj88cnO5q5WOYMiNHnPy90YK/s1E6N9pAnz"/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER.XXCER_REQ_SPECIAL_INFO&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER_REQ_SPECIAL_INFO&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * from XXCER.XXCER_REQ_SPECIAL_INFO &#13;&#10;where   &#13;&#10;REQUISITION_LINE_ID= '&quot;+context.latest_req_id+&quot;' &#13;&#10;AND &#13;&#10; ( CONTRACT_STATUS != 'Contract Submitted' or CONTRACT_STATUS is null)&#13;&#10;AND CONTRACT_TYPE IN ('Consulting Agreement')&#13;&#10;AND transfer_flag is null&#13;&#10;--and requisition_number in ( '118828' , '118829')&#13;&#10;&quot; "/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * from XXCER.XXCER_REQ_SPECIAL_INFO &#13;&#10;where   &#13;&#10;--REQUISITION_LINE_ID= '&quot;+context.latest_req_id+&quot;'  AND &#13;&#10; ( CONTRACT_STATUS != 'Contract Submitted' or CONTRACT_STATUS is null)&#13;&#10;AND CONTRACT_TYPE IN ('Consulting Agreement')&#13;&#10;AND transfer_flag is null&#13;&#10;and requisition_number = '120336'&#13;&#10;&quot; "/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1702,7 +1702,7 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TABLESCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:R5QpsV39cPkImr59GArxbcFp7IUsMDdsxu4z+NyR"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:utffTJiv+QJxVDg2qfczMlZ012ZmsS353xq3+faP"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER_REQ_SPECIAL_INFO&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete"/>
@@ -1781,7 +1781,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="Oracle"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:FiZehVJOLw/t0UdQJythab4ABN/3bN2B3l28mPtq"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:hAtgOJOx4x/+ndluPeQ+brVxO8kL95iQIGfpZmCL"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER_REQ_SPECIAL_INFO&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -1825,7 +1825,7 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:S5dJlkTkKsh9uQPSkiBtUfIqkfEWdEIMXbR6XsGZ"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Ul4JZIWaf+oV/Ch/s6pPiOlrMx8wLj47Cwy+nj90"/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER.XXCER_REQ_SPECIAL_INFO&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
@@ -2118,7 +2118,7 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TABLESCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:/3dE8yrscFmm222PjihIdEbgIwmIbDmZGwPpA+vu"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:zWvGk77HkQns0opJ4oMyQWtVvbNjr5OlaP9DJxiB"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER_REQ_SPECIAL_INFO&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete"/>
@@ -2196,12 +2196,12 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="Oracle"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:tZYA9ugJNtMhICufHmjxLRrJesqs+1K4wW0l+uSm"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:GlyMYjArBKMv+ZceBhiJbq81z2bbXNQgIAVW0KRJ"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER_REQ_SPECIAL_INFO&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;update XXCER_REQ_SPECIAL_INFO&#13;&#10;set transfer_flag = 'V'&#13;&#10;where &#13;&#10; --requisition_number in ( '118828' , '118829')&#13;&#10;REQUISITION_LINE_ID= '&quot;+context.latest_req_id+&quot;' &#13;&#10;and transfer_flag is null&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;update apps.XXCER_REQ_SPECIAL_INFO&#13;&#10;set transfer_flag = 'V'&#13;&#10;where &#13;&#10;--REQUISITION_LINE_ID= '&quot;+context.latest_req_id+&quot;' and &#13;&#10;transfer_flag is null&#13;&#10;and requisition_number = '120336'&#13;&#10;&quot;"/>
     <elementParameter field="CLOSED_LIST" name="USE_NB_LINE" value="NONE"/>
     <elementParameter field="LABEL" name="USE_NB_LINE_NOTE" value="* Only used if the query is an insert, an update or a delete."/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -2240,7 +2240,7 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:WxWYvIPKOJ+VX7nYU7svBfl4e5Agd2h+mjmI9ftc"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:XRLW+muGFOyjoOYeuKG31My/bQwzd9q4hF4gHIEt"/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER.XXCER_REQ_SPECIAL_INFO&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
@@ -2534,7 +2534,7 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TABLESCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:J/E9KhF9XuhRicf1+jhbffziaNFIyw0M210F8lZR"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:RJn7aOjQLvrskY9pc4DFXtKWnycsEw1N1Bvd4BL5"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;XXCER_REQ_SPECIAL_INFO&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete"/>
@@ -2613,13 +2613,13 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="context.ORACLE_SCHEMA"/>
     <elementParameter field="TEXT" name="USER" value="context.ORACLE_USERNAME"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:izzJfmrU/stz42V1d8QXEIehmRpQFpLJ60JLNnDIB4DZvniNnQwPfNPKeajhd4EDFznV"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:P+Swc8EIQAlCPdpzzT5RKJ2t2/mdF4rC2vFq22CQBcFcCJbln0mhOd37N5NWJpjcQqee"/>
     <elementParameter field="CHECK" name="USE_SSL" show="false" value="false"/>
     <elementParameter field="FILE" name="SSL_TRUSTSERVER_TRUSTSTORE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:dTrTzS2e1TVSVSPbrCbhTjbbHQCuM5KkScvqiHnk"/>
+    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" show="false" value="enc:system.encryption.key.v1:isbKK5gx75+jCKdyZ5KOiwyreXr6C4JKYLwZQP3w"/>
     <elementParameter field="CHECK" name="NEED_CLIENT_AUTH" show="false" value="false"/>
     <elementParameter field="FILE" name="SSL_KEYSTORE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="SSL_KEYSTORE_PASSWORD" show="false" value="enc:system.encryption.key.v1:wNph+n1VqZ5GkTqVP3x0SBvBMw7wdtaJOI1GUKl9"/>
+    <elementParameter field="PASSWORD" name="SSL_KEYSTORE_PASSWORD" show="false" value="enc:system.encryption.key.v1:IofRX3swGI9EMu4cysDvjpEc6qBpsTdQbt9AnvpI"/>
     <elementParameter field="CHECK" name="DISABLE_CBC_PROTECTION" show="false" value="true"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
@@ -2645,7 +2645,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="context.SCHEMA"/>
     <elementParameter field="TEXT" name="DBNAME" value="context.DATABASE"/>
     <elementParameter field="TEXT" name="USER" value="context.USERNAME"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:XVSQdI3NvyGXYngjW8exJLoAex5CAYjgJ51sm9K0ssnomVuML0/SkSqmT28="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:PvxBcznUb9JFA5U2OvPoAHKzdhfsaiXgglx1ZhXcJUJHcKbrvNmMmRD81Dk="/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
@@ -2805,14 +2805,14 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfcopyOfout2"/>
   </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_6" offsetLabelX="0" offsetLabelY="0" source="tDBInput_6" target="tDBRow_1">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk6"/>
+  </connection>
   <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tDBInput_6" offsetLabelX="0" offsetLabelY="0" source="tDBInput_6" target="tMap_6">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_6" offsetLabelX="0" offsetLabelY="0" source="tDBInput_6" target="tDBRow_1">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk6"/>
   </connection>
   <connection connectorName="FLOW" label="copyOfout1" lineStyle="0" metaname="copyOfout1" offsetLabelX="0" offsetLabelY="0" source="tMap_6" target="tDBOutput_6">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -2905,13 +2905,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a285970d-0af2-4ff3-81ca-bf08a26d63ad"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1TZZmiQ2u6sMTaakUkuh+8i2yX7HHqVKWe6TOAltu3+roAl0hdXvfRJZaXb2FzVGR5hmzZslpotx&#13;
-lYAutxmB8w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_76bc15cd-a803-4e90-8df2-5dda9fed0ee0"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JsskGQF6URa8Tn/KJucaEIEdZXFuqwYzqzztGVR09WMSWq07CUt5NJiFGJOOiuLVEpWcKA5BMp5r&#13;
-iwK4OaCJqA==</DigestValue></Reference></SignedInfo><SignatureValue>Iknjfzz6Z2QnNBLCNpF5jEMXDOH1njAbqhxO8te2FS/ocCLTHuNtlGRQkWmOAMz25Rzx6YqZGI3L&#13;
-ZlcRCsxFhKMa8Ewke5I0O00VjCpDXApnf+8JctGbzXA8xc5kQ5lPTkItH+GSbD2pW42jCLrtf1me&#13;
-0OfdkUDZppIA/1emEy0Q7HYp2c0lcs1iwosCChNKUt0OBStGcfGQBc4P2oAjIryCYme6rhhIHaMg&#13;
-YDZ2U3sqsjOvjXWUN6isrD7aabyCyi9bYue9nD/POp3xaTxW+D6QJYlcqefXONrOUJSnei7e8Det&#13;
-Gaga/FLdJsowlzPHxYoryWwsLLGf+/AlBHaHGw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_77cf8aa9-704d-4293-8e67-21ef49d9d558"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>uTUTmGG9oUa/S3zd0RwjOXFvSwMTX4UYP3aojbC0VN+8ufgl2JV/bx3EZmRRx53Gpd4ZNAzo4CsU&#13;
+m4LuhUhHhg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_12917ec2-56ea-432d-a2e0-b04446d2cdf6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ryC9RI93KPdzx5K2WG/bdxpUS9aBE2idabnYiQNuYq22TO0dUIvAbmVIczdHOVqc++50ADKYDprZ&#13;
+lyOlaUQMfw==</DigestValue></Reference></SignedInfo><SignatureValue>SRNmlcV+WFKLGfB/34aZkO6liGXx3B+tRSJv0tT42TkyjyY5zmQePzaPR1GS8cuoS5frLh7r45Yb&#13;
+RkOkYEJgw1lXIUKJ0bDuHQlPWXPKlW+XcQyiMhBA0GL7qqrtTvNDbXjFeMv3xgLVg5q9rGAS6QRO&#13;
+MFDdgc8izASijJTU8JHHv42HOe7aTKLQ/cLaqeAUiPNlQaSlMdN5TyxbwPR7SMHUqrT9HaMZYJAK&#13;
+he2giIERjTHImUPMYzGUAdjpOgBcRmWR6IhOXZcjHCH2Gudm2kjhRoF/RednlyCBdEpPnELypU+P&#13;
+afxpghjOzqcSRAiMfH4rCdv/SYYlVkP4IZ577g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2933,4 +2933,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_76bc15cd-a803-4e90-8df2-5dda9fed0ee0" Target="#_a285970d-0af2-4ff3-81ca-bf08a26d63ad"><Timestamp>2024-08-23 22:21:53</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_12917ec2-56ea-432d-a2e0-b04446d2cdf6" Target="#_77cf8aa9-704d-4293-8e67-21ef49d9d558"><Timestamp>2024-09-17 07:58:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
