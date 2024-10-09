@@ -40,7 +40,7 @@
     <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="true"/>
     <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="true"/>
     <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false"/>
-    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;C:/TSC_V7.3.1/Config_files/prod_config/credientials-edw-qa.txt&quot;"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;C:/Talend/prod_config/credientials__edw_qa.txt&quot;"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;=&quot;"/>
     <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" value="false"/>
     <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
@@ -57,7 +57,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:K7DQQ5QwLVMwzSxaTbp3PFQZhY2VgYIxIQGawI5G"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:FNuySc/vBQgXuQE+KfCdkke5Ezn/Mr8efsJq6d49"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -92,7 +92,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:IztcxM/HBL/ndoRv/vv2R5tPxWhht4KDWsavJXek"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:AIzCleCttZDDW4YqWmWwWV3nYed5r9Ej+3OM8EMo"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -140,7 +140,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="context.SCHEMA"/>
     <elementParameter field="TEXT" name="DBNAME" value="context.DATABASE"/>
     <elementParameter field="TEXT" name="USER" value="context.USERNAME"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Llj0ypKjf7A3/A6jGvqujMUNSGSUNuOU6fgJ4HhmmVKoeYV4yxp6GT4+sNk="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:8xUS4SvZFJLZgZ9iBq3VsbCbaPDbtdeBQHV6/33hAA7YVRVwmSiBM5vwodA="/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
@@ -177,7 +177,7 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;CER_DEVINT&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;cerdevint&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:GVPmLoEcYnPeYjifHXkxaLq897v+enjte5d1WllfXEIxzlTV5vbKeE1w6EC0"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:R8jphtSk2dIIZSYSSYLN22+t9/1NsKRgeqYSPFBd23oCQ5NXAG0yHhdcuthg"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;GL_EDW&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -275,6 +275,8 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="LAST_MODIFIED_DATE"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="ADJUSTMENTS" name="tDBInput_1">
@@ -424,10 +426,10 @@
       <column comment="" key="false" length="10" name="YEAR" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="CUSTOMER_ID" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="255" name="BILL_TO_CUSTOMER_NUMBER" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="CUSTOMER_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="255" name="BILL_TO_CUSTOMER_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="ACCOUNT" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
@@ -451,22 +453,22 @@
       <column comment="" key="false" length="255" name="ORDER_NUMBER" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="INVOICE_NUMBER" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="255" name="TRANS_NUMBER" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="UNITS" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="QUANTITY" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="TRANSACTION_CURRENCY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="255" name="CURRENCY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="TRANSACTION_AMOUNT" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="EXTENDED_AMOUNT" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="REPORTING_CURRENCY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="REPORTING_AMOUNT" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="AMOUNT" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="LOT" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -478,19 +480,13 @@
       <column comment="" key="false" length="255" name="SHIP_LOCATION" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="UNIT_COST" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="UNIT_PRICE" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="UNIT_STANDARD_COST" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="STANDARD_COST" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="XRATE" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="JEL_HEADER_ID" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="JEL_LINE_NUM" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+      <column comment="" key="false" length="24" name="EXCHANGE_RATE" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="JEL_CONTEXT" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -505,34 +501,27 @@
       <column comment="" key="false" length="23" name="GL_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="GL_ACCOUNT_TYPE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="255" name="TRANS_DATE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="COGS_ENTRY" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="255" name="TRX_DATE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="24" name="EUR_RATE" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="24" name="EUR_REPORTING_AMOUNT" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="EUR" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="INVOICE_ROW_ID" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="-1" name="INVOICE_LNNUM_ROW_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="INVOICE_LNNUM_GL_DIST_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="out1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row1.SOURCE_TYPE " name="SOURCE_TYPE" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.MONTH " name="MONTH" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.YEAR " name="YEAR" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="row1.CUSTOMER_ID " name="CUSTOMER_ID" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.CUSTOMER_NAME " name="CUSTOMER_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.CUSTOMER_ID " name="BILL_TO_CUSTOMER_NUMBER" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.CUSTOMER_NAME " name="BILL_TO_CUSTOMER_NAME" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.ACCOUNT " name="ACCOUNT" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="row1.ITEM " name="ITEM" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.ITEM_DESCRIPTION " name="ITEM_DESCRIPTION" nullable="true" type="id_String"/>
@@ -540,30 +529,27 @@
         <mapperTableEntries expression="row1.ENTITY " name="ENTITY" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="row1.LOCATION " name="LOCATION" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.ORDER_NUMBER " name="ORDER_NUMBER" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.INVOICE_NUMBER " name="INVOICE_NUMBER" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.UNITS " name="UNITS" nullable="true" type="id_Float"/>
-        <mapperTableEntries expression="row1.TRANSACTION_CURRENCY " name="TRANSACTION_CURRENCY" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.TRANSACTION_AMOUNT " name="TRANSACTION_AMOUNT" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="row1.INVOICE_NUMBER " name="TRANS_NUMBER" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.UNITS " name="QUANTITY" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="row1.TRANSACTION_CURRENCY " name="CURRENCY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TRANSACTION_AMOUNT " name="EXTENDED_AMOUNT" nullable="true" type="id_Float"/>
         <mapperTableEntries expression="row1.REPORTING_CURRENCY " name="REPORTING_CURRENCY" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.REPORTING_AMOUNT " name="REPORTING_AMOUNT" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="row1.REPORTING_AMOUNT " name="AMOUNT" nullable="true" type="id_Float"/>
         <mapperTableEntries expression="row1.LOT " name="LOT" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.SERIAL_NUMBER " name="SERIAL_NUMBER" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.SHIP_LOCATION " name="SHIP_LOCATION" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.UNIT_COST " name="UNIT_COST" nullable="true" type="id_Float"/>
-        <mapperTableEntries expression="row1.UNIT_STANDARD_COST " name="UNIT_STANDARD_COST" nullable="true" type="id_Float"/>
-        <mapperTableEntries expression="row1.XRATE " name="XRATE" nullable="true" type="id_Float"/>
-        <mapperTableEntries expression="row1.JEL_HEADER_ID " name="JEL_HEADER_ID" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="row1.JEL_LINE_NUM " name="JEL_LINE_NUM" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row1.UNIT_COST " name="UNIT_PRICE" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="row1.UNIT_STANDARD_COST " name="STANDARD_COST" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="row1.XRATE " name="EXCHANGE_RATE" nullable="true" type="id_Float"/>
         <mapperTableEntries expression="row1.JEL_CONTEXT " name="JEL_CONTEXT" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.JEL_ATTRIBUTE1 " name="JEL_ATTRIBUTE1" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.JEL_ATTRIBUTE2 " name="JEL_ATTRIBUTE2" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.GL_DATE " name="GL_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.GL_ACCOUNT_TYPE " name="GL_ACCOUNT_TYPE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.COGS_ENTRY " name="COGS_ENTRY" nullable="true" type="id_Float"/>
-        <mapperTableEntries expression="row1.TRX_DATE " name="TRX_DATE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.EUR_RATE " name="EUR_RATE" nullable="true" type="id_Float"/>
-        <mapperTableEntries expression="row1.EUR_REPORTING_AMOUNT " name="EUR_REPORTING_AMOUNT" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="row1.TRX_DATE " name="TRANS_DATE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.EUR_RATE " name="EUR" nullable="true" type="id_Float"/>
         <mapperTableEntries expression="row1.INVOICE_ROW_ID " name="INVOICE_ROW_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row1.INVOICE_LNNUM_ROW_ID " name="INVOICE_LNNUM_ROW_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row1.INVOICE_LNNUM_GL_DIST_ID " name="INVOICE_LNNUM_GL_DIST_ID" nullable="true" type="id_Integer"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="SOURCE_TYPE" nullable="true" type="id_String"/>
@@ -620,7 +606,7 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:4u0TfZm0Ynry+XSihMg8738QJnXOG0EbtN7y+G/3"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:A+6RbyrO+EO6lLA9MXV6o3NirlXHQ/UcaIivB80x"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;GL_EDW_HYP&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="TRUNCATE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -660,12 +646,12 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CUSTOMER_ID"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BILL_TO_CUSTOMER_NUMBER"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CUSTOMER_NAME"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BILL_TO_CUSTOMER_NAME"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -705,22 +691,22 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="INVOICE_NUMBER"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TRANS_NUMBER"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UNITS"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="QUANTITY"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TRANSACTION_CURRENCY"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CURRENCY"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TRANSACTION_AMOUNT"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EXTENDED_AMOUNT"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -730,7 +716,7 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="REPORTING_AMOUNT"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="AMOUNT"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -750,27 +736,17 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UNIT_COST"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="UNIT_PRICE"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UNIT_STANDARD_COST"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STANDARD_COST"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="XRATE"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="JEL_HEADER_ID"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="JEL_LINE_NUM"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EXCHANGE_RATE"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -795,32 +771,27 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="GL_ACCOUNT_TYPE"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TRANS_DATE"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="COGS_ENTRY"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TRX_DATE"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="EUR_RATE"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="EUR_REPORTING_AMOUNT"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EUR"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="INVOICE_ROW_ID"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="INVOICE_LNNUM_ROW_ID"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="INVOICE_LNNUM_GL_DIST_ID"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -831,6 +802,8 @@
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
     <elementParameter field="TEXT" name="LABEL" value="&quot;GL_EDW_HYP&quot;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_2">
@@ -843,10 +816,10 @@
       <column comment="" key="false" length="10" name="YEAR" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="CUSTOMER_ID" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="255" name="BILL_TO_CUSTOMER_NUMBER" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="CUSTOMER_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="255" name="BILL_TO_CUSTOMER_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="ACCOUNT" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
@@ -870,22 +843,22 @@
       <column comment="" key="false" length="255" name="ORDER_NUMBER" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="INVOICE_NUMBER" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="255" name="TRANS_NUMBER" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="UNITS" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="QUANTITY" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="TRANSACTION_CURRENCY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="255" name="CURRENCY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="TRANSACTION_AMOUNT" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="EXTENDED_AMOUNT" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="REPORTING_CURRENCY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="REPORTING_AMOUNT" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="AMOUNT" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="LOT" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -897,19 +870,13 @@
       <column comment="" key="false" length="255" name="SHIP_LOCATION" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="UNIT_COST" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="UNIT_PRICE" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="UNIT_STANDARD_COST" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="STANDARD_COST" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="XRATE" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="JEL_HEADER_ID" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="JEL_LINE_NUM" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+      <column comment="" key="false" length="24" name="EXCHANGE_RATE" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="JEL_CONTEXT" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -924,24 +891,17 @@
       <column comment="" key="false" length="23" name="GL_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="GL_ACCOUNT_TYPE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="255" name="TRANS_DATE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="COGS_ENTRY" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="255" name="TRX_DATE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="24" name="EUR_RATE" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="24" name="EUR_REPORTING_AMOUNT" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="EUR" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="INVOICE_ROW_ID" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="-1" name="INVOICE_LNNUM_ROW_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="INVOICE_LNNUM_GL_DIST_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="255" name="SOURCE_TYPE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -953,10 +913,10 @@
       <column comment="" key="false" length="10" name="YEAR" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="CUSTOMER_ID" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="255" name="BILL_TO_CUSTOMER_NUMBER" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="CUSTOMER_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="255" name="BILL_TO_CUSTOMER_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="ACCOUNT" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
@@ -980,22 +940,22 @@
       <column comment="" key="false" length="255" name="ORDER_NUMBER" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="INVOICE_NUMBER" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="255" name="TRANS_NUMBER" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="UNITS" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="QUANTITY" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="TRANSACTION_CURRENCY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="255" name="CURRENCY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="TRANSACTION_AMOUNT" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="EXTENDED_AMOUNT" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="REPORTING_CURRENCY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="REPORTING_AMOUNT" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="AMOUNT" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="LOT" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -1007,19 +967,13 @@
       <column comment="" key="false" length="255" name="SHIP_LOCATION" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="UNIT_COST" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="UNIT_PRICE" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="UNIT_STANDARD_COST" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="STANDARD_COST" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="XRATE" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="JEL_HEADER_ID" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="JEL_LINE_NUM" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+      <column comment="" key="false" length="24" name="EXCHANGE_RATE" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="255" name="JEL_CONTEXT" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -1034,24 +988,17 @@
       <column comment="" key="false" length="23" name="GL_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="GL_ACCOUNT_TYPE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="255" name="TRANS_DATE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="COGS_ENTRY" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="255" name="TRX_DATE" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="24" name="EUR_RATE" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="24" name="EUR_REPORTING_AMOUNT" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="EUR" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="INVOICE_ROW_ID" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="-1" name="INVOICE_LNNUM_ROW_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="INVOICE_LNNUM_GL_DIST_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -1155,7 +1102,7 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Eb9lfAzPKG/E++wptgTwUkK1s0YkGPgsZ1r6iOOm"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:fyfJD/Iu0034FLsQ+rEHfStFXYzXIk45GbSfuumW"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;ETL_JOB_LOG&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -1241,6 +1188,8 @@
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_1">
       <column comment="" key="false" length="-1" name="project_name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -1280,7 +1229,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;cer_devint&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;cerdevint&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:7+C/pQeaVKAPSN/WYiwysSdiqni/1+rX2XSBhYbk7zuLigF3YMPVNFuv+0so"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:3XMpGYfbrLHudHRE6ItbWiWeyk/fAv9JTZGIlIJiG8kKn9OayII9fs5YTqIv"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
@@ -1309,6 +1258,38 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="BILL_TO_CUSTOMER_NUMBER"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CURRENCY"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="QUANTITY"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AMOUNT"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="EXCHANGE_RATE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="UNIT_PRICE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="STANDARD_COST"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="EXTENDED_AMOUNT"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="INVOICE_LNNUM_GL_DIST_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="INVOICE_LNNUM_ROW_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
   </connection>
@@ -1370,13 +1351,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2cf3d190-c21b-46ad-95c7-a3a4d3f45079"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GXP8bZYMSwAENub2rlNlqtUvDI/0huFklG83Y4CV8YT45nyGcZ7DZOqGNuVt8yLfFdFb5LUqI4gh&#13;
-VwdS05Ly9A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5629e1ef-94c1-4685-ad67-16b70d3ade18"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PxhxrDqtZrOlSaeO7/8QKRBg8soN+GeQ1ga3DyA7v5G4lrWQl38KtLUUhOlvgUf9oM0b8o1bJQAF&#13;
-XUvL2lBnUg==</DigestValue></Reference></SignedInfo><SignatureValue>oScclyIvwtEZk6WYjjsV+RWAq0EmKc7C0R+2ZQ0E/kUEprIjDyiTAq1SjVU6NzmHwSQbeMnOmmee&#13;
-PRgBa5G2/B/M0Z88rCSgFP4XzF+fANmAyB+iokrieXoyrO8r4r5CoeE/AOApGZmf7dPUfnybY+RA&#13;
-xh0dkIrB4xR9PfMMjNRkH+XoTbgYB+AlJcD+f6LOtJmSx7xSkkcy1ZtvhaWkkjJp6UCC2NTu7ACh&#13;
-Kam+RoiZ0CXphCYm+DZXeDXQfNE1RzqxOUeOc1ET1dBscYm7DLhMJil59aOgNQd8Gtstw6T5NMX6&#13;
-VfU809xMXEoSjc1RA2GB9eigaTfypeynLVohkw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b4c59ec0-0013-4673-9e26-28c1245d56a4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ClB39xoJkKNwf5tkZqew8Uwj9rLO5iLin2Fx5c8iDRH4PEo/7ZsDPevpcQAKbDnYy/LjcrOkUipW&#13;
+I5TV7+tV4g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_db632051-51b8-42ee-ad9b-a4caa4f20691"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>l1ySO2M6p4AG7g1p4TDtQEnSHvRADPTNzUtkbqrF342/tNK1WdsL+jy2aMaejQJAANs0ycOKFNLv&#13;
+FTzL41bnlg==</DigestValue></Reference></SignedInfo><SignatureValue>KIRl1C2HJepepod/1N3NqqgSlBOKA6XfK4KtYUZcotua0FbpGwSnZBwKZcCKa8ZUCLB+Ip8yoaCT&#13;
+YI1IXmv/Nhi4Kr9HJi8vpESPXc57IEck8PhTm1NpNQr8Mkx7n+nMWaLM6YbGyoPZdtN7KZE0kSN8&#13;
+NuKFpyfIdlPSylMHu9VOvQoQ1RxRFmTV0xAc6uCaXqxH5UBRNeK0A56gK+iM/VkU41Q3lKAkBqgy&#13;
+ZsMM1A4vQeWidN7sjdrhYJ6RHEGJ6+aRcID2u1lMP91U2sNHCgjiyu2IwA9nG4zthb3Dct6JrptX&#13;
+8Vh9ghZkk8mUa3jyaMPU95OzXy/KC6fJn8UCaQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1398,4 +1379,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5629e1ef-94c1-4685-ad67-16b70d3ade18" Target="#_2cf3d190-c21b-46ad-95c7-a3a4d3f45079"><Timestamp>2024-10-08 23:43:29</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_db632051-51b8-42ee-ad9b-a4caa4f20691" Target="#_b4c59ec0-0013-4673-9e26-28c1245d56a4"><Timestamp>2024-10-09 00:18:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
